@@ -1,0 +1,27 @@
+# list your hosts here
+hosts:
+  1.2.3.4: 5.6.7.8
+
+ssh_path: ~/.ssh/educate-us-east1.pem
+vm_user: ec2-user
+kubernetes_controlplane_max_nodes: 3
+kubernetes_controlplane_pref_nodes: 3
+kubernetes_controlplane_min_nodes: 1
+kubernetes_worker_max_nodes: 3
+kubernetes_worker_pref_nodes: 3
+kubernetes_worker_min_nodes: 1
+cassandra_max_nodes: 5
+cassandra_pref_nodes: 3
+cassandra_min_nodes: 3
+mongodb_max_nodes: 3
+mongodb_pref_nodes: 3
+mongodb_min_nodes: 3
+flask_max_nodes: 3
+flask_pref_nodes: 3
+flask_min_nodes: 2
+kafka_max_nodes: 5
+kafka_pref_nodes: 3
+kafka_min_nodes: 2
+spark_max_nodes: 5
+spark_pref_nodes: 3
+spark_min_nodes: 2

@@ -1,7 +1,0 @@
-fabric2
-jinja2
-pyyaml
-kazoo
-python-dotenv
-boto3[crt]
-kafka-python
