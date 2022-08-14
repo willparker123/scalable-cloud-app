@@ -122,7 +122,7 @@ class CreateInstanceEC2(object):
         client = boto3.client('autoscaling')
         self.autoscale_client = client
         minsize = 2
-        maxsize = 5
+        maxsize = 4
         prefsize = 3
         if instance_type not in valid_instance_group_types:
             raise ValueError(f"Error: type '{instance_type}' is not a valid instance group type: {valid_instance_group_types}")

@@ -1,0 +1,71 @@
+sudo yum update
+sudo yum update -y
+sudo yum install -y docker
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker ec2-user
+
+minikube start --driver=none 
+kube-apiserver --enable-admission-plugins
+
+sudo yum update
+sudo yum update -y
+sudo yum install python3 python3-pip -y
+sudo pip3 install --upgrade pip
+sudo yum install zookeeper
+pip install boto3
+pip install boto3[crt]
+pip install -r requirements.txt
+pip install kafka-python
+
+tar -xzf kafka_2.13-3.0.0.tgz
+cd kafka_2.13-3.0.0
+
+aws configure
+((	~/.aws/credentials
+	[default]
+	aws_access_key_id = YOUR_ACCESS_KEY
+	aws_secret_access_key = YOUR_SECRET_KEY
+
+	~/.aws/config
+	[default]
+	region=us-east-1))
+
+K8s:
+minikube start --driver=none 
+kube-apiserver --enable-admission-plugins
+kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+
+EKSCTL:
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
+
+Zookeeper:
+sudo yum install zookeeper
+pip install -r requirements.txt
+config.yaml.template --> config.yaml and insert pyb/priv IP of EC2 (path to AWS key)
+fab create --name zk --securitygroup sg-0f8c026df0032d5c1 (but with your SEC GROUP)
+fab create --name zk --securitygroup sg-0f8c026df0032d5c1 
+fab create --name zk --securitygroup sg-0f8c026df0032d5c1 
+copy last IP from fab instancedetails --name zk into config.yaml right-hand-side
+start_zk_cluster.py
+query_zk_cluster.py
+
+ssh into node A, node B
+Node A:
+sudo /usr/local/zookeeper/bin/zkCli.sh -server 127.0.0.1:2181
+create -e /app 'COMSM0072'
+
+Node B:
+sudo /usr/local/zookeeper/bin/zkCli.sh -server 127.0.0.1:2181
+get -w /app
+
+closing node A results in node B:
+WatchedEvent state:SyncConnected type:NodeDeleted path:/app
+
+SEC GROUPS::
+
+Zookeeper:
+	SSH 22 MYIP
+	TCP 2181 MYIP
+	TCP 0-65535 172.31.0.0/16
