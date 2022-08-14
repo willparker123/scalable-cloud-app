@@ -4,6 +4,7 @@ from fabric import task, Connection
 import logging
 import sys
 from web3 import Web3, EthereumTesterProvider
+from web3.auto import w3
 
 YOUR_PUBLIC_IP = "192.168.0.0"
 YOUR_PRIVATE_IP = "0.0.0.0"
@@ -14,6 +15,9 @@ host = YOUR_IPS
 class Transaction(object):
     def __init__(self):
         self.to_addr = "a"
+        
+def format_addresses(web3_, addresses):
+    return list(map(lambda x: web3_.toChecksumAddress(x), addresses))
 
 def send_tx_to_cluster(logger, tx):
     (addr_from, adrr_to, value, gas_price, gas, max_priority_fee_per_gas, max_fee_per_gas, nonce, type_) = tx
@@ -25,24 +29,24 @@ def send_txs_to_cluster(logger, txs):
 
 def create_web3_pipe(logger, args, provider="IPCProvider"):
     logger.info(f"Trying to connect to Web3...")
-    w3 = None
+    web3_ = None
     try:
-        w3 = Web3(EthereumTesterProvider())
+        web3_ = Web3(EthereumTesterProvider())
     except:
         raise ValueError("Error: cannot connect to Web3")
-    if not w3.isConnected():
+    if not web3_.isConnected():
         raise ValueError("Error: cannot connect to Web3")
     if provider not in {"IPCProvider", "HTTPProvider", "WebsocketProvider"}:
         raise ValueError(f"Error: provider '{provider}' not one of 'IPCProvider', 'HTTPProvider' or 'WebsocketProvider'")
     if provider == "IPCProvider":
-        w3 = Web3(Web3.IPCProvider(args.pipe_url)) #e.g. './path/to/geth.ipc'
+        web3_ = Web3(Web3.IPCProvider(args.pipe_url)) #e.g. './path/to/geth.ipc'
     elif provider == "HTTPProvider":
-        w3 = Web3(Web3.HTTPProvider(args.pipe_url)) #e.g. 'http://127.0.0.1:8545'
+        web3_ = Web3(Web3.HTTPProvider(args.pipe_url)) #e.g. 'http://127.0.0.1:8545'
     elif provider == "WebsocketProvider":
-        w3 = Web3(Web3.WebsocketProvider(args.pipe_url)) #e.g. 'wss://127.0.0.1:8546'
+        web3_ = Web3(Web3.WebsocketProvider(args.pipe_url)) #e.g. 'wss://127.0.0.1:8546'
     else:
         raise ValueError(f"Error: provider '{provider}' not one of 'IPCProvider', 'HTTPProvider' or 'WebsocketProvider'")
-    if w3 is not None:
+    if web3_ is not None:
         logger.info(f"Connected to Web successfully.")
     else:
         raise ValueError("Error: cannot connect to Web3")
@@ -50,15 +54,16 @@ def create_web3_pipe(logger, args, provider="IPCProvider"):
     #latest_block = w3.eth.get_block('latest')
     
     while True:
-        logger.info("G")
+        logger.info(f"Getting latest Block while monitoring address(es) {args.monitor_addresses}...")
         #pending_block = w3.eth.getBlock(block_identifier='pending', full_transactions=True)
         #pending_transactions = pending_block['transactions']
-        latestblock_filter = w3.eth.filter({'fromBlock': 'latest', 'toBlock': 'pending'})#, 'address': 'MY ADDRESS'
+        latestblock_filter = w3.eth.filter({'fromBlock': 'latest', 'toBlock': 'pending', 'address': format_addresses(web3_, args.monitor_addresses)})
         #pending_transactions_filtered = latestblock_filter.get_new_entries()
         
         transaction_hashes = w3.eth.getFilterChanges(latestblock_filter.filter_id)
         transactions = [w3.eth.getTransaction(h) for h in transaction_hashes]
         for tx in transactions:
+            logger.info(tx)
             send_tx_to_cluster(tx)
         #send_txs_to_cluster(logger, pending_transactions)
     
@@ -125,8 +130,10 @@ if __name__ == "__main__":
     logging.basicConfig(stream=sys.stdout, level=logging.INFO)
     
     parser = ArgumentParser()
-    parser.add_argument("-p", "--pipeurl", dest="pipe_url", default="\\\\\.\\pipe\\geth.ipc",
+    parser.add_argument("-p", "--pipeurl", dest="pipe_url", default="\\\\\.\\pipe\\geth.ipc", required=True,
                         help="IPC, HTTP or WebSocket pipe url used to create the web3 pipe; must be supplied")
+    parser.add_argument("-a", "--addresses", nargs='+', required=True, dest="monitor_addresses", default=[],
+                        help="the addresses used in the 'address' field in web3.eth.filter")
     parser.add_argument("-u", "--publicip", dest="ip_public", default=YOUR_PUBLIC_IP,
                         help="public IP address for the hosted Node")
     parser.add_argument("-v", "--privateip", dest="ip_private", default=YOUR_PRIVATE_IP,
@@ -134,7 +141,7 @@ if __name__ == "__main__":
     parser.add_argument("-s", "--ssh",
                         action="store_true", dest="connect_via_ssh", default=False,
                         help="connect to the node via ssh - requires '-u / --user'")
-    parser.add_argument("-a", "--useapi",
+    parser.add_argument("-A", "--useapi",
                         action="store_true", dest="use_node_api", default=False,
                         help="when connected to the node via ssh, use the node's api")
     parser.add_argument("-U", "--user", dest="user", default=None,

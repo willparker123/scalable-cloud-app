@@ -83,8 +83,10 @@ To deploy a **transaction-streamer node**:
 The command-line arguments for  ```transaction_streamer.py``` are below. 
 
 ``````
-	parser.add_argument("-p", "--pipeurl", dest="pipe_url",
+    parser.add_argument("-p", "--pipeurl", dest="pipe_url", default="\\\\\.\\pipe\\geth.ipc", required=True,
                         help="IPC, HTTP or WebSocket pipe url used to create the web3 pipe; must be supplied")
+    parser.add_argument("-a", "--addresses", nargs='+', required=True, dest="monitor_addresses", default=[],
+                        help="the addresses used in the 'address' field in web3.eth.filter")
     parser.add_argument("-u", "--publicip", dest="ip_public", default=YOUR_PUBLIC_IP,
                         help="public IP address for the hosted Node")
     parser.add_argument("-v", "--privateip", dest="ip_private", default=YOUR_PRIVATE_IP,
@@ -92,7 +94,7 @@ The command-line arguments for  ```transaction_streamer.py``` are below.
     parser.add_argument("-s", "--ssh",
                         action="store_true", dest="connect_via_ssh", default=False,
                         help="connect to the node via ssh - requires '-u / --user'")
-    parser.add_argument("-a", "--useapi",
+    parser.add_argument("-A", "--useapi",
                         action="store_true", dest="use_node_api", default=False,
                         help="when connected to the node via ssh, use the node's api")
     parser.add_argument("-U", "--user", dest="user", default=None,
