@@ -102,9 +102,9 @@ The command-line arguments for  ```transaction_streamer.py``` are below.
                         help="the user for the ssh connection - requires '-u / --user'")
 ``````
 
-The default workflow is **1. Local Installation**. For example, using **3. Use node provider's API** and **Infura** as a node provider:
+The default workflow is **1. Local Installation**. For example, using **3. Use node provider's API** and **Alchemy** as a node provider:
 
-```python transaction_streamer.py -a WALLET_ADDRESS1 [WALLET_ADDRESS2 ...] -p https://mainnet.infura.io/v3/API_KEY -P HTTPProvider``` where **WALLET_ADDRESS** is the address of the wallet(s) to monitor and **API_KEY** is the API key from the node provider.
+```python transaction_streamer.py -a WALLET_ADDRESS1 [WALLET_ADDRESS2 ...] -p https://eth-mainnet.g.alchemy.com/v2/API_KEY -P HTTPProvider``` where **WALLET_ADDRESS** is the address of the wallet(s) to monitor and **API_KEY** is the API key from the node provider.
 
 
 

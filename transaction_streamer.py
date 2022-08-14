@@ -6,11 +6,11 @@ import sys
 from web3 import Web3, EthereumTesterProvider
 from web3.auto import w3
 
-YOUR_PUBLIC_IP = "192.168.0.0"
+YOUR_PUBLIC_IP = "0.0.0.0"
 YOUR_PRIVATE_IP = "0.0.0.0"
 YOUR_IPS = (YOUR_PUBLIC_IP, YOUR_PRIVATE_IP)
 
-host = YOUR_IPS
+main_host = YOUR_IPS
 
 class Transaction(object):
     def __init__(self):
@@ -53,20 +53,23 @@ def create_web3_pipe(logger, args):
         raise ValueError("Error: cannot connect to Web3")
 
     #latest_block = w3.eth.get_block('latest')
-    
-    while True:
+    temp_transactions = []
+    restart_bool = False
+    while not restart_bool:
         logger.info(f"Getting latest Block while monitoring address(es) {args.monitor_addresses}...")
         #pending_block = w3.eth.getBlock(block_identifier='pending', full_transactions=True)
         #pending_transactions = pending_block['transactions']
-        latestblock_filter = w3.eth.filter({'fromBlock': 'latest', 'toBlock': 'pending', 'address': format_addresses(web3_, args.monitor_addresses)})
+        latestblock_filter = web3_.eth.filter({'fromBlock': 'latest', 'toBlock': 'pending', 'address': format_addresses(web3_, args.monitor_addresses)})
         #pending_transactions_filtered = latestblock_filter.get_new_entries()
-        
-        transaction_hashes = w3.eth.getFilterChanges(latestblock_filter.filter_id)
-        transactions = [w3.eth.getTransaction(h) for h in transaction_hashes]
-        for tx in transactions:
-            logger.info(tx)
+        while len(temp_transactions) < 1:
+            transaction_hashes = web3_.eth.getFilterChanges(latestblock_filter.filter_id)
+            temp_transactions = [web3_.eth.getTransaction(h) for h in transaction_hashes]
+        logger.info(f"Captured TXs: {temp_transactions}")
+        for tx in temp_transactions:
+            logger.info(f"Sending TX: {tx} to cluster")
             send_tx_to_cluster(tx)
-        #send_txs_to_cluster(logger, pending_transactions)
+            #send_txs_to_cluster(logger, pending_transactions)
+        
     
     
 @task
@@ -87,7 +90,7 @@ def connect(user, host):
     return con
 
 @task
-def setup_ssh(logger, args, run_script=True):
+def setup_ssh(logger, args, host, run_script=True):
     pipe = None
     c = connect(args.user, host)
     # RUNS THIS SCRIPT ON THE MACHINE OVER SSH TO CREATE PIPE
@@ -103,7 +106,7 @@ def setup_ssh(logger, args, run_script=True):
         #c.sudo("apt-get update")
     return pipe
 
-def main(args, parser, logger, host=None):
+def main(args, parser, logger, host):
     pipe = None
     # ONLY IF --connect_via_ssh AND --user ARE SUPPLIED TO CLI
     #
@@ -113,9 +116,9 @@ def main(args, parser, logger, host=None):
             parser.error("--connect_via_ssh requires --user.")
         
         if args.use_node_api:
-            pipe = setup_ssh(logger, args, run_script=False)
+            pipe = setup_ssh(logger, args, host, run_script=False)
         else:
-            pipe = setup_ssh(logger, args, run_script=True)
+            pipe = setup_ssh(logger, args, host, run_script=True)
     else:
         # *********************
         # RUN SCRIPT LOCALLY        [DEFAULT]
@@ -131,7 +134,7 @@ if __name__ == "__main__":
     logging.basicConfig(stream=sys.stdout, level=logging.INFO)
     
     parser = ArgumentParser()
-    parser.add_argument("-p", "--pipeurl", dest="pipe_url", default="\\\\\.\\pipe\\geth.ipc", required=True,
+    parser.add_argument("-p", "--pipeurl", dest="pipe_url", required=True,
                         help="IPC, HTTP or WebSocket pipe url used to create the web3 pipe; must be supplied")
     parser.add_argument("-a", "--addresses", nargs='+', required=True, dest="monitor_addresses", default=[],
                         help="the addresses used in the 'address' field in web3.eth.filter")
@@ -155,8 +158,5 @@ if __name__ == "__main__":
     if args.provider not in {'IPCProvider', 'HTTPProvider', 'WebsocketProvider'}:
         raise ValueError("Error: -P / --provider must be one of 'IPCProvider', 'HTTPProvider' or 'WebsocketProvider'")
     
-    host = (args.ip_public, args.ip_private)
-    if host[0] == YOUR_PUBLIC_IP and host[1] == YOUR_PRIVATE_IP:
-        main(args, parser, logger)
-    else:
-        main(args, parser, logger, host)
+    main_host = (args.ip_public, args.ip_private)
+    main(args, parser, logger, main_host)
