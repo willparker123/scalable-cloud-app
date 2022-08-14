@@ -7,7 +7,7 @@ import logging
 logging.basicConfig()
 
 with open('config.yaml') as f:
-    config = yaml.load(f)
+    config = yaml.load(f, Loader=yaml.SafeLoader)
 
 cluster_ip = list(config['hosts'].keys())[0]
 

@@ -3,7 +3,7 @@ import jinja2
 import yaml
 
 with open('config.yaml') as f:
-    config = yaml.load(f)
+    config = yaml.load(f, Loader=yaml.SafeLoader)
 
 hosts = [(k, v) for k, v in config['hosts'].items()]
 

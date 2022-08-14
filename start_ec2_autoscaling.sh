@@ -11,4 +11,4 @@ echo "Configure the workers..."
 fab getips-instances --type=slave prepare-slave
 sleep 20
 echo "Running a sanity check..."
-fab getips-instances --type=master get-nodes
+fab getips-instances --type=master get-nodes--+
