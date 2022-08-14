@@ -1,17 +1,17 @@
-# Elastically Scalable and Fault Tolerant Video Stream Processing
+# Elastically Scalable and Fault Tolerant Blockchain Transaction Processing
 
-## (K8S + Spark + Kafka + ZooKeeper)
-
-
-### Overview
-
-This is an elastically scalable, horizontally and vertically scaling and fault tolerant cloud application which utilises many components from AWS (S3 buckets, EC2 instances, Lambda and Autoscaling groups), as well as Kubernetes, ZooKeeper/Kafka, Spark, as well as Redis and Node to provide a web-app frontend/backend. 
-
-The K8S cluster is initialised and orchestrated using fabric and boto3 to create EC2 instances on the back of an AWS Autoscaling Group Launch Template. The K8S cluster also deploys redis master and slave containers as well as node containers to provide a frontend. The frontend provides an interface to upload video files to an S3 bucket, where a Lambda function is triggered on upload to serialise the data into a bytestream forwarded to a Kafka Topic. This Topic is streamed to Spark for processing, and the resulting file(s) are uploaded to a seperate S3 bucket, with another Lambda function attached.
+## (K8S + Spark + Kafka + Cassandra + MongoDB)
 
 
+### <u>Overview</u>
 
-### Deployment
+This three-dimensional scaling web application provides an interface to a/many VPC-connected Ethereum node(s) (e.g. geth) which streams transactions from up to 75 peer nodes. The system holds a consistent transaction log of the past 6 months of Ethereum chain transactions using a distributed no-SQL Cassandra database, which can be used in efficient batch processing via Apache Spark.
+
+A Kubernetes cluster is initialised and orchestrated using Fabric and boto3, utilising AWS's AutoScaling Groups (ASGs) to create a group of EC2 instances within a region-bounded ASG to ensure a **replication factor of 3** to ensure high availability (**HA**) through redundancies. The relevant images are pulled from the Docker.io container registry and initialised for the following node types (in this order): **database (transaction / web-metadata; **MariaDB / MongoDB resp.**)**, **web-facing (Flask)**, **streaming** (Ethereum node running API; e.g. geth) and **processor** (Kafka/Spark consumer) **nodes**. The client-facing nodes provide a web UI to connect user nodes to a Kafka Topic as a consumer. This Topic is streamed to processor nodes using Spark for processing, and the resulting file(s) are uploaded to MariaDB under the user / the cluster.
+
+
+
+### <u>Deployment</u>
 
 The deployment of this cluster and infrastructure is through Docker. The repo contains a Dockerfile which will launch a Python container - this container installs prerequisites (pip, "requirements.txt") and runs "start_ec2_autoscaling.sh", followed by "start_cluster.py" in CMD.
 
@@ -42,3 +42,91 @@ The deployment of this cluster and infrastructure is through Docker. The repo co
   ```
   $ docker exec -it redis-latest /bin/bash
   ```
+
+
+
+#### Deploying a ```transaction-streamer``` node****
+
+A **transaction-streamer** node uses a custom API to do one of three processes to send transaction data to the main cluster (the **database** and nodes through Kafka topics):
+
+1. **Local Installation**: the script ```transaction_streamer.py``` runs on **transaction-streamer**; creates a web3 RPC pipe on the current machine.
+2. **Remote Installation:** the script ```transaction_streamer.py``` runs on any machine and connects to the desired node machine via SSH, then creates a web3 RPC pipe on the connected machine. 
+3. **Use Node API:** the script ```transaction_streamer.py``` runs on any machine and connects to the desired node machine via SSH, then tries to use the node's API depending on the **node_type** (default "geth")
+
+
+
+To deploy a **transaction-streamer node**:
+
+1. Copy the script and environment files - ``` transaction_streamer.py``` and ``` requirements-transaction-streamer.txt``` / ```environment-transaction-streamer.yaml``` for **pip** / **anaconda** respectively.
+
+2.  Activate the environment using:
+
+   ```pip install -r requirements.txt``` for **pip**, or
+
+   ```conda env create -f environment.yaml``` for **anaconda**.
+
+3.  Then, run:
+
+   ```sudo python transaction_streamer.py --CLI_ARGUMENTS_HERE```
+
+The command-line arguments for  ```transaction_streamer.py``` are below. 
+
+``````
+	parser.add_argument("-p", "--pipeurl", dest="pipe_url",
+                        help="IPC, HTTP or WebSocket pipe url used to create the web3 pipe; must be supplied")
+    parser.add_argument("-u", "--publicip", dest="ip_public", default=YOUR_PUBLIC_IP,
+                        help="public IP address for the hosted Node")
+    parser.add_argument("-v", "--privateip", dest="ip_private", default=YOUR_PRIVATE_IP,
+                        help="private IP address for the hosted Node")
+    parser.add_argument("-s", "--ssh",
+                        action="store_true", dest="connect_via_ssh", default=False,
+                        help="connect to the node via ssh - requires '-u / --user'")
+    parser.add_argument("-a", "--useapi",
+                        action="store_true", dest="use_node_api", default=False,
+                        help="when connected to the node via ssh, use the node's api")
+    parser.add_argument("-U", "--user", dest="user", default=None,
+                        help="the user for the ssh connection - requires '-u / --user'")
+``````
+
+The default workflow is **1. Local Installation**.
+
+
+
+
+
+### <u>Environments</u>
+
+The environments for this system were created using Anaconda 2.2.0 and were exported to **pip** using the command ```conda list -e > requirements_{environment_name}.txt```. The ```.env``` filenames for each environment are given as **[ENV_FILENAME]**.
+
+### scalable-cloud-app
+
+#### [requirements.txt    /    environment.yaml]
+
+The main cluster startup and deployment to spin up EC2 instances, autoscaling groups on AWS, the cluster API and the Kubernetes cluster.
+
+| **library** | **version** | description                                    | **command**                                          |
+| ----------- | ----------- | ---------------------------------------------- | ---------------------------------------------------- |
+| kubernetes  | 24.2.0      | Kubernetes cluster deployment and maintenance  | ```conda install -c conda-forge python-kubernetes``` |
+| fabric      | 2.6.0       | Executing ssh commands (in parallel) using SSH | ```conda install -c anaconda fabric```               |
+| jinja2      | 3.0.3       | Template engine for cluster deployment         | ```conda install -c anaconda jinja2```               |
+| pyyaml      | 6.0         | Reading and creating YAML files                | ```conda install -c conda-forge pyyaml```            |
+| boto3       | 1.24.2      | Interaction with AWS services                  | ```conda install -c anaconda boto3```                |
+| dotenv      | 0.20.0      | Get and set values in a ```.env``` file        | ```conda install -c conda-forge python-dotenv```     |
+
+
+
+### transaction-streamer 
+
+#### [requirements-transaction-streamer.txt    /    environment-transaction-streamer.yaml]
+
+The API which streams transactions to MariaDB from a hosted node or providers such as [**Infura**](https://infura.io/product/ethereum) and [**Alchemy**]().
+
+| **library** | **version** | description                                                  | **command**                             |
+| ----------- | ----------- | ------------------------------------------------------------ | --------------------------------------- |
+| web3        | 24.2.0      | Web3 library for Python to stream transaction data from the Blockchain. | ```conda install -c conda-forge web3``` |
+| fabric      | 2.6.0       | Executing ssh commands (in parallel) using SSH               | ```conda install -c anaconda fabric```  |
+|             |             |                                                              |                                         |
+|             |             |                                                              |                                         |
+|             |             |                                                              |                                         |
+|             |             |                                                              |                                         |
+
