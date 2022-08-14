@@ -1,6 +1,6 @@
 # Elastically Scalable and Fault Tolerant Blockchain Transaction Processing
 
-## (K8S + Spark + Kafka + Cassandra + MongoDB)
+## (K8S + Spark + Kafka + MariaDB + MongoDB)
 
 
 ### <u>Overview</u>
@@ -57,17 +57,28 @@ A **transaction-streamer** node uses a custom API to do one of three processes t
 
 To deploy a **transaction-streamer node**:
 
-1. Copy the script and environment files - ``` transaction_streamer.py``` and ``` requirements-transaction-streamer.txt``` / ```environment-transaction-streamer.yaml``` for **pip** / **anaconda** respectively.
+1. Copy the script and environment files - ``` transaction_streamer.py``` and ``` requirements-transaction-streamer.txt``` / ```environment-transaction-streamer.yml``` for **pip** / **anaconda** respectively.
 
 2.  Activate the environment using:
 
-   ```pip install -r requirements.txt``` for **pip**, or
+   ```pip install -r requirements-transaction-streamer.txt``` for **pip**, or
 
-   ```conda env create -f environment.yaml``` for **anaconda**.
+   ```conda env create -n ENVIRONMENT_NAME -f environment-transaction-streamer.yml``` for **anaconda**.
 
 3.  Then, run:
 
-   ```sudo python transaction_streamer.py --CLI_ARGUMENTS_HERE```
+   ```sudo python transaction_streamer.py --pipeurl PIPE_URL [--OTHER_CLI_ARGUMENTS_HERE]``` where **PIPE_URL** is the path to the pipe:
+
+   ``````
+       if provider == "IPCProvider":
+           w3 = Web3(Web3.IPCProvider(args.pipe_url)) #e.g. './path/to/geth.ipc'
+       elif provider == "HTTPProvider":
+           w3 = Web3(Web3.HTTPProvider(args.pipe_url)) #e.g. 'http://127.0.0.1:8545'
+       elif provider == "WebsocketProvider":
+           w3 = Web3(Web3.WebsocketProvider(args.pipe_url)) #e.g. 'wss://127.0.0.1:8546'
+   ``````
+
+   
 
 The command-line arguments for  ```transaction_streamer.py``` are below. 
 
@@ -96,11 +107,11 @@ The default workflow is **1. Local Installation**.
 
 ### <u>Environments</u>
 
-The environments for this system were created using Anaconda 2.2.0 and were exported to **pip** using the command ```conda list -e > requirements_{environment_name}.txt```. The ```.env``` filenames for each environment are given as **[ENV_FILENAME]**.
+The environments for this system were created using **Anaconda** 2.2.0 using the command ```conda env export > environment.yml``` and were exported to **pip** using the command ```conda list -e > requirements.txt```. The ```.env``` filenames for each environment are given as **[ENV_FILENAME_PIP / ENV_FILENAME_CONDA]**.
 
 ### scalable-cloud-app
 
-#### [requirements.txt    /    environment.yaml]
+#### [requirements.txt    /    environment.yml]
 
 The main cluster startup and deployment to spin up EC2 instances, autoscaling groups on AWS, the cluster API and the Kubernetes cluster.
 
@@ -117,15 +128,15 @@ The main cluster startup and deployment to spin up EC2 instances, autoscaling gr
 
 ### transaction-streamer 
 
-#### [requirements-transaction-streamer.txt    /    environment-transaction-streamer.yaml]
+#### [requirements-transaction-streamer.txt    /    environment-transaction-streamer.yml]
 
 The API which streams transactions to MariaDB from a hosted node or providers such as [**Infura**](https://infura.io/product/ethereum) and [**Alchemy**]().
 
 | **library** | **version** | description                                                  | **command**                             |
 | ----------- | ----------- | ------------------------------------------------------------ | --------------------------------------- |
-| web3        | 24.2.0      | Web3 library for Python to stream transaction data from the Blockchain. | ```conda install -c conda-forge web3``` |
+| web3        | 24.2.0      | Web3 library for Python to stream transaction data from the blockchain. | ```conda install -c conda-forge web3``` |
 | fabric      | 2.6.0       | Executing ssh commands (in parallel) using SSH               | ```conda install -c anaconda fabric```  |
-|             |             |                                                              |                                         |
+| eth-tester  | 0.6.0b6     | Tools for testing Ethereum-based applications; testing connection to blockchain | ``` pip install eth-tester```           |
 |             |             |                                                              |                                         |
 |             |             |                                                              |                                         |
 |             |             |                                                              |                                         |
