@@ -51,7 +51,7 @@ A **transaction-streamer** node uses a custom API to do one of three processes t
 
 1. **Local Installation**: the script ```transaction_streamer.py``` runs on **transaction-streamer**; creates a web3 RPC pipe on the current machine.
 2. **Remote Installation:** the script ```transaction_streamer.py``` runs on any machine and connects to the desired node machine via SSH, then creates a web3 RPC pipe on the connected machine. 
-3. **Use Node API:** the script ```transaction_streamer.py``` runs on any machine and connects to the desired node machine via SSH, then tries to use the node's API depending on the **node_type** (default "geth")
+3. **Use node provider's API:** the script ```transaction_streamer.py``` runs on any machine and connects to the desired node machine via SSH, then tries to use the node's API depending on the **node_type** (default "geth")
 
 
 
@@ -67,7 +67,7 @@ To deploy a **transaction-streamer node**:
 
 3.  Then, run:
 
-   ```sudo python transaction_streamer.py --addresses ADDRESSES_TO_MONITOR_ARRAY --pipeurl PIPE_URL [--OTHER_CLI_ARGUMENTS_HERE]``` where **PIPE_URL** is the path to the pipe:
+   ```sudo python transaction_streamer.py --addresses ADDRESSES_TO_MONITOR --pipeurl PIPE_URL [--OTHER_CLI_ARGUMENTS_HERE]``` where **PIPE_URL** is the path to the pipe and **ADDRESSES_TO_MONITOR** is an array of wallet addresses to watch transactions from
 
    ``````
        if provider == "IPCProvider":
@@ -102,9 +102,9 @@ The command-line arguments for  ```transaction_streamer.py``` are below.
                         help="the user for the ssh connection - requires '-u / --user'")
 ``````
 
-The default workflow is **1. Local Installation**.
+The default workflow is **1. Local Installation**. For example, using **3. Use node provider's API** and **Infura** as a node provider:
 
-
+```python transaction_streamer.py -a WALLET_ADDRESS1 [WALLET_ADDRESS2 ...] -p https://mainnet.infura.io/v3/API_KEY -P HTTPProvider``` where **WALLET_ADDRESS** is the address of the wallet(s) to monitor and **API_KEY** is the API key from the node provider.
 
 
 
