@@ -67,7 +67,7 @@ To deploy a **transaction-streamer node**:
 
 3.  Then, run:
 
-   ```sudo python transaction_streamer.py --pipeurl PIPE_URL [--OTHER_CLI_ARGUMENTS_HERE]``` where **PIPE_URL** is the path to the pipe:
+   ```sudo python transaction_streamer.py --addresses ADDRESSES_TO_MONITOR_ARRAY --pipeurl PIPE_URL [--OTHER_CLI_ARGUMENTS_HERE]``` where **PIPE_URL** is the path to the pipe:
 
    ``````
        if provider == "IPCProvider":
@@ -78,7 +78,6 @@ To deploy a **transaction-streamer node**:
            w3 = Web3(Web3.WebsocketProvider(args.pipe_url)) #e.g. 'wss://127.0.0.1:8546'
    ``````
 
-   
 
 The command-line arguments for  ```transaction_streamer.py``` are below. 
 
