@@ -27,7 +27,8 @@ def send_tx_to_cluster(logger, tx):
 def send_txs_to_cluster(logger, txs):
     return txs
 
-def create_web3_pipe(logger, args, provider="IPCProvider"):
+def create_web3_pipe(logger, args):
+    provider = args.provider
     logger.info(f"Trying to connect to Web3...")
     web3_ = None
     try:
@@ -141,6 +142,8 @@ if __name__ == "__main__":
     parser.add_argument("-s", "--ssh",
                         action="store_true", dest="connect_via_ssh", default=False,
                         help="connect to the node via ssh - requires '-u / --user'")
+    parser.add_argument("-P", "--provider", dest="provider", default="IPCProvider",
+                        help="type of provider to use - must be 'IPCProvider', 'HTTPProvider' or 'WebsocketProvider'")
     parser.add_argument("-A", "--useapi",
                         action="store_true", dest="use_node_api", default=False,
                         help="when connected to the node via ssh, use the node's api")
@@ -149,6 +152,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.pipe_url is None:
         raise ValueError("Error: -p / --pipeurl must be supplied")
+    if args.provider not in {'IPCProvider', 'HTTPProvider', 'WebsocketProvider'}:
+        raise ValueError("Error: -P / --provider must be one of 'IPCProvider', 'HTTPProvider' or 'WebsocketProvider'")
     
     host = (args.ip_public, args.ip_private)
     if host[0] == YOUR_PUBLIC_IP and host[1] == YOUR_PRIVATE_IP:

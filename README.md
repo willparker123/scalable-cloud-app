@@ -94,6 +94,8 @@ The command-line arguments for  ```transaction_streamer.py``` are below.
     parser.add_argument("-s", "--ssh",
                         action="store_true", dest="connect_via_ssh", default=False,
                         help="connect to the node via ssh - requires '-u / --user'")
+    parser.add_argument("-P", "--provider", dest="provider", default="IPCProvider",
+                        help="type of provider to use - must be 'IPCProvider', 'HTTPProvider' or 'WebsocketProvider'")
     parser.add_argument("-A", "--useapi",
                         action="store_true", dest="use_node_api", default=False,
                         help="when connected to the node via ssh, use the node's api")
