@@ -13,21 +13,58 @@ YOUR_IPS = (YOUR_PUBLIC_IP, YOUR_PRIVATE_IP)
 main_host = YOUR_IPS
 
 class Transaction(object):
-    def __init__(self):
-        self.to_addr = "a"
+    def __init__(self, tx):
+        """
+        {
+            'blockHash': HexBytes('HASH'), 
+            'blockNumber': 12345678, 
+            'from': 'ADDR', 
+            'gas': 350000, 
+            'gasPrice': 25524367634, 
+            'hash': HexBytes('HASH'), 
+            'input': '0x', 
+            'nonce': 6123469, 
+            'to': 'ADDR', 
+            'transactionIndex': 0, 
+            'value': 45584000000000000, 
+            'type': '0x0', 
+            'chainId': '0x1', 
+            'v': 38, 
+            'r': HexBytes('HASH'), 
+            's': HexBytes('HASH')
+        }
+        """
+        self.block_hash = tx["blockHash"]
+        self.block_number = tx["blockNumber"]
+        self.to_addr = tx["to"]
+        self.from_addr = tx["from"]
+        self.gas = tx["gas"]
+        self.gas_price = tx["gasPrice"]
+        self.nonce = tx["nonce"]
+        self.value = tx["value"]
+        self.type = tx["type"]
+        self.chainId = tx["chainId"]
+        self.vrs = (tx["v"], tx["r"], tx["s"])
+        self.transaction_index = tx["transactionIndex"]
         
 def format_addresses(web3_, addresses):
     return list(map(lambda x: web3_.toChecksumAddress(x), addresses))
 
-def send_tx_to_cluster(logger, tx):
-    (addr_from, adrr_to, value, gas_price, gas, max_priority_fee_per_gas, max_fee_per_gas, nonce, type_) = tx
-    logger.info(f"Sending transaction (TX) to cluster: {tx}")
-    return tx
+def send_tx_to_cluster(logger, tx, log_send=False):
+    if log_send:
+        logger.info(f"Sending transaction (TX) to cluster: {tx['transactionIndex']}")
+    return Transaction(tx)
 
 def send_txs_to_cluster(logger, txs):
-    return txs
+    if len(txs) < 1:
+        logger.info(f"No TXs to send.")
+        return []
+    else:
+        logger.info(f"Sending {len(txs)} transactions (TXs) to cluster...")
+        transactions = [send_tx_to_cluster(logger, tx) for tx in txs]
+        return transactions
 
-def create_web3_pipe(logger, args):
+def create_web3_pipe(logger, args, filter_address=False):
     provider = args.provider
     logger.info(f"Trying to connect to Web3...")
     web3_ = None
@@ -48,27 +85,44 @@ def create_web3_pipe(logger, args):
     else:
         raise ValueError(f"Error: provider '{provider}' not one of 'IPCProvider', 'HTTPProvider' or 'WebsocketProvider'")
     if web3_ is not None:
-        logger.info(f"Connected to Web successfully.")
+        logger.info(f"Connected to Web3 successfully.")
     else:
         raise ValueError("Error: cannot connect to Web3")
 
     #latest_block = w3.eth.get_block('latest')
+    transaction_hashes = []
     temp_transactions = []
     restart_bool = False
     while not restart_bool:
         logger.info(f"Getting latest Block while monitoring address(es) {args.monitor_addresses}...")
-        #pending_block = w3.eth.getBlock(block_identifier='pending', full_transactions=True)
-        #pending_transactions = pending_block['transactions']
-        latestblock_filter = web3_.eth.filter({'fromBlock': 'latest', 'toBlock': 'pending', 'address': format_addresses(web3_, args.monitor_addresses)})
+        pending_block = web3_.eth.getBlock(block_identifier='pending', full_transactions=True)
+        pending_transactions = pending_block['transactions']
+        
+        latestblock_filter = web3_.eth.filter({'fromBlock': 'latest', 'toBlock': 'pending'})
+        if filter_address:
+            latestblock_filter = web3_.eth.filter({'fromBlock': 'latest', 'toBlock': 'pending', 'address': format_addresses(web3_, args.monitor_addresses)})
         #pending_transactions_filtered = latestblock_filter.get_new_entries()
-        while len(temp_transactions) < 1:
-            transaction_hashes = web3_.eth.getFilterChanges(latestblock_filter.filter_id)
-            temp_transactions = [web3_.eth.getTransaction(h) for h in transaction_hashes]
-        logger.info(f"Captured TXs: {temp_transactions}")
-        for tx in temp_transactions:
-            logger.info(f"Sending TX: {tx} to cluster")
-            send_tx_to_cluster(tx)
-            #send_txs_to_cluster(logger, pending_transactions)
+        #logger.info("Waiting for latest block hashes...")
+        while True:
+            #transaction_hashes = web3_.eth.getFilterChanges(latestblock_filter.filter_id)
+            pending_block = web3_.eth.getBlock(block_identifier='pending', full_transactions=True)
+            new_pending = [x for x in pending_block['transactions'] if x not in pending_transactions]
+            logger.info(f"New pending transactions: {len(new_pending)}")
+            pending_transactions.extend(new_pending)
+            #new_transaction_hashes = [web3_.eth.getTransaction(h) for h in new_pending]
+            new_transaction_hashes = new_pending
+            transaction_hashes.extend(new_transaction_hashes)
+            send_txs_to_cluster(logger, new_transaction_hashes)
+        #logger.info("Waiting for latest block hashes...")
+        #while len(pending_transactions) < 1:
+            #logger.info("tick")
+            #transaction_hashes = web3_.eth.getFilterChanges(latestblock_filter.filter_id)
+        #temp_transactions = [web3_.eth.getTransaction(h['transactionHash']) for h in transaction_hashes]
+        #logger.info(f"Captured {len(transaction_hashes)} transaction_hashes from block")
+        #logger.info(f"Captured TXs: {temp_transactions}")
+        #for tx in temp_transactions:
+        #    logger.info(f"Sending TX: {tx} to cluster")
+        #    send_txs_to_cluster(logger, pending_transactions)
         
     
     
@@ -123,7 +177,7 @@ def main(args, parser, logger, host):
         # *********************
         # RUN SCRIPT LOCALLY        [DEFAULT]
         # *********************
-        pipe = create_web3_pipe(logger, args)
+        pipe = create_web3_pipe(logger, args, filter_address=len(args.monitor_addresses) < 1)
     if pipe is None:
         raise ValueError("Error: broken pipe or ssh connection; failed to make web3 RPC pipe")
 
@@ -136,7 +190,7 @@ if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("-p", "--pipeurl", dest="pipe_url", required=True,
                         help="IPC, HTTP or WebSocket pipe url used to create the web3 pipe; must be supplied")
-    parser.add_argument("-a", "--addresses", nargs='+', required=True, dest="monitor_addresses", default=[],
+    parser.add_argument("-a", "--addresses", nargs='+', required=False, dest="monitor_addresses", default=[],
                         help="the addresses used in the 'address' field in web3.eth.filter")
     parser.add_argument("-u", "--publicip", dest="ip_public", default=YOUR_PUBLIC_IP,
                         help="public IP address for the hosted Node")
@@ -155,6 +209,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.pipe_url is None:
         raise ValueError("Error: -p / --pipeurl must be supplied")
+    if len(args.monitor_addresses) < 1:
+        logger.warning("-a / --addresses is empty; monitor_addresses=[]")
     if args.provider not in {'IPCProvider', 'HTTPProvider', 'WebsocketProvider'}:
         raise ValueError("Error: -P / --provider must be one of 'IPCProvider', 'HTTPProvider' or 'WebsocketProvider'")
     
