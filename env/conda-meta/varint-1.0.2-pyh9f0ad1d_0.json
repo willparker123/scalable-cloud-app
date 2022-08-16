@@ -1,0 +1,107 @@
+{
+  "build": "pyh9f0ad1d_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\varint-1.0.2-pyh9f0ad1d_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/varint-1.0.2.dist-info/INSTALLER",
+    "Lib/site-packages/varint-1.0.2.dist-info/LICENSE",
+    "Lib/site-packages/varint-1.0.2.dist-info/METADATA",
+    "Lib/site-packages/varint-1.0.2.dist-info/RECORD",
+    "Lib/site-packages/varint-1.0.2.dist-info/WHEEL",
+    "Lib/site-packages/varint-1.0.2.dist-info/direct_url.json",
+    "Lib/site-packages/varint-1.0.2.dist-info/top_level.txt",
+    "Lib/site-packages/varint.py",
+    "Lib/site-packages/__pycache__/varint.cpython-39.pyc"
+  ],
+  "fn": "varint-1.0.2-pyh9f0ad1d_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\varint-1.0.2-pyh9f0ad1d_0",
+    "type": 1
+  },
+  "md5": "4b09bbb71c8286b54396ac9c772611fd",
+  "name": "varint",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\varint-1.0.2-pyh9f0ad1d_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/varint-1.0.2.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/varint-1.0.2.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "3f1a76a557b23d719e037d8671102ff4ddbd364f74b5e44a10e6bc23a3847d7d",
+        "sha256_in_prefix": "3f1a76a557b23d719e037d8671102ff4ddbd364f74b5e44a10e6bc23a3847d7d",
+        "size_in_bytes": 1079
+      },
+      {
+        "_path": "site-packages/varint-1.0.2.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "02183e9e9e162f64d4dab1cca50839375d27b50c9ba3fb0833cc3616305bbd51",
+        "sha256_in_prefix": "02183e9e9e162f64d4dab1cca50839375d27b50c9ba3fb0833cc3616305bbd51",
+        "size_in_bytes": 709
+      },
+      {
+        "_path": "site-packages/varint-1.0.2.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "82afae744ae8a86ca22c6be2bd2928ed08103344c0b4b88cbcee72f985a9666a",
+        "sha256_in_prefix": "82afae744ae8a86ca22c6be2bd2928ed08103344c0b4b88cbcee72f985a9666a",
+        "size_in_bytes": 670
+      },
+      {
+        "_path": "site-packages/varint-1.0.2.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "8389ccb3b77e5e5f7ec42f57a2f52bb031c65edf854f4135ed8aa8f760c47ef6",
+        "sha256_in_prefix": "8389ccb3b77e5e5f7ec42f57a2f52bb031c65edf854f4135ed8aa8f760c47ef6",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/varint-1.0.2.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "c22022fc8b167d419b25a7c0c3d55fffd1c02db47924f67045aa3053eb3d4f5b",
+        "sha256_in_prefix": "c22022fc8b167d419b25a7c0c3d55fffd1c02db47924f67045aa3053eb3d4f5b",
+        "size_in_bytes": 102
+      },
+      {
+        "_path": "site-packages/varint-1.0.2.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "9a60f20b07e5a4157955b79f99fcf0efd8b7bc9a07b1599a3694d0d52e06bcd3",
+        "sha256_in_prefix": "9a60f20b07e5a4157955b79f99fcf0efd8b7bc9a07b1599a3694d0d52e06bcd3",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "site-packages/varint.py",
+        "path_type": "hardlink",
+        "sha256": "4811b2bc618888a93ccb7aec1cf639cbc90e64ada886331f594ce65010347b26",
+        "sha256_in_prefix": "4811b2bc618888a93ccb7aec1cf639cbc90e64ada886331f594ce65010347b26",
+        "size_in_bytes": 1453
+      },
+      {
+        "_path": "Lib/site-packages/__pycache__/varint.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "varint==1.0.2=pyh9f0ad1d_0",
+  "sha256": "b336cbbace103ab63ea0079a143c7e5ca9ef08f65d0e1210e6c6faab9b08dbcc",
+  "size": 6190,
+  "subdir": "noarch",
+  "timestamp": 1591731694794,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/varint-1.0.2-pyh9f0ad1d_0.tar.bz2",
+  "version": "1.0.2"
+}

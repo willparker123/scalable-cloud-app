@@ -1,14 +1,16 @@
 aws_azs:
 - us-east-1
 - eu-west-2
-hosts:
-  1.2.3.4: 5.6.7.8
 cassandra_max_nodes: 5
 cassandra_min_nodes: 3
 cassandra_pref_nodes: 3
 flask_max_nodes: 3
 flask_min_nodes: 2
 flask_pref_nodes: 3
+hosts:
+  ip-172-31-86-84.ec2.internal: ec2-3-94-78-170.compute-1.amazonaws.com
+  ip-172-31-91-96.ec2.internal: ec2-54-204-73-237.compute-1.amazonaws.com
+  ip-172-31-95-211.ec2.internal: ec2-18-233-160-68.compute-1.amazonaws.com
 kafka_max_nodes: 5
 kafka_min_nodes: 2
 kafka_pref_nodes: 3

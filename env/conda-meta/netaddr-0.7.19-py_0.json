@@ -1,0 +1,390 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\netaddr-0.7.19-py_0",
+  "features": "",
+  "files": [
+    "Scripts/netaddr",
+    "Lib/site-packages/netaddr-0.7.19-py3.6.egg-info/PKG-INFO",
+    "Lib/site-packages/netaddr-0.7.19-py3.6.egg-info/SOURCES.txt",
+    "Lib/site-packages/netaddr-0.7.19-py3.6.egg-info/dependency_links.txt",
+    "Lib/site-packages/netaddr-0.7.19-py3.6.egg-info/top_level.txt",
+    "Lib/site-packages/netaddr/__init__.py",
+    "Lib/site-packages/netaddr/compat.py",
+    "Lib/site-packages/netaddr/contrib/__init__.py",
+    "Lib/site-packages/netaddr/contrib/subnet_splitter.py",
+    "Lib/site-packages/netaddr/core.py",
+    "Lib/site-packages/netaddr/eui/__init__.py",
+    "Lib/site-packages/netaddr/eui/iab.idx",
+    "Lib/site-packages/netaddr/eui/iab.txt",
+    "Lib/site-packages/netaddr/eui/ieee.py",
+    "Lib/site-packages/netaddr/eui/oui.idx",
+    "Lib/site-packages/netaddr/eui/oui.txt",
+    "Lib/site-packages/netaddr/fbsocket.py",
+    "Lib/site-packages/netaddr/ip/__init__.py",
+    "Lib/site-packages/netaddr/ip/glob.py",
+    "Lib/site-packages/netaddr/ip/iana.py",
+    "Lib/site-packages/netaddr/ip/ipv4-address-space.xml",
+    "Lib/site-packages/netaddr/ip/ipv6-address-space.xml",
+    "Lib/site-packages/netaddr/ip/ipv6-unicast-address-assignments.xml",
+    "Lib/site-packages/netaddr/ip/multicast-addresses.xml",
+    "Lib/site-packages/netaddr/ip/nmap.py",
+    "Lib/site-packages/netaddr/ip/rfc1924.py",
+    "Lib/site-packages/netaddr/ip/sets.py",
+    "Lib/site-packages/netaddr/strategy/__init__.py",
+    "Lib/site-packages/netaddr/strategy/eui48.py",
+    "Lib/site-packages/netaddr/strategy/eui64.py",
+    "Lib/site-packages/netaddr/strategy/ipv4.py",
+    "Lib/site-packages/netaddr/strategy/ipv6.py",
+    "Lib/site-packages/netaddr/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/netaddr/__pycache__/compat.cpython-39.pyc",
+    "Lib/site-packages/netaddr/contrib/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/netaddr/contrib/__pycache__/subnet_splitter.cpython-39.pyc",
+    "Lib/site-packages/netaddr/__pycache__/core.cpython-39.pyc",
+    "Lib/site-packages/netaddr/eui/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/netaddr/eui/__pycache__/ieee.cpython-39.pyc",
+    "Lib/site-packages/netaddr/__pycache__/fbsocket.cpython-39.pyc",
+    "Lib/site-packages/netaddr/ip/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/netaddr/ip/__pycache__/glob.cpython-39.pyc",
+    "Lib/site-packages/netaddr/ip/__pycache__/iana.cpython-39.pyc",
+    "Lib/site-packages/netaddr/ip/__pycache__/nmap.cpython-39.pyc",
+    "Lib/site-packages/netaddr/ip/__pycache__/rfc1924.cpython-39.pyc",
+    "Lib/site-packages/netaddr/ip/__pycache__/sets.cpython-39.pyc",
+    "Lib/site-packages/netaddr/strategy/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/netaddr/strategy/__pycache__/eui48.cpython-39.pyc",
+    "Lib/site-packages/netaddr/strategy/__pycache__/eui64.cpython-39.pyc",
+    "Lib/site-packages/netaddr/strategy/__pycache__/ipv4.cpython-39.pyc",
+    "Lib/site-packages/netaddr/strategy/__pycache__/ipv6.cpython-39.pyc"
+  ],
+  "fn": "netaddr-0.7.19-py_0.tar.bz2",
+  "license": "BSD 3-clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\netaddr-0.7.19-py_0",
+    "type": 1
+  },
+  "md5": "e670abc2ee6c64c55daade2eceb03472",
+  "name": "netaddr",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\netaddr-0.7.19-py_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "python-scripts/netaddr",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "72792d45badf069c7faa19ad457902b0bbf04fb45380bebaa84a6e1188260221",
+        "sha256_in_prefix": "9a18763f4e9346492803962ee7cd15083a0ad4215e6bcc522871bfd607942051",
+        "size_in_bytes": 1182
+      },
+      {
+        "_path": "site-packages/netaddr-0.7.19-py3.6.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "95b50d09c3732a3e8a2d3e9097b7965532005d53a7dd6ddef5836c89b6e3d54f",
+        "sha256_in_prefix": "95b50d09c3732a3e8a2d3e9097b7965532005d53a7dd6ddef5836c89b6e3d54f",
+        "size_in_bytes": 4823
+      },
+      {
+        "_path": "site-packages/netaddr-0.7.19-py3.6.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "2cc18b3e556bdae0966bd42d8213afa0111e4f44e0a38b860410e987605ae6a2",
+        "sha256_in_prefix": "2cc18b3e556bdae0966bd42d8213afa0111e4f44e0a38b860410e987605ae6a2",
+        "size_in_bytes": 2399
+      },
+      {
+        "_path": "site-packages/netaddr-0.7.19-py3.6.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "site-packages/netaddr-0.7.19-py3.6.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "1a5a2e4665194900a0d24968456298eaac531c0b10a3fac4f10be5c58047c0e1",
+        "sha256_in_prefix": "1a5a2e4665194900a0d24968456298eaac531c0b10a3fac4f10be5c58047c0e1",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "site-packages/netaddr/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0ba7038af67aeb5f36a3633fc06e697b4d93550f8eb462c8ac9527e5ad0a7085",
+        "sha256_in_prefix": "0ba7038af67aeb5f36a3633fc06e697b4d93550f8eb462c8ac9527e5ad0a7085",
+        "size_in_bytes": 1835
+      },
+      {
+        "_path": "site-packages/netaddr/compat.py",
+        "path_type": "hardlink",
+        "sha256": "d88d214f26cd3d4f0621a203742407549f883a5008511a42d781a88f252acdf0",
+        "sha256_in_prefix": "d88d214f26cd3d4f0621a203742407549f883a5008511a42d781a88f252acdf0",
+        "size_in_bytes": 2686
+      },
+      {
+        "_path": "site-packages/netaddr/contrib/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b470c058ae53d25dc8c4c8e59e55d16660551167bf26762ee8699d49e3fcb254",
+        "sha256_in_prefix": "b470c058ae53d25dc8c4c8e59e55d16660551167bf26762ee8699d49e3fcb254",
+        "size_in_bytes": 567
+      },
+      {
+        "_path": "site-packages/netaddr/contrib/subnet_splitter.py",
+        "path_type": "hardlink",
+        "sha256": "165a00c73bdc30c5d71da7ac1898b2256ba0d51f16af187ed340afbfa51f0c06",
+        "sha256_in_prefix": "165a00c73bdc30c5d71da7ac1898b2256ba0d51f16af187ed340afbfa51f0c06",
+        "size_in_bytes": 1769
+      },
+      {
+        "_path": "site-packages/netaddr/core.py",
+        "path_type": "hardlink",
+        "sha256": "021421c2eb6a975d7049458de7f8a9e9c33d8078cfff3af773b237048ac2c08c",
+        "sha256_in_prefix": "021421c2eb6a975d7049458de7f8a9e9c33d8078cfff3af773b237048ac2c08c",
+        "size_in_bytes": 5898
+      },
+      {
+        "_path": "site-packages/netaddr/eui/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d2041e80c022579b2dd00ac505fac4ebb03b2ac92edc1c5b2c0135f5b5458698",
+        "sha256_in_prefix": "d2041e80c022579b2dd00ac505fac4ebb03b2ac92edc1c5b2c0135f5b5458698",
+        "size_in_bytes": 24990
+      },
+      {
+        "_path": "site-packages/netaddr/eui/iab.idx",
+        "path_type": "hardlink",
+        "sha256": "4f5358ae8ee04e1cfa96c3bf1913b56f72a4e1e81d105a318679f787c5bc3d9f",
+        "sha256_in_prefix": "4f5358ae8ee04e1cfa96c3bf1913b56f72a4e1e81d105a318679f787c5bc3d9f",
+        "size_in_bytes": 95467
+      },
+      {
+        "_path": "site-packages/netaddr/eui/iab.txt",
+        "path_type": "hardlink",
+        "sha256": "009f022dcab1846c76d3a3476b53ded2b3987576dcc8026b1b33bc0f7a9783b9",
+        "sha256_in_prefix": "009f022dcab1846c76d3a3476b53ded2b3987576dcc8026b1b33bc0f7a9783b9",
+        "size_in_bytes": 2453271
+      },
+      {
+        "_path": "site-packages/netaddr/eui/ieee.py",
+        "path_type": "hardlink",
+        "sha256": "60531e37e62b5c82d20270831f7c2546a0f8c7c2e68842c31777ac565de287f2",
+        "sha256_in_prefix": "60531e37e62b5c82d20270831f7c2546a0f8c7c2e68842c31777ac565de287f2",
+        "size_in_bytes": 9500
+      },
+      {
+        "_path": "site-packages/netaddr/eui/oui.idx",
+        "path_type": "hardlink",
+        "sha256": "9d2c15fd571ef9b73d7ade09da172ff250937b6e9aa0ca551996e8ad0673bd14",
+        "sha256_in_prefix": "9d2c15fd571ef9b73d7ade09da172ff250937b6e9aa0ca551996e8ad0673bd14",
+        "size_in_bytes": 419098
+      },
+      {
+        "_path": "site-packages/netaddr/eui/oui.txt",
+        "path_type": "hardlink",
+        "sha256": "4d7414c686808a7efa62e0bf675be6a8b0b6ae479c18e2422bb3e0f7f0cd960c",
+        "sha256_in_prefix": "4d7414c686808a7efa62e0bf675be6a8b0b6ae479c18e2422bb3e0f7f0cd960c",
+        "size_in_bytes": 3566144
+      },
+      {
+        "_path": "site-packages/netaddr/fbsocket.py",
+        "path_type": "hardlink",
+        "sha256": "0d374f97acad0b86e11ccefe910d3c0991bcc2b6c45caeb17c50d0f9c54f3ef3",
+        "sha256_in_prefix": "0d374f97acad0b86e11ccefe910d3c0991bcc2b6c45caeb17c50d0f9c54f3ef3",
+        "size_in_bytes": 8252
+      },
+      {
+        "_path": "site-packages/netaddr/ip/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "1efa37aac3009f9e28b6208e0aa9ac00b147a4db4cf885e0e8bfe0b089373454",
+        "sha256_in_prefix": "1efa37aac3009f9e28b6208e0aa9ac00b147a4db4cf885e0e8bfe0b089373454",
+        "size_in_bytes": 66202
+      },
+      {
+        "_path": "site-packages/netaddr/ip/glob.py",
+        "path_type": "hardlink",
+        "sha256": "5cffe84b16e1bacf1049fc2467f2e8445ba6fb1b33aaa40301090f5a31b50fcf",
+        "sha256_in_prefix": "5cffe84b16e1bacf1049fc2467f2e8445ba6fb1b33aaa40301090f5a31b50fcf",
+        "size_in_bytes": 10471
+      },
+      {
+        "_path": "site-packages/netaddr/ip/iana.py",
+        "path_type": "hardlink",
+        "sha256": "deaa8a36e91f6703ae394c0325158e0668a285e8168f45c22d870a2aeb555a2c",
+        "sha256_in_prefix": "deaa8a36e91f6703ae394c0325158e0668a285e8168f45c22d870a2aeb555a2c",
+        "size_in_bytes": 13618
+      },
+      {
+        "_path": "site-packages/netaddr/ip/ipv4-address-space.xml",
+        "path_type": "hardlink",
+        "sha256": "8e7a4eff3ce2f80658c0125840356e2da44245f01cdab9d9a5c37b15a7b823a4",
+        "sha256_in_prefix": "8e7a4eff3ce2f80658c0125840356e2da44245f01cdab9d9a5c37b15a7b823a4",
+        "size_in_bytes": 76073
+      },
+      {
+        "_path": "site-packages/netaddr/ip/ipv6-address-space.xml",
+        "path_type": "hardlink",
+        "sha256": "5dcd085d1b7e49b5a9095e44981d013347d8de0b7d1b566a87708093032352cd",
+        "sha256_in_prefix": "5dcd085d1b7e49b5a9095e44981d013347d8de0b7d1b566a87708093032352cd",
+        "size_in_bytes": 8539
+      },
+      {
+        "_path": "site-packages/netaddr/ip/ipv6-unicast-address-assignments.xml",
+        "path_type": "hardlink",
+        "sha256": "c88414c1b9971b7448ec26ac0bfe738d9ee313fb9a87118d97293dd423e33fdc",
+        "sha256_in_prefix": "c88414c1b9971b7448ec26ac0bfe738d9ee313fb9a87118d97293dd423e33fdc",
+        "size_in_bytes": 15060
+      },
+      {
+        "_path": "site-packages/netaddr/ip/multicast-addresses.xml",
+        "path_type": "hardlink",
+        "sha256": "a1408f886c4fa60812cb6d76ffe9d55d5a9c2e1a440f4c46aff48ed89916be91",
+        "sha256_in_prefix": "a1408f886c4fa60812cb6d76ffe9d55d5a9c2e1a440f4c46aff48ed89916be91",
+        "size_in_bytes": 135464
+      },
+      {
+        "_path": "site-packages/netaddr/ip/nmap.py",
+        "path_type": "hardlink",
+        "sha256": "985c67cefe35c95ee34810dc25a99d780777b2b84b79e2e4571769fd14652ecf",
+        "sha256_in_prefix": "985c67cefe35c95ee34810dc25a99d780777b2b84b79e2e4571769fd14652ecf",
+        "size_in_bytes": 4063
+      },
+      {
+        "_path": "site-packages/netaddr/ip/rfc1924.py",
+        "path_type": "hardlink",
+        "sha256": "4b80234e194b3d8e9a511583a61fd0384bc916bf53b8f46dcda0171b0a7e0252",
+        "sha256_in_prefix": "4b80234e194b3d8e9a511583a61fd0384bc916bf53b8f46dcda0171b0a7e0252",
+        "size_in_bytes": 1747
+      },
+      {
+        "_path": "site-packages/netaddr/ip/sets.py",
+        "path_type": "hardlink",
+        "sha256": "fd4c788f9ce4485280a34e931d4eeecba2681c47a56380af32f596e464e3e071",
+        "sha256_in_prefix": "fd4c788f9ce4485280a34e931d4eeecba2681c47a56380af32f596e464e3e071",
+        "size_in_bytes": 26558
+      },
+      {
+        "_path": "site-packages/netaddr/strategy/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "90665ddff8bc90d28fca550172f67af57006a3d4eb9b3ef7ac1f3ce8d9d72c8f",
+        "sha256_in_prefix": "90665ddff8bc90d28fca550172f67af57006a3d4eb9b3ef7ac1f3ce8d9d72c8f",
+        "size_in_bytes": 7468
+      },
+      {
+        "_path": "site-packages/netaddr/strategy/eui48.py",
+        "path_type": "hardlink",
+        "sha256": "4bcf0695e6ab6f503d239230e0a4e50ef59916794ab129baa4897254d8784009",
+        "sha256_in_prefix": "4bcf0695e6ab6f503d239230e0a4e50ef59916794ab129baa4897254d8784009",
+        "size_in_bytes": 8630
+      },
+      {
+        "_path": "site-packages/netaddr/strategy/eui64.py",
+        "path_type": "hardlink",
+        "sha256": "e9abc7289569b61b348b84db882252cd50962052f93606a7f7674b68a0b39961",
+        "sha256_in_prefix": "e9abc7289569b61b348b84db882252cd50962052f93606a7f7674b68a0b39961",
+        "size_in_bytes": 7707
+      },
+      {
+        "_path": "site-packages/netaddr/strategy/ipv4.py",
+        "path_type": "hardlink",
+        "sha256": "ba412280f548d6805329830ef4fba6b86e2b6159f32eb72ad7d5128f493a865d",
+        "sha256_in_prefix": "ba412280f548d6805329830ef4fba6b86e2b6159f32eb72ad7d5128f493a865d",
+        "size_in_bytes": 8083
+      },
+      {
+        "_path": "site-packages/netaddr/strategy/ipv6.py",
+        "path_type": "hardlink",
+        "sha256": "6c01f6bfaa105d099fc13eecc074a40ef6b3a87d9663ba7e3bad2d97030eaf14",
+        "sha256_in_prefix": "6c01f6bfaa105d099fc13eecc074a40ef6b3a87d9663ba7e3bad2d97030eaf14",
+        "size_in_bytes": 7626
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/__pycache__/compat.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/contrib/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/contrib/__pycache__/subnet_splitter.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/__pycache__/core.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/eui/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/eui/__pycache__/ieee.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/__pycache__/fbsocket.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/ip/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/ip/__pycache__/glob.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/ip/__pycache__/iana.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/ip/__pycache__/nmap.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/ip/__pycache__/rfc1924.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/ip/__pycache__/sets.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/strategy/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/strategy/__pycache__/eui48.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/strategy/__pycache__/eui64.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/strategy/__pycache__/ipv4.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/netaddr/strategy/__pycache__/ipv6.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "netaddr==0.7.19=py_0",
+  "sha256": "d4f5c6a9e71851946c2e06c9441b1d4a203c7c27e2f78bcbd5be51ac130b8910",
+  "size": 1189517,
+  "subdir": "noarch",
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/netaddr-0.7.19-py_0.tar.bz2",
+  "version": "0.7.19"
+}

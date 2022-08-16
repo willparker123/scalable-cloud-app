@@ -1,0 +1,68 @@
+{
+  "build": "h8ffe710_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "vc >=14.1,<15",
+    "vs2015_runtime >=14.16.27033"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\libsqlite-3.39.2-h8ffe710_1",
+  "features": "",
+  "files": [
+    "Library/bin/sqlite3.dll",
+    "Library/include/sqlite3.h",
+    "Library/include/sqlite3ext.h",
+    "Library/lib/sqlite3.lib"
+  ],
+  "fn": "libsqlite-3.39.2-h8ffe710_1.tar.bz2",
+  "license": "Unlicense",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\libsqlite-3.39.2-h8ffe710_1",
+    "type": 1
+  },
+  "md5": "63c1f08b51aa383076140abdb10373e7",
+  "name": "libsqlite",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\libsqlite-3.39.2-h8ffe710_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Library/bin/sqlite3.dll",
+        "path_type": "hardlink",
+        "sha256": "873f4e1fdcc8e8aadd1e1c46f0d37aac4523de11ea25faaa25502dd19bb2e0bd",
+        "sha256_in_prefix": "873f4e1fdcc8e8aadd1e1c46f0d37aac4523de11ea25faaa25502dd19bb2e0bd",
+        "size_in_bytes": 1474048
+      },
+      {
+        "_path": "Library/include/sqlite3.h",
+        "path_type": "hardlink",
+        "sha256": "93cbf47cd0ac3e1837a040bd0778bd67e38d5014945a52fdc105ef003e17690e",
+        "sha256_in_prefix": "93cbf47cd0ac3e1837a040bd0778bd67e38d5014945a52fdc105ef003e17690e",
+        "size_in_bytes": 613551
+      },
+      {
+        "_path": "Library/include/sqlite3ext.h",
+        "path_type": "hardlink",
+        "sha256": "7f9ae3bab94bbc62d909fbb0149861b4a0832299f12d7ccbfecc7f28a8d27aa2",
+        "sha256_in_prefix": "7f9ae3bab94bbc62d909fbb0149861b4a0832299f12d7ccbfecc7f28a8d27aa2",
+        "size_in_bytes": 37310
+      },
+      {
+        "_path": "Library/lib/sqlite3.lib",
+        "path_type": "hardlink",
+        "sha256": "8f12910bd00635d55ffbe6c5a354176aa0f9d722c3732b462771add8c36a7020",
+        "sha256_in_prefix": "8f12910bd00635d55ffbe6c5a354176aa0f9d722c3732b462771add8c36a7020",
+        "size_in_bytes": 66522
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "libsqlite==3.39.2=h8ffe710_1",
+  "sha256": "77c1dfa5cb2e7f5312989b06ba372a60cdb7e0f6d8ebac5883f6d9e99433f1a0",
+  "size": 651799,
+  "subdir": "win-64",
+  "timestamp": 1660346796414,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/win-64/libsqlite-3.39.2-h8ffe710_1.tar.bz2",
+  "version": "3.39.2"
+}

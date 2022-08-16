@@ -1,0 +1,231 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [
+    "pysha3 >=1.0.0,<2.0.0",
+    "pycryptodome >=3.6.6,<4"
+  ],
+  "depends": [
+    "pycryptodome >=3.6.6,<4",
+    "python >=3.5,<4.0"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\eth-hash-0.5.0-pyhd8ed1ab_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/eth_hash-0.5.0.dist-info/INSTALLER",
+    "Lib/site-packages/eth_hash-0.5.0.dist-info/LICENSE",
+    "Lib/site-packages/eth_hash-0.5.0.dist-info/METADATA",
+    "Lib/site-packages/eth_hash-0.5.0.dist-info/RECORD",
+    "Lib/site-packages/eth_hash-0.5.0.dist-info/REQUESTED",
+    "Lib/site-packages/eth_hash-0.5.0.dist-info/WHEEL",
+    "Lib/site-packages/eth_hash-0.5.0.dist-info/direct_url.json",
+    "Lib/site-packages/eth_hash-0.5.0.dist-info/top_level.txt",
+    "Lib/site-packages/eth_hash/__init__.py",
+    "Lib/site-packages/eth_hash/abc.py",
+    "Lib/site-packages/eth_hash/auto.py",
+    "Lib/site-packages/eth_hash/backends/__init__.py",
+    "Lib/site-packages/eth_hash/backends/auto.py",
+    "Lib/site-packages/eth_hash/backends/pycryptodome.py",
+    "Lib/site-packages/eth_hash/backends/pysha3.py",
+    "Lib/site-packages/eth_hash/main.py",
+    "Lib/site-packages/eth_hash/py.typed",
+    "Lib/site-packages/eth_hash/utils.py",
+    "Lib/site-packages/eth_hash/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/eth_hash/__pycache__/abc.cpython-39.pyc",
+    "Lib/site-packages/eth_hash/__pycache__/auto.cpython-39.pyc",
+    "Lib/site-packages/eth_hash/backends/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/eth_hash/backends/__pycache__/auto.cpython-39.pyc",
+    "Lib/site-packages/eth_hash/backends/__pycache__/pycryptodome.cpython-39.pyc",
+    "Lib/site-packages/eth_hash/backends/__pycache__/pysha3.cpython-39.pyc",
+    "Lib/site-packages/eth_hash/__pycache__/main.cpython-39.pyc",
+    "Lib/site-packages/eth_hash/__pycache__/utils.cpython-39.pyc"
+  ],
+  "fn": "eth-hash-0.5.0-pyhd8ed1ab_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\eth-hash-0.5.0-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "592d3b2db5364373b86a0a4914159f43",
+  "name": "eth-hash",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\eth-hash-0.5.0-pyhd8ed1ab_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/eth_hash-0.5.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/eth_hash-0.5.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "dfdd23c17b8345e5da79379fd1e4fadc5ac52a88003158180545a5d681a4e1e7",
+        "sha256_in_prefix": "dfdd23c17b8345e5da79379fd1e4fadc5ac52a88003158180545a5d681a4e1e7",
+        "size_in_bytes": 1090
+      },
+      {
+        "_path": "site-packages/eth_hash-0.5.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "e5e217caaae6cf8eabb43fbd763b79c77c48e8c5f4c0b4dc27e436a85d819d21",
+        "sha256_in_prefix": "e5e217caaae6cf8eabb43fbd763b79c77c48e8c5f4c0b4dc27e436a85d819d21",
+        "size_in_bytes": 6583
+      },
+      {
+        "_path": "site-packages/eth_hash-0.5.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "23e46ac1c9e79f455b715766f6811f116be2a3023683b7f108a10de61ddcd551",
+        "sha256_in_prefix": "23e46ac1c9e79f455b715766f6811f116be2a3023683b7f108a10de61ddcd551",
+        "size_in_bytes": 1914
+      },
+      {
+        "_path": "site-packages/eth_hash-0.5.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/eth_hash-0.5.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "1b5e87e00dc87a84269cead8578b9e6462928e18a95f1f3373c9eef451a5bcc0",
+        "sha256_in_prefix": "1b5e87e00dc87a84269cead8578b9e6462928e18a95f1f3373c9eef451a5bcc0",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/eth_hash-0.5.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "5d92474249f95a8115c18d0dad5c7568fc5d03261c6474c382989786b49b2122",
+        "sha256_in_prefix": "5d92474249f95a8115c18d0dad5c7568fc5d03261c6474c382989786b49b2122",
+        "size_in_bytes": 104
+      },
+      {
+        "_path": "site-packages/eth_hash-0.5.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "6eaca4a1061a4d352a377cb5f9036d9730ba197127ea3d1073b6f6b18c7ed469",
+        "sha256_in_prefix": "6eaca4a1061a4d352a377cb5f9036d9730ba197127ea3d1073b6f6b18c7ed469",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "site-packages/eth_hash/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "87f736949d3b41b936052691ab544fb7bc73300ef6a7feec7cbf1b9b20b3c9c5",
+        "sha256_in_prefix": "87f736949d3b41b936052691ab544fb7bc73300ef6a7feec7cbf1b9b20b3c9c5",
+        "size_in_bytes": 51
+      },
+      {
+        "_path": "site-packages/eth_hash/abc.py",
+        "path_type": "hardlink",
+        "sha256": "aad05cf641abac1d582f237ff09bc42e1667a670f8684c47fa6725cbfa081d3c",
+        "sha256_in_prefix": "aad05cf641abac1d582f237ff09bc42e1667a670f8684c47fa6725cbfa081d3c",
+        "size_in_bytes": 629
+      },
+      {
+        "_path": "site-packages/eth_hash/auto.py",
+        "path_type": "hardlink",
+        "sha256": "78cbb00b9cf3e557ce4521c17f9db5af25fe538fa78661db588628a267580ae6",
+        "sha256_in_prefix": "78cbb00b9cf3e557ce4521c17f9db5af25fe538fa78661db588628a267580ae6",
+        "size_in_bytes": 136
+      },
+      {
+        "_path": "site-packages/eth_hash/backends/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0cc21107017437c19381d8cea2fd2e9c9b7c1886ea8fcf15ac4809328dbd1870",
+        "sha256_in_prefix": "0cc21107017437c19381d8cea2fd2e9c9b7c1886ea8fcf15ac4809328dbd1870",
+        "size_in_bytes": 352
+      },
+      {
+        "_path": "site-packages/eth_hash/backends/auto.py",
+        "path_type": "hardlink",
+        "sha256": "2648b7a1a77f75b5bf64c3fdf83c5c35265822f85cc6b8b71a92ac0cfda8cdb9",
+        "sha256_in_prefix": "2648b7a1a77f75b5bf64c3fdf83c5c35265822f85cc6b8b71a92ac0cfda8cdb9",
+        "size_in_bytes": 753
+      },
+      {
+        "_path": "site-packages/eth_hash/backends/pycryptodome.py",
+        "path_type": "hardlink",
+        "sha256": "7d33974743eb9c800a0a4dbce076c3e5920cc4d875a80fa774335358d8e9e881",
+        "sha256_in_prefix": "7d33974743eb9c800a0a4dbce076c3e5920cc4d875a80fa774335358d8e9e881",
+        "size_in_bytes": 1212
+      },
+      {
+        "_path": "site-packages/eth_hash/backends/pysha3.py",
+        "path_type": "hardlink",
+        "sha256": "943d1587ce18e73d0836c4079bce0183e40c574306aef1102596ba715af30369",
+        "sha256_in_prefix": "943d1587ce18e73d0836c4079bce0183e40c574306aef1102596ba715af30369",
+        "size_in_bytes": 960
+      },
+      {
+        "_path": "site-packages/eth_hash/main.py",
+        "path_type": "hardlink",
+        "sha256": "668984b904fd3b0828e6f1b472cf87137feee1164961a3495146f8cbe3342362",
+        "sha256_in_prefix": "668984b904fd3b0828e6f1b472cf87137feee1164961a3495146f8cbe3342362",
+        "size_in_bytes": 2018
+      },
+      {
+        "_path": "site-packages/eth_hash/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/eth_hash/utils.py",
+        "path_type": "hardlink",
+        "sha256": "230c37a9a9e63875d56808aad7554a6b603a9aa879ba51a698252e0e87df5d54",
+        "sha256_in_prefix": "230c37a9a9e63875d56808aad7554a6b603a9aa879ba51a698252e0e87df5d54",
+        "size_in_bytes": 2293
+      },
+      {
+        "_path": "Lib/site-packages/eth_hash/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_hash/__pycache__/abc.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_hash/__pycache__/auto.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_hash/backends/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_hash/backends/__pycache__/auto.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_hash/backends/__pycache__/pycryptodome.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_hash/backends/__pycache__/pysha3.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_hash/__pycache__/main.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_hash/__pycache__/utils.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "f5a54bd35f3ce016adfa5e8511a40a87e268552ec8b6ed04a1440470119f5b5f",
+  "size": 12459,
+  "subdir": "noarch",
+  "timestamp": 1658828999025,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/eth-hash-0.5.0-pyhd8ed1ab_0.tar.bz2",
+  "version": "0.5.0"
+}

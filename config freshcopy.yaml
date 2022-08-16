@@ -3,9 +3,6 @@ aws_azs:
 - eu-west-2
 hosts:
   1.2.3.4: 5.6.7.8
-cassandra_max_nodes: 5
-cassandra_min_nodes: 3
-cassandra_pref_nodes: 3
 flask_max_nodes: 3
 flask_min_nodes: 2
 flask_pref_nodes: 3
@@ -21,9 +18,9 @@ kubernetes_worker_pref_nodes: 3
 mongodb_max_nodes: 3
 mongodb_min_nodes: 3
 mongodb_pref_nodes: 3
-sca_user: root
 spark_max_nodes: 5
 spark_min_nodes: 2
 spark_pref_nodes: 3
+sca_user: root
 ssh_path: ~/.ssh/educate-us-east1.pem
 vm_user: ec2-user

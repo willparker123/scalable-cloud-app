@@ -1,0 +1,118 @@
+{
+  "build": "py39hcbf5309_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0",
+    "python_abi 3.9.* *_cp39",
+    "six >=1.13.0"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\pathlib2-2.3.7.post1-py39hcbf5309_1",
+  "features": "",
+  "files": [
+    "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/INSTALLER",
+    "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/LICENSE.rst",
+    "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/METADATA",
+    "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/RECORD",
+    "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/REQUESTED",
+    "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/WHEEL",
+    "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/direct_url.json",
+    "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/top_level.txt",
+    "Lib/site-packages/pathlib2/__init__.py",
+    "Lib/site-packages/pathlib2/__pycache__/__init__.cpython-39.pyc"
+  ],
+  "fn": "pathlib2-2.3.7.post1-py39hcbf5309_1.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\pathlib2-2.3.7.post1-py39hcbf5309_1",
+    "type": 1
+  },
+  "md5": "5d28bc3940d87727f2633c0df10b77d8",
+  "name": "pathlib2",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\pathlib2-2.3.7.post1-py39hcbf5309_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/LICENSE.rst",
+        "path_type": "hardlink",
+        "sha256": "861f813004a151ac77024ad445794653809ddf8a7572aee7bab18d11df2ba1c6",
+        "sha256_in_prefix": "861f813004a151ac77024ad445794653809ddf8a7572aee7bab18d11df2ba1c6",
+        "size_in_bytes": 1175
+      },
+      {
+        "_path": "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "133ca17b3de4c91cbac00bc259874a664c126cf399a9fc812532dd424260473a",
+        "sha256_in_prefix": "133ca17b3de4c91cbac00bc259874a664c126cf399a9fc812532dd424260473a",
+        "size_in_bytes": 3392
+      },
+      {
+        "_path": "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "f8cd6fe2a8e4087a0deb56db80223e9b532a674830864b51c05a2bc240339dc8",
+        "sha256_in_prefix": "f8cd6fe2a8e4087a0deb56db80223e9b532a674830864b51c05a2bc240339dc8",
+        "size_in_bytes": 849
+      },
+      {
+        "_path": "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "cfd8f4c406bf26650a3299b3ef62b464600b48cfe7fb04159866e5797c765478",
+        "sha256_in_prefix": "cfd8f4c406bf26650a3299b3ef62b464600b48cfe7fb04159866e5797c765478",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "fde8ce0ad902ee63ff353d9eb12514f7a6d911fa28594a4436cd9093fb2d09d3",
+        "sha256_in_prefix": "fde8ce0ad902ee63ff353d9eb12514f7a6d911fa28594a4436cd9093fb2d09d3",
+        "size_in_bytes": 69
+      },
+      {
+        "_path": "Lib/site-packages/pathlib2-2.3.7.post1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "b4d3e48ac16218116c3d49c220783adaf485964c7fd4d3bce8877c95b2667c54",
+        "sha256_in_prefix": "b4d3e48ac16218116c3d49c220783adaf485964c7fd4d3bce8877c95b2667c54",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "Lib/site-packages/pathlib2/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e4d77a41ce5f238da75f49e925523ee4dc27d652a59aa071c874288ffc290903",
+        "sha256_in_prefix": "e4d77a41ce5f238da75f49e925523ee4dc27d652a59aa071c874288ffc290903",
+        "size_in_bytes": 63938
+      },
+      {
+        "_path": "Lib/site-packages/pathlib2/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "ec244a26cb8ed963fcda366c0d57b8ce0111ad570183fa5a32b3665e1391db8e",
+        "sha256_in_prefix": "ec244a26cb8ed963fcda366c0d57b8ce0111ad570183fa5a32b3665e1391db8e",
+        "size_in_bytes": 50452
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pathlib2==2.3.7.post1=py39hcbf5309_1",
+  "sha256": "a430e85dd902605d05269bd1d134c608120c94528beb6a24d0e730f9548c9522",
+  "size": 37721,
+  "subdir": "win-64",
+  "timestamp": 1649684384142,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/win-64/pathlib2-2.3.7.post1-py39hcbf5309_1.tar.bz2",
+  "version": "2.3.7.post1"
+}

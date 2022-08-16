@@ -1,0 +1,111 @@
+{
+  "build": "py39hb82d6ee_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0",
+    "python_abi 3.9.* *_cp39",
+    "vc >=14.1,<15",
+    "vs2015_runtime >=14.16.27033"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\lru-dict-1.1.8-py39hb82d6ee_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/lru.cp39-win_amd64.pyd",
+    "Lib/site-packages/lru_dict-1.1.8.dist-info/INSTALLER",
+    "Lib/site-packages/lru_dict-1.1.8.dist-info/LICENSE",
+    "Lib/site-packages/lru_dict-1.1.8.dist-info/METADATA",
+    "Lib/site-packages/lru_dict-1.1.8.dist-info/RECORD",
+    "Lib/site-packages/lru_dict-1.1.8.dist-info/REQUESTED",
+    "Lib/site-packages/lru_dict-1.1.8.dist-info/WHEEL",
+    "Lib/site-packages/lru_dict-1.1.8.dist-info/direct_url.json",
+    "Lib/site-packages/lru_dict-1.1.8.dist-info/top_level.txt"
+  ],
+  "fn": "lru-dict-1.1.8-py39hb82d6ee_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\lru-dict-1.1.8-py39hb82d6ee_0",
+    "type": 1
+  },
+  "md5": "265580b1b982f14fe32a39e9ef4b4ed8",
+  "name": "lru-dict",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\lru-dict-1.1.8-py39hb82d6ee_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Lib/site-packages/lru.cp39-win_amd64.pyd",
+        "path_type": "hardlink",
+        "sha256": "4c7927a5abe0cfccd67ffea0629a1505f866f8988e48540c7e76d6fa07720ba5",
+        "sha256_in_prefix": "4c7927a5abe0cfccd67ffea0629a1505f866f8988e48540c7e76d6fa07720ba5",
+        "size_in_bytes": 20480
+      },
+      {
+        "_path": "Lib/site-packages/lru_dict-1.1.8.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "Lib/site-packages/lru_dict-1.1.8.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "196a34fbb4dd3cd33542107ce97bd1c903bbdb3cf307f7c94e71aa7acbb2b988",
+        "sha256_in_prefix": "196a34fbb4dd3cd33542107ce97bd1c903bbdb3cf307f7c94e71aa7acbb2b988",
+        "size_in_bytes": 1057
+      },
+      {
+        "_path": "Lib/site-packages/lru_dict-1.1.8.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "2c630f13e1f04420835d82def1f9ce62a4c5412f19c33167625429629793ea78",
+        "sha256_in_prefix": "2c630f13e1f04420835d82def1f9ce62a4c5412f19c33167625429629793ea78",
+        "size_in_bytes": 4638
+      },
+      {
+        "_path": "Lib/site-packages/lru_dict-1.1.8.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "2fbb8ae287c9a7b7676802ceb398e525a23e58ef4922129a478100405bf6f1c9",
+        "sha256_in_prefix": "2fbb8ae287c9a7b7676802ceb398e525a23e58ef4922129a478100405bf6f1c9",
+        "size_in_bytes": 751
+      },
+      {
+        "_path": "Lib/site-packages/lru_dict-1.1.8.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "Lib/site-packages/lru_dict-1.1.8.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "7d571594bce2f021a2fd497cbe331d9fc804476e5d9f918183d13a93dcf8d7e6",
+        "sha256_in_prefix": "7d571594bce2f021a2fd497cbe331d9fc804476e5d9f918183d13a93dcf8d7e6",
+        "size_in_bytes": 100
+      },
+      {
+        "_path": "Lib/site-packages/lru_dict-1.1.8.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "321f8adbbc5ec6410a663b5f0033986fd8a0cd2474c0672e919bc88a30364774",
+        "sha256_in_prefix": "321f8adbbc5ec6410a663b5f0033986fd8a0cd2474c0672e919bc88a30364774",
+        "size_in_bytes": 69
+      },
+      {
+        "_path": "Lib/site-packages/lru_dict-1.1.8.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "3883d28fbd0c753f4c73b65e3e8492ede7a37b9e50bbed38ce0a69f96b3be6ce",
+        "sha256_in_prefix": "3883d28fbd0c753f4c73b65e3e8492ede7a37b9e50bbed38ce0a69f96b3be6ce",
+        "size_in_bytes": 4
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "lru-dict==1.1.8=py39hb82d6ee_0",
+  "sha256": "c77f29b518d08d571f8e12db9e3f409d4e188671a22d50cb36e2448e6e9d69f4",
+  "size": 17995,
+  "subdir": "win-64",
+  "timestamp": 1657723324587,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/win-64/lru-dict-1.1.8-py39hb82d6ee_0.tar.bz2",
+  "version": "1.1.8"
+}

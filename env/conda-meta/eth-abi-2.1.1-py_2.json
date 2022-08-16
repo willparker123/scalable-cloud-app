@@ -1,0 +1,326 @@
+{
+  "build": "py_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "eth-typing >=2.0.0,<3.0.0",
+    "eth-utils >=1.2.0,<2.0.0",
+    "parsimonious >=0.8.0,<0.9.0",
+    "python >=3.6,<4.0"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\eth-abi-2.1.1-py_2",
+  "features": "",
+  "files": [
+    "Lib/site-packages/eth_abi-2.1.1.dist-info/INSTALLER",
+    "Lib/site-packages/eth_abi-2.1.1.dist-info/LICENSE",
+    "Lib/site-packages/eth_abi-2.1.1.dist-info/METADATA",
+    "Lib/site-packages/eth_abi-2.1.1.dist-info/RECORD",
+    "Lib/site-packages/eth_abi-2.1.1.dist-info/REQUESTED",
+    "Lib/site-packages/eth_abi-2.1.1.dist-info/WHEEL",
+    "Lib/site-packages/eth_abi-2.1.1.dist-info/direct_url.json",
+    "Lib/site-packages/eth_abi-2.1.1.dist-info/top_level.txt",
+    "Lib/site-packages/eth_abi/__init__.py",
+    "Lib/site-packages/eth_abi/abi.py",
+    "Lib/site-packages/eth_abi/base.py",
+    "Lib/site-packages/eth_abi/codec.py",
+    "Lib/site-packages/eth_abi/constants.py",
+    "Lib/site-packages/eth_abi/decoding.py",
+    "Lib/site-packages/eth_abi/encoding.py",
+    "Lib/site-packages/eth_abi/exceptions.py",
+    "Lib/site-packages/eth_abi/grammar.py",
+    "Lib/site-packages/eth_abi/packed.py",
+    "Lib/site-packages/eth_abi/registry.py",
+    "Lib/site-packages/eth_abi/tools/__init__.py",
+    "Lib/site-packages/eth_abi/tools/_strategies.py",
+    "Lib/site-packages/eth_abi/utils/__init__.py",
+    "Lib/site-packages/eth_abi/utils/numeric.py",
+    "Lib/site-packages/eth_abi/utils/padding.py",
+    "Lib/site-packages/eth_abi/utils/string.py",
+    "Lib/site-packages/eth_abi/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/__pycache__/abi.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/__pycache__/base.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/__pycache__/codec.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/__pycache__/constants.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/__pycache__/decoding.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/__pycache__/encoding.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/__pycache__/exceptions.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/__pycache__/grammar.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/__pycache__/packed.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/__pycache__/registry.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/tools/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/tools/__pycache__/_strategies.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/utils/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/utils/__pycache__/numeric.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/utils/__pycache__/padding.cpython-39.pyc",
+    "Lib/site-packages/eth_abi/utils/__pycache__/string.cpython-39.pyc"
+  ],
+  "fn": "eth-abi-2.1.1-py_2.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\eth-abi-2.1.1-py_2",
+    "type": 1
+  },
+  "md5": "ffae07892e023d611c4879646ca21418",
+  "name": "eth-abi",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\eth-abi-2.1.1-py_2.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/eth_abi-2.1.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/eth_abi-2.1.1.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "70cdfa625e0475fc8a8e4eb237a9a8dfd1b75c062eb9c28d8e3c287a1ead2ae2",
+        "sha256_in_prefix": "70cdfa625e0475fc8a8e4eb237a9a8dfd1b75c062eb9c28d8e3c287a1ead2ae2",
+        "size_in_bytes": 1090
+      },
+      {
+        "_path": "site-packages/eth_abi-2.1.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "12a02c9e6f0f56ae836b1f84714b485982e57a47f10dc1f698a5706653db5ad5",
+        "sha256_in_prefix": "12a02c9e6f0f56ae836b1f84714b485982e57a47f10dc1f698a5706653db5ad5",
+        "size_in_bytes": 5729
+      },
+      {
+        "_path": "site-packages/eth_abi-2.1.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "0f863d32cc3625cb8ed9126b5e5a34216c8017dd7439a64f2cac15f41ab2e0e3",
+        "sha256_in_prefix": "0f863d32cc3625cb8ed9126b5e5a34216c8017dd7439a64f2cac15f41ab2e0e3",
+        "size_in_bytes": 2808
+      },
+      {
+        "_path": "site-packages/eth_abi-2.1.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/eth_abi-2.1.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "11546323af45e6a5639bf620a9c4d73e74c0bf705f494af4595007b923f75e8a",
+        "sha256_in_prefix": "11546323af45e6a5639bf620a9c4d73e74c0bf705f494af4595007b923f75e8a",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/eth_abi-2.1.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "6469bd57bae09fb7df5320653b8f9e86c509cbff75d3278b5a0c35a136063762",
+        "sha256_in_prefix": "6469bd57bae09fb7df5320653b8f9e86c509cbff75d3278b5a0c35a136063762",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "site-packages/eth_abi-2.1.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "062f4b83bff6a9cabb68fd212a52bace7da7a5f1f2f0ba0b73ad08fd34d6cac2",
+        "sha256_in_prefix": "062f4b83bff6a9cabb68fd212a52bace7da7a5f1f2f0ba0b73ad08fd34d6cac2",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "site-packages/eth_abi/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "17395058f9abf706d052a7915d27de486259abfbbe327e4271606aa46048d3af",
+        "sha256_in_prefix": "17395058f9abf706d052a7915d27de486259abfbbe327e4271606aa46048d3af",
+        "size_in_bytes": 234
+      },
+      {
+        "_path": "site-packages/eth_abi/abi.py",
+        "path_type": "hardlink",
+        "sha256": "0adbaa05ab63309f17c580574c0f3a1cde17a824a617f77488b1f411f7c0d777",
+        "sha256_in_prefix": "0adbaa05ab63309f17c580574c0f3a1cde17a824a617f77488b1f411f7c0d777",
+        "size_in_bytes": 386
+      },
+      {
+        "_path": "site-packages/eth_abi/base.py",
+        "path_type": "hardlink",
+        "sha256": "8c0621fbdf931901e80553f64cfecc000d3157eea1579c8cccf7562bce42a349",
+        "sha256_in_prefix": "8c0621fbdf931901e80553f64cfecc000d3157eea1579c8cccf7562bce42a349",
+        "size_in_bytes": 4846
+      },
+      {
+        "_path": "site-packages/eth_abi/codec.py",
+        "path_type": "hardlink",
+        "sha256": "460ee371c55197f181d12918ebb7ec66916ec6c66481acb156f050ca08c950e6",
+        "sha256_in_prefix": "460ee371c55197f181d12918ebb7ec66916ec6c66481acb156f050ca08c950e6",
+        "size_in_bytes": 5793
+      },
+      {
+        "_path": "site-packages/eth_abi/constants.py",
+        "path_type": "hardlink",
+        "sha256": "0b1526401bc419d8e5300399494e6f8446ddbbf38e30ed6b54f3a0a111c43e9f",
+        "sha256_in_prefix": "0b1526401bc419d8e5300399494e6f8446ddbbf38e30ed6b54f3a0a111c43e9f",
+        "size_in_bytes": 57
+      },
+      {
+        "_path": "site-packages/eth_abi/decoding.py",
+        "path_type": "hardlink",
+        "sha256": "0f3c1b06e4d7b38c324ae7777f9be64dfcf5570d2f845ff67c2cf042a8796802",
+        "sha256_in_prefix": "0f3c1b06e4d7b38c324ae7777f9be64dfcf5570d2f845ff67c2cf042a8796802",
+        "size_in_bytes": 16855
+      },
+      {
+        "_path": "site-packages/eth_abi/encoding.py",
+        "path_type": "hardlink",
+        "sha256": "6b83a8454c9da219f34585a092ae6819004e871e219b6ebd08f4e388fd501570",
+        "sha256_in_prefix": "6b83a8454c9da219f34585a092ae6819004e871e219b6ebd08f4e388fd501570",
+        "size_in_bytes": 20275
+      },
+      {
+        "_path": "site-packages/eth_abi/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "3fed126c1bb20fbdcfb64266b5f2a8bc390aa8f0f944143dc9a10dd9de05234a",
+        "sha256_in_prefix": "3fed126c1bb20fbdcfb64266b5f2a8bc390aa8f0f944143dc9a10dd9de05234a",
+        "size_in_bytes": 2911
+      },
+      {
+        "_path": "site-packages/eth_abi/grammar.py",
+        "path_type": "hardlink",
+        "sha256": "bdd7021e6156538a30924c142235924565b8a567cfbc924201038e1c95bb9cc7",
+        "sha256_in_prefix": "bdd7021e6156538a30924c142235924565b8a567cfbc924201038e1c95bb9cc7",
+        "size_in_bytes": 12172
+      },
+      {
+        "_path": "site-packages/eth_abi/packed.py",
+        "path_type": "hardlink",
+        "sha256": "faae1a21011239f02d9370bcec79ff2cbb13cfdf2866d68536bb4747ee15f2ac",
+        "sha256_in_prefix": "faae1a21011239f02d9370bcec79ff2cbb13cfdf2866d68536bb4747ee15f2ac",
+        "size_in_bytes": 313
+      },
+      {
+        "_path": "site-packages/eth_abi/registry.py",
+        "path_type": "hardlink",
+        "sha256": "0cce7c290eb6900ecf1e97b5e6b0126a7967ef83ad15f3d25dbb50b182a1e4ce",
+        "sha256_in_prefix": "0cce7c290eb6900ecf1e97b5e6b0126a7967ef83ad15f3d25dbb50b182a1e4ce",
+        "size_in_bytes": 19030
+      },
+      {
+        "_path": "site-packages/eth_abi/tools/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ab2c58f366d3d0733c9bd6eaa68d0830563fcb838cf42d180388140029d45908",
+        "sha256_in_prefix": "ab2c58f366d3d0733c9bd6eaa68d0830563fcb838cf42d180388140029d45908",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "site-packages/eth_abi/tools/_strategies.py",
+        "path_type": "hardlink",
+        "sha256": "9b71ec0e4912fb3917ddd3ae08a1a969f5f8b0720b2fa99f43f4506f70431767",
+        "sha256_in_prefix": "9b71ec0e4912fb3917ddd3ae08a1a969f5f8b0720b2fa99f43f4506f70431767",
+        "size_in_bytes": 5783
+      },
+      {
+        "_path": "site-packages/eth_abi/utils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/eth_abi/utils/numeric.py",
+        "path_type": "hardlink",
+        "sha256": "aa118fb018946369290d4eb9619904e1f2f077925dd4bd18bd4234a954ec524f",
+        "sha256_in_prefix": "aa118fb018946369290d4eb9619904e1f2f077925dd4bd18bd4234a954ec524f",
+        "size_in_bytes": 2089
+      },
+      {
+        "_path": "site-packages/eth_abi/utils/padding.py",
+        "path_type": "hardlink",
+        "sha256": "7deb452bd584ab957709b8574723946520c566cf2c7c0700a3f15490c3b0d8dc",
+        "sha256_in_prefix": "7deb452bd584ab957709b8574723946520c566cf2c7c0700a3f15490c3b0d8dc",
+        "size_in_bytes": 427
+      },
+      {
+        "_path": "site-packages/eth_abi/utils/string.py",
+        "path_type": "hardlink",
+        "sha256": "ef6e00379e61e36be55d66dcc37b839a4b79ab083acd185fdce740e6a69aef46",
+        "sha256_in_prefix": "ef6e00379e61e36be55d66dcc37b839a4b79ab083acd185fdce740e6a69aef46",
+        "size_in_bytes": 433
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/__pycache__/abi.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/__pycache__/base.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/__pycache__/codec.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/__pycache__/constants.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/__pycache__/decoding.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/__pycache__/encoding.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/__pycache__/exceptions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/__pycache__/grammar.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/__pycache__/packed.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/__pycache__/registry.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/tools/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/tools/__pycache__/_strategies.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/utils/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/utils/__pycache__/numeric.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/utils/__pycache__/padding.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_abi/utils/__pycache__/string.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "eth-abi==2.1.1=py_2",
+  "sha256": "c18ad6e7ca0303ab9c1542f2e675232de3cffd27a6866ac95adaa0d935c4899a",
+  "size": 26050,
+  "subdir": "noarch",
+  "timestamp": 1603548000640,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/eth-abi-2.1.1-py_2.tar.bz2",
+  "version": "2.1.1"
+}

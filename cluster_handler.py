@@ -3,20 +3,25 @@ import os
 import logging
 import time
 import sys
-from instance_handler import terminate_instances, get_join_token, create_instance_autoscaling_group, valid_instance_group_nodetypes
+from instance_handler import terminate_instances, prepare_master, create_instance_autoscaling_group, valid_instance_group_nodetypes
 from kubernetes_interaction import Kubernetes_Interaction
 from dotenv import load_dotenv, dotenv_values
 from fabric import Connection
+from fabric.api import *
 from helpers import fixpath
 import invoke
 
 class Cluster(object):
-    def __init__(self, config_path='config.yaml', logger=None, config_env=None, user=None):
+    def __init__(self, config_path='config.yml', aws_pem_path='aws_key.pem', logger=None, config_env=None, user=None):
         self.config_path = config_path
         self.config = self.load_config(config_path)
         self.hosts = self.load_hosts(config_path)
         self.context = invoke.context.Context()
         self.valid_instance_group_nodetypes = valid_instance_group_nodetypes
+        if aws_pem_path.endswith(".pem"):
+            self.aws_pem_path = aws_pem_path
+        else:
+            raise ValueError("Error: pem_path must be a valid public key - must end in the '.pem' extension")
         load_dotenv()
         l = None
         if logger is not None:
@@ -70,22 +75,22 @@ class Cluster(object):
         if fs:
             #GET NEW HOSTS IN AWS ASG
             self.config["hosts"] = {}
-            with open("config.yaml", 'w') as f:
+            with open("config.yml", 'w') as f:
                 try:
                     yaml.dump(self.config, f, default_flow_style=False)
                 except yaml.YAMLError as exception:
                     self.logger.warning(exception)
-                    raise ValueError("Error: could not open 'config.yaml'")
+                    raise ValueError("Error: could not open 'config.yml'")
             updated_hosts, ids, pubips, privips = create_instance_autoscaling_group(self.context, self.config, self.config_env, self.logger, instance_name=aws_instancename, instance_nodetype=instance_nodetype, instance_type=aws_instancetype, 
                                                                 group_name=aws_instancename, template_name=template_name, image_id=aws_image_id, az_region=aws_az_region, securitygroup=securitygroup)
             for uh in updated_hosts:
                 self.config["hosts"][uh[0]] = uh[1]
-            with open("config.yaml", 'w') as f:
+            with open("config.yml", 'w') as f:
                 try:
                     yaml.dump(self.config, f, default_flow_style=False)
                 except yaml.YAMLError as exception:
                     self.logger.warning(exception)
-                    raise ValueError("Error: could not open 'config.yaml'")
+                    raise ValueError("Error: could not open 'config.yml'")
             if ids is None and updated_hosts is None and pubips is None and privips is None:
                 raise ValueError("Error: get_new_hosts failed on create_instance_autoscaling_group")
             aws_asg = [{'id': ids[i], 'host': (pubips[i], privips[i])} for i in range(len(ids))]
@@ -133,8 +138,20 @@ class Cluster(object):
         creds = new_hosts[0]
         user, host = creds[0], creds[1]
         self.logger.info(f"Trying connection to {user}@{host}...")
+        
+        #########################
+        # AUTHENTICATION USING PUBLICKEY
+        #########################
+        HOME = os.getcwd()
+        pem_path = self.aws_pem_path
+
+        env.user = user
+        env.hosts = [host] #can add multiple instances
+        env.key_filename = [f'{HOME}/{pem_path}'] #assuming keypair file is located in HOME
+
         con = Connection(f"{user}@{host}")
-        token = get_join_token(con, self.logger)
+        
+        token = prepare_master(self.logger)
         interaction = Kubernetes_Interaction(token)
         podsList = interaction.list_pods()
         self.logger.info(podsList)

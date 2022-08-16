@@ -2,7 +2,7 @@ import fabric
 import jinja2
 import yaml
 
-with open('config.yaml') as f:
+with open('config.yml') as f:
     config = yaml.load(f, Loader=yaml.SafeLoader)
 
 hosts = [(h[0], h[1]) for h in config["hosts"].items()]

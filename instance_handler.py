@@ -183,7 +183,7 @@ class CreateInstanceEC2(object):
             raise ValueError(f"Error: type '{instance_type}' is not a valid instance group type: {valid_instance_group_types}")
         if instance_nodetype not in valid_instance_group_nodetypes:
             raise ValueError(f"Error: type '{instance_nodetype}' is not a valid instance group type: {valid_instance_group_nodetypes}")
-        with open("config.yaml") as f:
+        with open("config.yml") as f:
             try:
                 config_ = yaml.load(f, Loader=yaml.SafeLoader)
                 maxsize = config_[f'{instance_nodetype}_max_nodes']
@@ -246,13 +246,13 @@ class CreateInstanceEC2(object):
                 config_['hosts'][pubip] = privip
             hosts = config_['hosts'].items()
             logger.info(f"Created {len(instances)} Instances; {hosts}") #maybe
-            with open("config.yaml", 'w') as f:
+            with open("config.yml", 'w') as f:
                 try:
                     yaml.dump(config_, f, default_flow_style=False)
                 except yaml.YAMLError as exception:
                     logger.warning(exception)
-                    raise ValueError("Error: could not open 'config.yaml'")
-            logger.info(f"---- Added Auto Scaling Group to config.yaml for K8S : COMPLETED ----")
+                    raise ValueError("Error: could not open 'config.yml'")
+            logger.info(f"---- Added Auto Scaling Group to config.yml for K8S : COMPLETED ----")
             return hosts, ids, pubips, privips
         else:
             logger.info("---- Creation of Auto Scaling Group using Launch Templates : FAILED ----")
@@ -378,50 +378,25 @@ def get_nodes(c, con):
     con.sudo("kubectl get nodes")
 
 @task
-def install_docker(c, con, logger):
+def install_docker(c, logger):
     logger.info(f"Installing Docker on {c.host}")
-    con.sudo("yum update && yum install -y docker")
-    con.run("docker --version")
-    con.sudo("systemctl enable docker.service")
-    con.sudo("systemctl enable docker")
-    con.sudo("usermod -aG docker ec2-user")
-    con.sudo("yum install -y nc")
+    c.sudo("yum update && yum install -y docker")
+    c.run("docker --version")
+    c.sudo("systemctl enable docker.service")
+    c.sudo("systemctl enable docker")
+    c.sudo("usermod -aG docker ec2-user")
+    c.sudo("yum install -y nc")
 
 @task
-def install_kubernetes(c, con, logger):
+def install_kubernetes(c, logger):
     logger.info(f"Installing Kubernetes on {c.host}")
-    con.sudo("apt-get update")
-    con.sudo("apt-get install -y apt-transport-https ca-certificates curl")
-    con.sudo("curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg")
-    con.run('echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list')
-    con.sudo("apt-get update")
-    con.sudo("apt-get install -y kubelet kubeadm kubectl")
-    con.sudo("apt-mark hold kubelet kubeadm kubectl")
-
-@task
-def configure_k8s_master(c, con):
-    con.sudo("kubeadm init")
-    con.sudo("mkdir -p $HOME/.kube")
-    con.sudo("cp -i /etc/kubernetes/admin.conf $HOME/.kube/config")
-    con.sudo("chown $(id -u):$(id -g) $HOME/.kube/config")
-    con.sudo("kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml")
-
-@task
-def prepare_instances(c):
-    install_docker(c)
-    #disable_selinux_swap(conn)
-    install_kubernetes(c)
-
-@task
-def prepare_masters(c):
-    configure_k8s_master(c)
-    get_join_token(c)
-
-@task
-def prepare_slaves(c):
-    with open("join_command.txt") as f:
-        command = f.readline()
-        c.sudo(f"{command}")
+    c.sudo("apt-get update")
+    c.sudo("apt-get install -y apt-transport-https ca-certificates curl")
+    c.sudo("curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg")
+    c.run('echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list')
+    c.sudo("apt-get update")
+    c.sudo("apt-get install -y kubelet kubeadm kubectl")
+    c.sudo("apt-mark hold kubelet kubeadm kubectl")
 
 @task
 def configure_k8s_master(c):
@@ -432,6 +407,25 @@ def configure_k8s_master(c):
     c.sudo("kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml")
 
 @task
+def prepare_instances(c):
+    install_docker(c)
+    #disable_selinux_swap(conn)
+    install_kubernetes(c)
+
+@task
+def prepare_master(c, logger):
+    install_kubernetes(c, logger)
+    configure_k8s_master(c)
+    token = get_join_token(c)
+    return token
+
+@task
+def prepare_slaves(c):
+    with open("join_command.txt") as f:
+        command = f.readline()
+        c.sudo(f"{command}")
+
+@task
 def get_join_token(c, logger):
     command_create_token = c.sudo("kubeadm token create --print-join-command")
     token = re.findall("^kubeadm.*$", str(command_create_token), re.MULTILINE)[0]
@@ -439,3 +433,4 @@ def get_join_token(c, logger):
     with open("join_command.txt", "w") as f:
         with redirect_stdout(f):
             logger.info(token)
+    return token

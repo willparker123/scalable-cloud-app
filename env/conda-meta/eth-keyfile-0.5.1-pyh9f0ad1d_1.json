@@ -1,0 +1,132 @@
+{
+  "build": "pyh9f0ad1d_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "cytoolz >=0.9.0,<1.0.0",
+    "eth-keys >=0.1.0-beta.4,<1.0.0",
+    "eth-utils >=1.0.0-beta.1,<2.0.0",
+    "pycryptodome >=3.4.7,<4.0.0",
+    "python"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\eth-keyfile-0.5.1-pyh9f0ad1d_1",
+  "features": "",
+  "files": [
+    "Lib/site-packages/eth_keyfile-0.5.1.dist-info/INSTALLER",
+    "Lib/site-packages/eth_keyfile-0.5.1.dist-info/LICENSE",
+    "Lib/site-packages/eth_keyfile-0.5.1.dist-info/METADATA",
+    "Lib/site-packages/eth_keyfile-0.5.1.dist-info/RECORD",
+    "Lib/site-packages/eth_keyfile-0.5.1.dist-info/REQUESTED",
+    "Lib/site-packages/eth_keyfile-0.5.1.dist-info/WHEEL",
+    "Lib/site-packages/eth_keyfile-0.5.1.dist-info/direct_url.json",
+    "Lib/site-packages/eth_keyfile-0.5.1.dist-info/top_level.txt",
+    "Lib/site-packages/eth_keyfile/__init__.py",
+    "Lib/site-packages/eth_keyfile/keyfile.py",
+    "Lib/site-packages/eth_keyfile/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/eth_keyfile/__pycache__/keyfile.cpython-39.pyc"
+  ],
+  "fn": "eth-keyfile-0.5.1-pyh9f0ad1d_1.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\eth-keyfile-0.5.1-pyh9f0ad1d_1",
+    "type": 1
+  },
+  "md5": "46f729433b739063ad52675c31a6e663",
+  "name": "eth-keyfile",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\eth-keyfile-0.5.1-pyh9f0ad1d_1.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/eth_keyfile-0.5.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/eth_keyfile-0.5.1.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "3280906de5389296eb9cbf17e7222c4b4ff61eb08a10324899427f6639537e8d",
+        "sha256_in_prefix": "3280906de5389296eb9cbf17e7222c4b4ff61eb08a10324899427f6639537e8d",
+        "size_in_bytes": 1080
+      },
+      {
+        "_path": "site-packages/eth_keyfile-0.5.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "49edb534ed53724abc0d44d03c399db474db7ae668823d536f3262b408210a57",
+        "sha256_in_prefix": "49edb534ed53724abc0d44d03c399db474db7ae668823d536f3262b408210a57",
+        "size_in_bytes": 7191
+      },
+      {
+        "_path": "site-packages/eth_keyfile-0.5.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "4d8c621f207f5bfa1ab3d8f81b5645c7dc3ee9ed3ff1ab7ebff4c156468b1e0a",
+        "sha256_in_prefix": "4d8c621f207f5bfa1ab3d8f81b5645c7dc3ee9ed3ff1ab7ebff4c156468b1e0a",
+        "size_in_bytes": 956
+      },
+      {
+        "_path": "site-packages/eth_keyfile-0.5.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/eth_keyfile-0.5.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "11546323af45e6a5639bf620a9c4d73e74c0bf705f494af4595007b923f75e8a",
+        "sha256_in_prefix": "11546323af45e6a5639bf620a9c4d73e74c0bf705f494af4595007b923f75e8a",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/eth_keyfile-0.5.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "614584be1aa02a5229df379a1bc35937b8b39aae787795f2f231e720813c1950",
+        "sha256_in_prefix": "614584be1aa02a5229df379a1bc35937b8b39aae787795f2f231e720813c1950",
+        "size_in_bytes": 107
+      },
+      {
+        "_path": "site-packages/eth_keyfile-0.5.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "48ba295fd14861c817c10f1f16c107969f4bb5949df8827c4552aebffaf96434",
+        "sha256_in_prefix": "48ba295fd14861c817c10f1f16c107969f4bb5949df8827c4552aebffaf96434",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "site-packages/eth_keyfile/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "63d9f9ffd7461bc524585f233fa76af2cce0e9bf10e651fce30811795c0e7dbd",
+        "sha256_in_prefix": "63d9f9ffd7461bc524585f233fa76af2cce0e9bf10e651fce30811795c0e7dbd",
+        "size_in_bytes": 562
+      },
+      {
+        "_path": "site-packages/eth_keyfile/keyfile.py",
+        "path_type": "hardlink",
+        "sha256": "ede09060df766f345832a34ffd4ddb87e499a18747a83b284173c68e24b73f7c",
+        "sha256_in_prefix": "ede09060df766f345832a34ffd4ddb87e499a18747a83b284173c68e24b73f7c",
+        "size_in_bytes": 6771
+      },
+      {
+        "_path": "Lib/site-packages/eth_keyfile/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_keyfile/__pycache__/keyfile.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "eth-keyfile==0.5.1=pyh9f0ad1d_1",
+  "sha256": "66191fd79333c3b20b4043aaf64a6e97e9b01fb064914ae81f5276967838b859",
+  "size": 9960,
+  "subdir": "noarch",
+  "timestamp": 1598795249359,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/eth-keyfile-0.5.1-pyh9f0ad1d_1.tar.bz2",
+  "version": "0.5.1"
+}

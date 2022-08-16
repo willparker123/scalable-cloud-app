@@ -1,0 +1,243 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "six >=1.9.0"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\parsimonious-0.8.1-py_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/parsimonious-0.8.1.dist-info/INSTALLER",
+    "Lib/site-packages/parsimonious-0.8.1.dist-info/LICENSE",
+    "Lib/site-packages/parsimonious-0.8.1.dist-info/METADATA",
+    "Lib/site-packages/parsimonious-0.8.1.dist-info/RECORD",
+    "Lib/site-packages/parsimonious-0.8.1.dist-info/WHEEL",
+    "Lib/site-packages/parsimonious-0.8.1.dist-info/top_level.txt",
+    "Lib/site-packages/parsimonious/__init__.py",
+    "Lib/site-packages/parsimonious/exceptions.py",
+    "Lib/site-packages/parsimonious/expressions.py",
+    "Lib/site-packages/parsimonious/grammar.py",
+    "Lib/site-packages/parsimonious/nodes.py",
+    "Lib/site-packages/parsimonious/tests/__init__.py",
+    "Lib/site-packages/parsimonious/tests/benchmarks.py",
+    "Lib/site-packages/parsimonious/tests/test_benchmarks.py",
+    "Lib/site-packages/parsimonious/tests/test_expressions.py",
+    "Lib/site-packages/parsimonious/tests/test_grammar.py",
+    "Lib/site-packages/parsimonious/tests/test_nodes.py",
+    "Lib/site-packages/parsimonious/utils.py",
+    "Lib/site-packages/parsimonious/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/parsimonious/__pycache__/exceptions.cpython-39.pyc",
+    "Lib/site-packages/parsimonious/__pycache__/expressions.cpython-39.pyc",
+    "Lib/site-packages/parsimonious/__pycache__/grammar.cpython-39.pyc",
+    "Lib/site-packages/parsimonious/__pycache__/nodes.cpython-39.pyc",
+    "Lib/site-packages/parsimonious/tests/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/parsimonious/tests/__pycache__/benchmarks.cpython-39.pyc",
+    "Lib/site-packages/parsimonious/tests/__pycache__/test_benchmarks.cpython-39.pyc",
+    "Lib/site-packages/parsimonious/tests/__pycache__/test_expressions.cpython-39.pyc",
+    "Lib/site-packages/parsimonious/tests/__pycache__/test_grammar.cpython-39.pyc",
+    "Lib/site-packages/parsimonious/tests/__pycache__/test_nodes.cpython-39.pyc",
+    "Lib/site-packages/parsimonious/__pycache__/utils.cpython-39.pyc"
+  ],
+  "fn": "parsimonious-0.8.1-py_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\parsimonious-0.8.1-py_0",
+    "type": 1
+  },
+  "md5": "f794348cdc88f4c00f66269572670c7f",
+  "name": "parsimonious",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\parsimonious-0.8.1-py_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/parsimonious-0.8.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+        "sha256_in_prefix": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+        "size_in_bytes": 4
+      },
+      {
+        "_path": "site-packages/parsimonious-0.8.1.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+        "sha256_in_prefix": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+        "size_in_bytes": 1053
+      },
+      {
+        "_path": "site-packages/parsimonious-0.8.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "685224a0941bcbc5a328bc2f5fdd6de58d20575ad45e23f6e7247a416caf4974",
+        "sha256_in_prefix": "685224a0941bcbc5a328bc2f5fdd6de58d20575ad45e23f6e7247a416caf4974",
+        "size_in_bytes": 20781
+      },
+      {
+        "_path": "site-packages/parsimonious-0.8.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "c291a70894754eee3a015561de6f312e7609679e61055d806a980a2d3002037d",
+        "sha256_in_prefix": "c291a70894754eee3a015561de6f312e7609679e61055d806a980a2d3002037d",
+        "size_in_bytes": 1957
+      },
+      {
+        "_path": "site-packages/parsimonious-0.8.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "e52a4c9ea634a1c869ce3cb33e98d61027b294b1d4fd1182e8311948ffb78711",
+        "sha256_in_prefix": "e52a4c9ea634a1c869ce3cb33e98d61027b294b1d4fd1182e8311948ffb78711",
+        "size_in_bytes": 93
+      },
+      {
+        "_path": "site-packages/parsimonious-0.8.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "67d6f72eff9bd24ba503d2f871c53327c5aec66ba19a4d61af31242f1d997a08",
+        "sha256_in_prefix": "67d6f72eff9bd24ba503d2f871c53327c5aec66ba19a4d61af31242f1d997a08",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "site-packages/parsimonious/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4a22538cd9f19dddbda8706d65a17b20cbde30f3866c58f82ab3c4a4c815c7bf",
+        "sha256_in_prefix": "4a22538cd9f19dddbda8706d65a17b20cbde30f3866c58f82ab3c4a4c815c7bf",
+        "size_in_bytes": 421
+      },
+      {
+        "_path": "site-packages/parsimonious/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "35ee636dba1f798c2fbe1f46eefcae58ab349292308e0f10c0a26de27fe3b972",
+        "sha256_in_prefix": "35ee636dba1f798c2fbe1f46eefcae58ab349292308e0f10c0a26de27fe3b972",
+        "size_in_bytes": 3763
+      },
+      {
+        "_path": "site-packages/parsimonious/expressions.py",
+        "path_type": "hardlink",
+        "sha256": "f5f51a57620bae44a0ad07c655fc95880caee9f1ae1861eab55f6fcc172e9647",
+        "sha256_in_prefix": "f5f51a57620bae44a0ad07c655fc95880caee9f1ae1861eab55f6fcc172e9647",
+        "size_in_bytes": 16484
+      },
+      {
+        "_path": "site-packages/parsimonious/grammar.py",
+        "path_type": "hardlink",
+        "sha256": "8c7ac03a722fffa4bd1a3601b0409b5d85e76ce90d39cb8db3e790a0a01afdb5",
+        "sha256_in_prefix": "8c7ac03a722fffa4bd1a3601b0409b5d85e76ce90d39cb8db3e790a0a01afdb5",
+        "size_in_bytes": 19436
+      },
+      {
+        "_path": "site-packages/parsimonious/nodes.py",
+        "path_type": "hardlink",
+        "sha256": "d3065995922bde3c0a81634bbd5c4fbd8189ac529778c7559948b4c10e671943",
+        "sha256_in_prefix": "d3065995922bde3c0a81634bbd5c4fbd8189ac529778c7559948b4c10e671943",
+        "size_in_bytes": 13167
+      },
+      {
+        "_path": "site-packages/parsimonious/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/parsimonious/tests/benchmarks.py",
+        "path_type": "hardlink",
+        "sha256": "d04b2eee876dee26caecab1559a23d21d660cfaa6c5ae9e0731fd4c5b4c58820",
+        "sha256_in_prefix": "d04b2eee876dee26caecab1559a23d21d660cfaa6c5ae9e0731fd4c5b4c58820",
+        "size_in_bytes": 3278
+      },
+      {
+        "_path": "site-packages/parsimonious/tests/test_benchmarks.py",
+        "path_type": "hardlink",
+        "sha256": "ca8fa524faf6889a093fb7976c907ae9f4889b765d08a2d77ae09e14b75cdc4e",
+        "sha256_in_prefix": "ca8fa524faf6889a093fb7976c907ae9f4889b765d08a2d77ae09e14b75cdc4e",
+        "size_in_bytes": 1595
+      },
+      {
+        "_path": "site-packages/parsimonious/tests/test_expressions.py",
+        "path_type": "hardlink",
+        "sha256": "19e9ea4aed21673b0bb309f3299a4f5e819334ccd298b9e9933194dcbf309228",
+        "sha256_in_prefix": "19e9ea4aed21673b0bb309f3299a4f5e819334ccd298b9e9933194dcbf309228",
+        "size_in_bytes": 12211
+      },
+      {
+        "_path": "site-packages/parsimonious/tests/test_grammar.py",
+        "path_type": "hardlink",
+        "sha256": "05c158ac76274fc1c255b8de823b1094f1a9c1cac5d333c33b44bc2b4b3deacf",
+        "sha256_in_prefix": "05c158ac76274fc1c255b8de823b1094f1a9c1cac5d333c33b44bc2b4b3deacf",
+        "size_in_bytes": 17671
+      },
+      {
+        "_path": "site-packages/parsimonious/tests/test_nodes.py",
+        "path_type": "hardlink",
+        "sha256": "b6cc3dd162fcdd93d923ed750add98be5a7ff9f54432ab627ac8c46b003d11ca",
+        "sha256_in_prefix": "b6cc3dd162fcdd93d923ed750add98be5a7ff9f54432ab627ac8c46b003d11ca",
+        "size_in_bytes": 5836
+      },
+      {
+        "_path": "site-packages/parsimonious/utils.py",
+        "path_type": "hardlink",
+        "sha256": "0bc45f5a76d00985fffb259063203d273a70a29f4295789b09c1fdab532533a8",
+        "sha256_in_prefix": "0bc45f5a76d00985fffb259063203d273a70a29f4295789b09c1fdab532533a8",
+        "size_in_bytes": 1161
+      },
+      {
+        "_path": "Lib/site-packages/parsimonious/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/parsimonious/__pycache__/exceptions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/parsimonious/__pycache__/expressions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/parsimonious/__pycache__/grammar.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/parsimonious/__pycache__/nodes.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/parsimonious/tests/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/parsimonious/tests/__pycache__/benchmarks.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/parsimonious/tests/__pycache__/test_benchmarks.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/parsimonious/tests/__pycache__/test_expressions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/parsimonious/tests/__pycache__/test_grammar.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/parsimonious/tests/__pycache__/test_nodes.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/parsimonious/__pycache__/utils.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "parsimonious==0.8.1=py_0",
+  "sha256": "ee684c8337d0068d6e3c976d8d6f47a25511a00f51303110a769e1ce8785f769",
+  "size": 36190,
+  "subdir": "noarch",
+  "timestamp": 1546057974073,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/parsimonious-0.8.1-py_0.tar.bz2",
+  "version": "0.8.1"
+}

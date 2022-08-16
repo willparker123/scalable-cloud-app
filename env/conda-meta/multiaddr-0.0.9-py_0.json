@@ -1,0 +1,315 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "base58",
+    "idna",
+    "netaddr",
+    "python >=3.5",
+    "six",
+    "varint"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\multiaddr-0.0.9-py_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/multiaddr-0.0.9.dist-info/AUTHORS",
+    "Lib/site-packages/multiaddr-0.0.9.dist-info/INSTALLER",
+    "Lib/site-packages/multiaddr-0.0.9.dist-info/METADATA",
+    "Lib/site-packages/multiaddr-0.0.9.dist-info/RECORD",
+    "Lib/site-packages/multiaddr-0.0.9.dist-info/REQUESTED",
+    "Lib/site-packages/multiaddr-0.0.9.dist-info/WHEEL",
+    "Lib/site-packages/multiaddr-0.0.9.dist-info/direct_url.json",
+    "Lib/site-packages/multiaddr-0.0.9.dist-info/top_level.txt",
+    "Lib/site-packages/multiaddr/__init__.py",
+    "Lib/site-packages/multiaddr/codecs/__init__.py",
+    "Lib/site-packages/multiaddr/codecs/_util.py",
+    "Lib/site-packages/multiaddr/codecs/fspath.py",
+    "Lib/site-packages/multiaddr/codecs/idna.py",
+    "Lib/site-packages/multiaddr/codecs/ip4.py",
+    "Lib/site-packages/multiaddr/codecs/ip6.py",
+    "Lib/site-packages/multiaddr/codecs/onion.py",
+    "Lib/site-packages/multiaddr/codecs/onion3.py",
+    "Lib/site-packages/multiaddr/codecs/p2p.py",
+    "Lib/site-packages/multiaddr/codecs/uint16be.py",
+    "Lib/site-packages/multiaddr/codecs/utf8.py",
+    "Lib/site-packages/multiaddr/exceptions.py",
+    "Lib/site-packages/multiaddr/multiaddr.py",
+    "Lib/site-packages/multiaddr/protocols.py",
+    "Lib/site-packages/multiaddr/transforms.py",
+    "Lib/site-packages/multiaddr/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/codecs/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/codecs/__pycache__/_util.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/codecs/__pycache__/fspath.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/codecs/__pycache__/idna.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/codecs/__pycache__/ip4.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/codecs/__pycache__/ip6.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/codecs/__pycache__/onion.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/codecs/__pycache__/onion3.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/codecs/__pycache__/p2p.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/codecs/__pycache__/uint16be.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/codecs/__pycache__/utf8.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/__pycache__/exceptions.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/__pycache__/multiaddr.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/__pycache__/protocols.cpython-39.pyc",
+    "Lib/site-packages/multiaddr/__pycache__/transforms.cpython-39.pyc"
+  ],
+  "fn": "multiaddr-0.0.9-py_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\multiaddr-0.0.9-py_0",
+    "type": 1
+  },
+  "md5": "36cbbb7e05a5565a0595ceab3a5e78c0",
+  "name": "multiaddr",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\multiaddr-0.0.9-py_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/multiaddr-0.0.9.dist-info/AUTHORS",
+        "path_type": "hardlink",
+        "sha256": "08cf47346a8453f77693cb86e69e07153115ea0457f53398fc9cadfd3c6ac084",
+        "sha256_in_prefix": "08cf47346a8453f77693cb86e69e07153115ea0457f53398fc9cadfd3c6ac084",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "site-packages/multiaddr-0.0.9.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/multiaddr-0.0.9.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "be7ceac6a3ad99596bb9ef71a65304dbd20a77de41841ff6bbf24f079d7bcb2f",
+        "sha256_in_prefix": "be7ceac6a3ad99596bb9ef71a65304dbd20a77de41841ff6bbf24f079d7bcb2f",
+        "size_in_bytes": 5000
+      },
+      {
+        "_path": "site-packages/multiaddr-0.0.9.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "b744bf039289b827c8ca5c0e88c198eb410b0aca205677571be24bafa67d04cf",
+        "sha256_in_prefix": "b744bf039289b827c8ca5c0e88c198eb410b0aca205677571be24bafa67d04cf",
+        "size_in_bytes": 2817
+      },
+      {
+        "_path": "site-packages/multiaddr-0.0.9.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/multiaddr-0.0.9.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "00329ec9a1b2285e43c01344d2c444e69bd6f9b4a414c25f06e873677adc78fe",
+        "sha256_in_prefix": "00329ec9a1b2285e43c01344d2c444e69bd6f9b4a414c25f06e873677adc78fe",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/multiaddr-0.0.9.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "d9742df3df8bc26f49157d1e1a055a7733d8dd1d953f520b9cf6892bdbb1cd61",
+        "sha256_in_prefix": "d9742df3df8bc26f49157d1e1a055a7733d8dd1d953f520b9cf6892bdbb1cd61",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "site-packages/multiaddr-0.0.9.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "dccdef8dbcd46631a766dc7d10caca1fb831363d86357a05bd3b9c137b330c22",
+        "sha256_in_prefix": "dccdef8dbcd46631a766dc7d10caca1fb831363d86357a05bd3b9c137b330c22",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "site-packages/multiaddr/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "eb44fea9580fbd413880909da4b2a82d9c26d0794cfef52621583384ae4dc11e",
+        "sha256_in_prefix": "eb44fea9580fbd413880909da4b2a82d9c26d0794cfef52621583384ae4dc11e",
+        "size_in_bytes": 151
+      },
+      {
+        "_path": "site-packages/multiaddr/codecs/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "be11d1fec581ba87feb75539040776749cbb615660958a0256bbc4ceb11b2ac2",
+        "sha256_in_prefix": "be11d1fec581ba87feb75539040776749cbb615660958a0256bbc4ceb11b2ac2",
+        "size_in_bytes": 504
+      },
+      {
+        "_path": "site-packages/multiaddr/codecs/_util.py",
+        "path_type": "hardlink",
+        "sha256": "e170d45475d71f8d828acc005d9e4d1036b904fc85e46a705fa66b00f26bcbef",
+        "sha256_in_prefix": "e170d45475d71f8d828acc005d9e4d1036b904fc85e46a705fa66b00f26bcbef",
+        "size_in_bytes": 357
+      },
+      {
+        "_path": "site-packages/multiaddr/codecs/fspath.py",
+        "path_type": "hardlink",
+        "sha256": "eb848e94aded18475b6a56fefbb0cb602f5fb7a91e8b362ea31aba8d6161ae1c",
+        "sha256_in_prefix": "eb848e94aded18475b6a56fefbb0cb602f5fb7a91e8b362ea31aba8d6161ae1c",
+        "size_in_bytes": 730
+      },
+      {
+        "_path": "site-packages/multiaddr/codecs/idna.py",
+        "path_type": "hardlink",
+        "sha256": "16c01ed5951c4d91d6d101c86c7572e073e8ee8f121102458d7f780221ad4b53",
+        "sha256_in_prefix": "16c01ed5951c4d91d6d101c86c7572e073e8ee8f121102458d7f780221ad4b53",
+        "size_in_bytes": 273
+      },
+      {
+        "_path": "site-packages/multiaddr/codecs/ip4.py",
+        "path_type": "hardlink",
+        "sha256": "3caf1b67d768959f24c514547946a623297b95cbdf54b3ce764ec85acfefba14",
+        "sha256_in_prefix": "3caf1b67d768959f24c514547946a623297b95cbdf54b3ce764ec85acfefba14",
+        "size_in_bytes": 360
+      },
+      {
+        "_path": "site-packages/multiaddr/codecs/ip6.py",
+        "path_type": "hardlink",
+        "sha256": "8b95f5aa2ba2b3580ab5d2fdff23c79d0728156e2a41626d8579a656801e3caf",
+        "sha256_in_prefix": "8b95f5aa2ba2b3580ab5d2fdff23c79d0728156e2a41626d8579a656801e3caf",
+        "size_in_bytes": 361
+      },
+      {
+        "_path": "site-packages/multiaddr/codecs/onion.py",
+        "path_type": "hardlink",
+        "sha256": "727c85824bd8a30221927803a1adcf44d762378586bbc1b4a8be1a25e89c2371",
+        "sha256_in_prefix": "727c85824bd8a30221927803a1adcf44d762378586bbc1b4a8be1a25e89c2371",
+        "size_in_bytes": 1195
+      },
+      {
+        "_path": "site-packages/multiaddr/codecs/onion3.py",
+        "path_type": "hardlink",
+        "sha256": "fad8dafb7f80c707040da525ebc3a7f15ae36bc09ccf5df9e1b2387424a21ded",
+        "sha256_in_prefix": "fad8dafb7f80c707040da525ebc3a7f15ae36bc09ccf5df9e1b2387424a21ded",
+        "size_in_bytes": 1201
+      },
+      {
+        "_path": "site-packages/multiaddr/codecs/p2p.py",
+        "path_type": "hardlink",
+        "sha256": "a50f34fe3d0db101d6806148c18dc7a6fbb43c27f49b05c60acf00e5a198301c",
+        "sha256_in_prefix": "a50f34fe3d0db101d6806148c18dc7a6fbb43c27f49b05c60acf00e5a198301c",
+        "size_in_bytes": 568
+      },
+      {
+        "_path": "site-packages/multiaddr/codecs/uint16be.py",
+        "path_type": "hardlink",
+        "sha256": "bb7fc17ae5d05162f70edd677b851136b1742461a77af3caf210ef8dd23e56ca",
+        "sha256_in_prefix": "bb7fc17ae5d05162f70edd677b851136b1742461a77af3caf210ef8dd23e56ca",
+        "size_in_bytes": 565
+      },
+      {
+        "_path": "site-packages/multiaddr/codecs/utf8.py",
+        "path_type": "hardlink",
+        "sha256": "022a1d09ee16afcf85dc5365601d6f0bafb89d69a4f70413a58f364d0d4ecdbf",
+        "sha256_in_prefix": "022a1d09ee16afcf85dc5365601d6f0bafb89d69a4f70413a58f364d0d4ecdbf",
+        "size_in_bytes": 435
+      },
+      {
+        "_path": "site-packages/multiaddr/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "360b09f953206b6e91d52517ccf12f2f05b6de1c7befb70e950b361cc7130e03",
+        "sha256_in_prefix": "360b09f953206b6e91d52517ccf12f2f05b6de1c7befb70e950b361cc7130e03",
+        "size_in_bytes": 2283
+      },
+      {
+        "_path": "site-packages/multiaddr/multiaddr.py",
+        "path_type": "hardlink",
+        "sha256": "d077103631305f2d019b3966bf8176d21b0d3bf9be0f03983a4aad7cd79431ab",
+        "sha256_in_prefix": "d077103631305f2d019b3966bf8176d21b0d3bf9be0f03983a4aad7cd79431ab",
+        "size_in_bytes": 8625
+      },
+      {
+        "_path": "site-packages/multiaddr/protocols.py",
+        "path_type": "hardlink",
+        "sha256": "1ad53ae22526c09b5c0026243bfaf3c67b35d41cd593f815c8bc0d79cca20000",
+        "sha256_in_prefix": "1ad53ae22526c09b5c0026243bfaf3c67b35d41cd593f815c8bc0d79cca20000",
+        "size_in_bytes": 5369
+      },
+      {
+        "_path": "site-packages/multiaddr/transforms.py",
+        "path_type": "hardlink",
+        "sha256": "c2af8a3b7ed9300cf116fbe5409f123247b284de94da0978ec97993efbbbf863",
+        "sha256_in_prefix": "c2af8a3b7ed9300cf116fbe5409f123247b284de94da0978ec97993efbbbf863",
+        "size_in_bytes": 3299
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/codecs/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/codecs/__pycache__/_util.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/codecs/__pycache__/fspath.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/codecs/__pycache__/idna.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/codecs/__pycache__/ip4.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/codecs/__pycache__/ip6.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/codecs/__pycache__/onion.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/codecs/__pycache__/onion3.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/codecs/__pycache__/p2p.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/codecs/__pycache__/uint16be.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/codecs/__pycache__/utf8.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/__pycache__/exceptions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/__pycache__/multiaddr.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/__pycache__/protocols.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/multiaddr/__pycache__/transforms.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "multiaddr==0.0.9=py_0",
+  "sha256": "313d15cc724634771e438aae4afe4cc8d00a46837abb9d19db482e1ece085c24",
+  "size": 15589,
+  "subdir": "noarch",
+  "timestamp": 1598720248764,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/multiaddr-0.0.9-py_0.tar.bz2",
+  "version": "0.0.9"
+}

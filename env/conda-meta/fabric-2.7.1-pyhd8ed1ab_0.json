@@ -1,0 +1,344 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "invoke >=1.3,<2.0",
+    "paramiko >=2.4",
+    "pathlib2",
+    "python >=3.6"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\fabric-2.7.1-pyhd8ed1ab_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/fabric-2.7.1.dist-info/INSTALLER",
+    "Lib/site-packages/fabric-2.7.1.dist-info/LICENSE",
+    "Lib/site-packages/fabric-2.7.1.dist-info/METADATA",
+    "Lib/site-packages/fabric-2.7.1.dist-info/RECORD",
+    "Lib/site-packages/fabric-2.7.1.dist-info/REQUESTED",
+    "Lib/site-packages/fabric-2.7.1.dist-info/WHEEL",
+    "Lib/site-packages/fabric-2.7.1.dist-info/direct_url.json",
+    "Lib/site-packages/fabric-2.7.1.dist-info/entry_points.txt",
+    "Lib/site-packages/fabric-2.7.1.dist-info/top_level.txt",
+    "Lib/site-packages/fabric/__init__.py",
+    "Lib/site-packages/fabric/__main__.py",
+    "Lib/site-packages/fabric/_version.py",
+    "Lib/site-packages/fabric/config.py",
+    "Lib/site-packages/fabric/connection.py",
+    "Lib/site-packages/fabric/exceptions.py",
+    "Lib/site-packages/fabric/executor.py",
+    "Lib/site-packages/fabric/group.py",
+    "Lib/site-packages/fabric/main.py",
+    "Lib/site-packages/fabric/runners.py",
+    "Lib/site-packages/fabric/tasks.py",
+    "Lib/site-packages/fabric/testing/__init__.py",
+    "Lib/site-packages/fabric/testing/base.py",
+    "Lib/site-packages/fabric/testing/fixtures.py",
+    "Lib/site-packages/fabric/transfer.py",
+    "Lib/site-packages/fabric/tunnels.py",
+    "Lib/site-packages/fabric/util.py",
+    "Lib/site-packages/fabric/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/__main__.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/_version.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/config.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/connection.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/exceptions.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/executor.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/group.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/main.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/runners.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/tasks.cpython-39.pyc",
+    "Lib/site-packages/fabric/testing/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/fabric/testing/__pycache__/base.cpython-39.pyc",
+    "Lib/site-packages/fabric/testing/__pycache__/fixtures.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/transfer.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/tunnels.cpython-39.pyc",
+    "Lib/site-packages/fabric/__pycache__/util.cpython-39.pyc",
+    "Scripts/fab-script.py",
+    "Scripts/fab.exe"
+  ],
+  "fn": "fabric-2.7.1-pyhd8ed1ab_0.tar.bz2",
+  "license": "BSD-2-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\fabric-2.7.1-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "f4283ed2d08f323167d8f6ef4b6c8c4a",
+  "name": "fabric",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\fabric-2.7.1-pyhd8ed1ab_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/fabric-2.7.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/fabric-2.7.1.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "7922f97f896f1d161e1ebf47083e304a23638361b255c6902b5e4f34eeda0dad",
+        "sha256_in_prefix": "7922f97f896f1d161e1ebf47083e304a23638361b255c6902b5e4f34eeda0dad",
+        "size_in_bytes": 1314
+      },
+      {
+        "_path": "site-packages/fabric-2.7.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "9234c34908dc839fdc30428b88d2bea919fb64663bb078e798a22262d3b98225",
+        "sha256_in_prefix": "9234c34908dc839fdc30428b88d2bea919fb64663bb078e798a22262d3b98225",
+        "size_in_bytes": 3506
+      },
+      {
+        "_path": "site-packages/fabric-2.7.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "105f826f7e104c1991024cc0947aa2a0e46e2c65b149faa61b6635f6bda64fbd",
+        "sha256_in_prefix": "105f826f7e104c1991024cc0947aa2a0e46e2c65b149faa61b6635f6bda64fbd",
+        "size_in_bytes": 2923
+      },
+      {
+        "_path": "site-packages/fabric-2.7.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/fabric-2.7.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "cfd8f4c406bf26650a3299b3ef62b464600b48cfe7fb04159866e5797c765478",
+        "sha256_in_prefix": "cfd8f4c406bf26650a3299b3ef62b464600b48cfe7fb04159866e5797c765478",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/fabric-2.7.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "bae1174bf18cc44333e0386ff52b481f3fd33e5475b95e81df55fd850d114a46",
+        "sha256_in_prefix": "bae1174bf18cc44333e0386ff52b481f3fd33e5475b95e81df55fd850d114a46",
+        "size_in_bytes": 102
+      },
+      {
+        "_path": "site-packages/fabric-2.7.1.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "ac21bc48ee5d956f50ad1bcfa69e28a5176a8633cdeb38b9791f702f38436cdb",
+        "sha256_in_prefix": "ac21bc48ee5d956f50ad1bcfa69e28a5176a8633cdeb38b9791f702f38436cdb",
+        "size_in_bytes": 48
+      },
+      {
+        "_path": "site-packages/fabric-2.7.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "b61615b47ab1b62743b0642135c062e870cd335de57a22ebe88487911ebac4ef",
+        "sha256_in_prefix": "b61615b47ab1b62743b0642135c062e870cd335de57a22ebe88487911ebac4ef",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "site-packages/fabric/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3193ac02fa43e30d0472942dfccfce7b899faaf3ec034d032439ca98fb26853e",
+        "sha256_in_prefix": "3193ac02fa43e30d0472942dfccfce7b899faaf3ec034d032439ca98fb26853e",
+        "size_in_bytes": 287
+      },
+      {
+        "_path": "site-packages/fabric/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "cf4d0936fcccd2f753efa2c4449b998167b41f99dda2e5d7ea3de3fadeb492fc",
+        "sha256_in_prefix": "cf4d0936fcccd2f753efa2c4449b998167b41f99dda2e5d7ea3de3fadeb492fc",
+        "size_in_bytes": 139
+      },
+      {
+        "_path": "site-packages/fabric/_version.py",
+        "path_type": "hardlink",
+        "sha256": "bf80672acd42f4e07f6a0776186d8cff30280d1aa8248b7dde94966e5a4d78ef",
+        "sha256_in_prefix": "bf80672acd42f4e07f6a0776186d8cff30280d1aa8248b7dde94966e5a4d78ef",
+        "size_in_bytes": 80
+      },
+      {
+        "_path": "site-packages/fabric/config.py",
+        "path_type": "hardlink",
+        "sha256": "67f1cc732c4dc5391a3e537ec1e6d9769992de6acb0973d60fa63f30d6f7e000",
+        "sha256_in_prefix": "67f1cc732c4dc5391a3e537ec1e6d9769992de6acb0973d60fa63f30d6f7e000",
+        "size_in_bytes": 13891
+      },
+      {
+        "_path": "site-packages/fabric/connection.py",
+        "path_type": "hardlink",
+        "sha256": "e31315a0732c1aa8faaf8f9f25ab5d47fb18a98ed31b895ec2e1684bfab97777",
+        "sha256_in_prefix": "e31315a0732c1aa8faaf8f9f25ab5d47fb18a98ed31b895ec2e1684bfab97777",
+        "size_in_bytes": 44505
+      },
+      {
+        "_path": "site-packages/fabric/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "3d54706564dc71572e5def6ef8fe474757905793ee3b8f4009a3464bd00473cf",
+        "sha256_in_prefix": "3d54706564dc71572e5def6ef8fe474757905793ee3b8f4009a3464bd00473cf",
+        "size_in_bytes": 698
+      },
+      {
+        "_path": "site-packages/fabric/executor.py",
+        "path_type": "hardlink",
+        "sha256": "ffb82fb35013e9f1f47aa4768eb6a27fe3dc86e96863b22ab7a7631e3c129805",
+        "sha256_in_prefix": "ffb82fb35013e9f1f47aa4768eb6a27fe3dc86e96863b22ab7a7631e3c129805",
+        "size_in_bytes": 5512
+      },
+      {
+        "_path": "site-packages/fabric/group.py",
+        "path_type": "hardlink",
+        "sha256": "1fc741acba6fbb611c5dba1abd51818fbf919b0015742967223068329337e74f",
+        "sha256_in_prefix": "1fc741acba6fbb611c5dba1abd51818fbf919b0015742967223068329337e74f",
+        "size_in_bytes": 12498
+      },
+      {
+        "_path": "site-packages/fabric/main.py",
+        "path_type": "hardlink",
+        "sha256": "e44cedbf4048cedd4956e2c8c11ac2abd3d533626a42315c91e21b62cdfbadc0",
+        "sha256_in_prefix": "e44cedbf4048cedd4956e2c8c11ac2abd3d533626a42315c91e21b62cdfbadc0",
+        "size_in_bytes": 6655
+      },
+      {
+        "_path": "site-packages/fabric/runners.py",
+        "path_type": "hardlink",
+        "sha256": "2ec7b7f5f7d53bb5e77972c1385100657678d2465dc656664acda9f9172a3b91",
+        "sha256_in_prefix": "2ec7b7f5f7d53bb5e77972c1385100657678d2465dc656664acda9f9172a3b91",
+        "size_in_bytes": 6590
+      },
+      {
+        "_path": "site-packages/fabric/tasks.py",
+        "path_type": "hardlink",
+        "sha256": "0e149996ac22ed37d2d3be8b9a4ecaa26e461e3d614ebe7faf0ff8875fc1a12c",
+        "sha256_in_prefix": "0e149996ac22ed37d2d3be8b9a4ecaa26e461e3d614ebe7faf0ff8875fc1a12c",
+        "size_in_bytes": 4724
+      },
+      {
+        "_path": "site-packages/fabric/testing/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/fabric/testing/base.py",
+        "path_type": "hardlink",
+        "sha256": "ccf0bf6f8fe51f5098fe1489313d21ccea46a2a0c4d7fd7d712006ae5bc542bd",
+        "sha256_in_prefix": "ccf0bf6f8fe51f5098fe1489313d21ccea46a2a0c4d7fd7d712006ae5bc542bd",
+        "size_in_bytes": 15268
+      },
+      {
+        "_path": "site-packages/fabric/testing/fixtures.py",
+        "path_type": "hardlink",
+        "sha256": "7b129094524db96141da3e5a6ce4ef060854bc74993edde37ffa15f92778b11c",
+        "sha256_in_prefix": "7b129094524db96141da3e5a6ce4ef060854bc74993edde37ffa15f92778b11c",
+        "size_in_bytes": 5540
+      },
+      {
+        "_path": "site-packages/fabric/transfer.py",
+        "path_type": "hardlink",
+        "sha256": "19d997a7d4c26829b63cbabba17487088e916a64a5352d158a1d54998f3861b4",
+        "sha256_in_prefix": "19d997a7d4c26829b63cbabba17487088e916a64a5352d158a1d54998f3861b4",
+        "size_in_bytes": 14835
+      },
+      {
+        "_path": "site-packages/fabric/tunnels.py",
+        "path_type": "hardlink",
+        "sha256": "640d029e7f32b02a33615843bc53b00bc4f07e9c8d47004bf63ca3ff9eeb4ee1",
+        "sha256_in_prefix": "640d029e7f32b02a33615843bc53b00bc4f07e9c8d47004bf63ca3ff9eeb4ee1",
+        "size_in_bytes": 5520
+      },
+      {
+        "_path": "site-packages/fabric/util.py",
+        "path_type": "hardlink",
+        "sha256": "a5e7c593e342861699a74393deafaa7baab3b03749c798405d8c2e79f2c25f24",
+        "sha256_in_prefix": "a5e7c593e342861699a74393deafaa7baab3b03749c798405d8c2e79f2c25f24",
+        "size_in_bytes": 1446
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/__main__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/_version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/config.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/connection.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/exceptions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/executor.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/group.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/main.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/runners.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/tasks.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/testing/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/testing/__pycache__/base.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/testing/__pycache__/fixtures.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/transfer.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/tunnels.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/fabric/__pycache__/util.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Scripts/fab-script.py",
+        "path_type": "windows_python_entry_point_script"
+      },
+      {
+        "_path": "Scripts/fab.exe",
+        "path_type": "windows_python_entry_point_exe"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "fabric==2.7.1=pyhd8ed1ab_0",
+  "sha256": "8d632247eb1de4d3f251fee43d243c0e3ceb97d23ff2db46984568dec7c2d6aa",
+  "size": 44667,
+  "subdir": "noarch",
+  "timestamp": 1657937537619,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/fabric-2.7.1-pyhd8ed1ab_0.tar.bz2",
+  "version": "2.7.1"
+}

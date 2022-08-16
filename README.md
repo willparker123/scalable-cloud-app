@@ -15,7 +15,7 @@ A Kubernetes cluster is initialised and orchestrated using Fabric and boto3, uti
 
 The deployment of this cluster and infrastructure is through Docker. The repo contains a Dockerfile which will launch a Python container - this container installs prerequisites (pip, "requirements.txt") and clones the **[repository of this project](https://github.com/willparker123/scalable-cloud-app)**. Afterwards, ``start_cluster.py`` can be ran to begin deployment from the VM where the Docker image is installed.
 
-Before the following instructions, please [sign up](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html) to AWS or log into the AWS console and generate an [**access and secret access key**](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/).
+Before the following instructions, please [sign up](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html) to AWS or log into the AWS console and generate an [**access and secret access key**](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/) as well as a [**authentication public key**](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/getstarted-keypair.html) (``'aws_key.pem'`` by default or  CLI arg ``args.aws_pem_path``)
 
 * Run and SSH into an EC2 instance or prepare your local machine (e.g. using a VM)
 
@@ -43,7 +43,7 @@ Before the following instructions, please [sign up](https://docs.aws.amazon.com/
 
 * Configure the aws_access_key, aws_secret_access_key and aws_session_token environment variables in the ".env" file in the root directory (/app).
 
-* Configure the configuration file ``config.yaml`` and other environment variables to include host ``<public_ip>:<private_ip>`` pairs if you wish to use EC2 instances created before deployment. 
+* Configure the configuration file ``config.yml`` and other environment variables to include host ``<public_ip>:<private_ip>`` pairs if you wish to use EC2 instances created before deployment. 
 
   Note: pair **1.2.3.4:5.6.7.8** is used to indicate a fresh startup (default **hosts**).
 
@@ -57,7 +57,11 @@ Before the following instructions, please [sign up](https://docs.aws.amazon.com/
 
 * Run the deployment Python script ``start_cluster.py`` with the following CLI arguments:
 
-      *** Due to lack of development time, there are currently no CLI arguments for start_cluster.py: however it will still run ***
+      parser.add_argument("-k", "--awskeypath", dest="aws_pem_path", default="aws_key.pem", required=False,
+                              help="Path to the ssh publickey generate")
+          
+      
+      *** Due to lack of development time, there are currently no more CLI arguments for start_cluster.py: however it will still run ***
 
 
 
@@ -137,7 +141,7 @@ The main cluster startup and deployment to spin up EC2 instances, autoscaling gr
 | **library**  | **version** | description                                    | **command**                                          |
 | ------------ | ----------- | ---------------------------------------------- | ---------------------------------------------------- |
 | kubernetes   | 24.2.0      | Kubernetes cluster deployment and maintenance  | ```conda install -c conda-forge python-kubernetes``` |
-| fabric       | 2.6.0       | Executing ssh commands (in parallel) using SSH | ```conda install -c anaconda fabric```               |
+| fabric3      | 2.6.0       | Executing ssh commands (in parallel) using SSH | ```conda install -c anaconda fabric```               |
 | jinja2       | 3.0.3       | Template engine for cluster deployment         | ```conda install -c anaconda jinja2```               |
 | pyyaml       | 6.0         | Reading and creating YAML files                | ```conda install -c conda-forge pyyaml```            |
 | boto3        | 1.24.2      | Interaction with AWS services                  | ```conda install -c anaconda boto3```                |
@@ -155,7 +159,7 @@ The API which streams transactions to MariaDB from a hosted node or providers su
 | **library** | **version** | description                                                  | **command**                                 |
 | ----------- | ----------- | ------------------------------------------------------------ | ------------------------------------------- |
 | web3        | 24.2.0      | Web3 library for Python to stream transaction data from the blockchain. | ```conda install -c conda-forge web3```     |
-| fabric      | 2.6.0       | Executing ssh commands (in parallel) using SSH               | ```conda install -c anaconda fabric```      |
+| fabric3     | 2.6.0       | Executing ssh commands (in parallel) using SSH               | ```conda install -c anaconda fabric```      |
 | eth-tester  | 0.6.0b6     | Tools for testing Ethereum-based applications; testing connection to blockchain | ``` pip install eth-tester```               |
 | websockets  | 10.3        | Websocket connections to stream data from web3               | ``conda install -c conda-forge websockets`` |
 | asyncio     | 3.4.1       | Starting asynchronous processes for request handling over websocket | ``conda install -c mutirri asyncio``        |

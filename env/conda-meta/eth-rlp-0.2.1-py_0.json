@@ -1,0 +1,131 @@
+{
+  "build": "py_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "eth-utils >=1.0.1,<2",
+    "hexbytes >=0.1.0,<1",
+    "python >=3.5,<4.0",
+    "rlp >=0.6.0,<2"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\eth-rlp-0.2.1-py_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/eth_rlp-0.2.1.dist-info/INSTALLER",
+    "Lib/site-packages/eth_rlp-0.2.1.dist-info/LICENSE",
+    "Lib/site-packages/eth_rlp-0.2.1.dist-info/METADATA",
+    "Lib/site-packages/eth_rlp-0.2.1.dist-info/RECORD",
+    "Lib/site-packages/eth_rlp-0.2.1.dist-info/REQUESTED",
+    "Lib/site-packages/eth_rlp-0.2.1.dist-info/WHEEL",
+    "Lib/site-packages/eth_rlp-0.2.1.dist-info/direct_url.json",
+    "Lib/site-packages/eth_rlp-0.2.1.dist-info/top_level.txt",
+    "Lib/site-packages/eth_rlp/__init__.py",
+    "Lib/site-packages/eth_rlp/main.py",
+    "Lib/site-packages/eth_rlp/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/eth_rlp/__pycache__/main.cpython-39.pyc"
+  ],
+  "fn": "eth-rlp-0.2.1-py_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\eth-rlp-0.2.1-py_0",
+    "type": 1
+  },
+  "md5": "0c31d56f290f849acb9221484ef55113",
+  "name": "eth-rlp",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\eth-rlp-0.2.1-py_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/eth_rlp-0.2.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/eth_rlp-0.2.1.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "dfdd23c17b8345e5da79379fd1e4fadc5ac52a88003158180545a5d681a4e1e7",
+        "sha256_in_prefix": "dfdd23c17b8345e5da79379fd1e4fadc5ac52a88003158180545a5d681a4e1e7",
+        "size_in_bytes": 1090
+      },
+      {
+        "_path": "site-packages/eth_rlp-0.2.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "7251d71941e17ae5af88443546f2c61b02bcbe11a402b1bfa80efef3b33f863a",
+        "sha256_in_prefix": "7251d71941e17ae5af88443546f2c61b02bcbe11a402b1bfa80efef3b33f863a",
+        "size_in_bytes": 5326
+      },
+      {
+        "_path": "site-packages/eth_rlp-0.2.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "cd1095bf7360df45610c8e207425fd7528e2c094aaebf86289c010b6b090f5c5",
+        "sha256_in_prefix": "cd1095bf7360df45610c8e207425fd7528e2c094aaebf86289c010b6b090f5c5",
+        "size_in_bytes": 900
+      },
+      {
+        "_path": "site-packages/eth_rlp-0.2.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/eth_rlp-0.2.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "11546323af45e6a5639bf620a9c4d73e74c0bf705f494af4595007b923f75e8a",
+        "sha256_in_prefix": "11546323af45e6a5639bf620a9c4d73e74c0bf705f494af4595007b923f75e8a",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/eth_rlp-0.2.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "83949f6aa0f6b8429af3ff0fe32c1fdeb9383a0a54531f998aad188d44d77915",
+        "sha256_in_prefix": "83949f6aa0f6b8429af3ff0fe32c1fdeb9383a0a54531f998aad188d44d77915",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "site-packages/eth_rlp-0.2.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "56b0b8397c17710dd63bbc8aafd7fa2c9409974606b732c4fc514b6c2ba8dfe5",
+        "sha256_in_prefix": "56b0b8397c17710dd63bbc8aafd7fa2c9409974606b732c4fc514b6c2ba8dfe5",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "site-packages/eth_rlp/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b3f58d88898dfd7936a39028afe45cf35edc4cb8a93172b3d9fea24145d87486",
+        "sha256_in_prefix": "b3f58d88898dfd7936a39028afe45cf35edc4cb8a93172b3d9fea24145d87486",
+        "size_in_bytes": 53
+      },
+      {
+        "_path": "site-packages/eth_rlp/main.py",
+        "path_type": "hardlink",
+        "sha256": "54923ec84cbe5d4ee1c9ec927a63bd1a37bff6d8662ef6fa9b7f57ba1ed2bd7e",
+        "sha256_in_prefix": "54923ec84cbe5d4ee1c9ec927a63bd1a37bff6d8662ef6fa9b7f57ba1ed2bd7e",
+        "size_in_bytes": 2571
+      },
+      {
+        "_path": "Lib/site-packages/eth_rlp/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_rlp/__pycache__/main.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "eth-rlp==0.2.1=py_0",
+  "sha256": "79f9bb6ab05616c26ba439dfbe0799d9dbbe92ddb5d9bb711664d541d9bd1620",
+  "size": 8822,
+  "subdir": "noarch",
+  "timestamp": 1602701799039,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/eth-rlp-0.2.1-py_0.tar.bz2",
+  "version": "0.2.1"
+}

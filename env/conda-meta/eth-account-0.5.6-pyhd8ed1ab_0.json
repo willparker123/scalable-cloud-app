@@ -1,0 +1,442 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "bitarray >=1.2.1,<1.3.0",
+    "eth-abi >=2.0.0b7,<3",
+    "eth-keyfile >=0.5.0,<0.6.0",
+    "eth-keys >=0.2.1,<0.4.0,!=0.3.2",
+    "eth-rlp >=0.1.2,<1",
+    "eth-utils >=1.3.0,<2",
+    "hexbytes >=0.1.0,<1",
+    "python >=3.6,<4.0",
+    "rlp >=1.0.0,<2"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\eth-account-0.5.6-pyhd8ed1ab_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/eth_account-0.5.6.dist-info/INSTALLER",
+    "Lib/site-packages/eth_account-0.5.6.dist-info/LICENSE",
+    "Lib/site-packages/eth_account-0.5.6.dist-info/METADATA",
+    "Lib/site-packages/eth_account-0.5.6.dist-info/RECORD",
+    "Lib/site-packages/eth_account-0.5.6.dist-info/REQUESTED",
+    "Lib/site-packages/eth_account-0.5.6.dist-info/WHEEL",
+    "Lib/site-packages/eth_account-0.5.6.dist-info/direct_url.json",
+    "Lib/site-packages/eth_account-0.5.6.dist-info/top_level.txt",
+    "Lib/site-packages/eth_account/__init__.py",
+    "Lib/site-packages/eth_account/_utils/__init__.py",
+    "Lib/site-packages/eth_account/_utils/legacy_transactions.py",
+    "Lib/site-packages/eth_account/_utils/signing.py",
+    "Lib/site-packages/eth_account/_utils/structured_data/__init__.py",
+    "Lib/site-packages/eth_account/_utils/structured_data/hashing.py",
+    "Lib/site-packages/eth_account/_utils/structured_data/validation.py",
+    "Lib/site-packages/eth_account/_utils/transaction_utils.py",
+    "Lib/site-packages/eth_account/_utils/typed_transactions.py",
+    "Lib/site-packages/eth_account/_utils/validation.py",
+    "Lib/site-packages/eth_account/account.py",
+    "Lib/site-packages/eth_account/datastructures.py",
+    "Lib/site-packages/eth_account/hdaccount/__init__.py",
+    "Lib/site-packages/eth_account/hdaccount/_utils.py",
+    "Lib/site-packages/eth_account/hdaccount/deterministic.py",
+    "Lib/site-packages/eth_account/hdaccount/mnemonic.py",
+    "Lib/site-packages/eth_account/hdaccount/wordlist/chinese_simplified.txt",
+    "Lib/site-packages/eth_account/hdaccount/wordlist/chinese_traditional.txt",
+    "Lib/site-packages/eth_account/hdaccount/wordlist/czech.txt",
+    "Lib/site-packages/eth_account/hdaccount/wordlist/english.txt",
+    "Lib/site-packages/eth_account/hdaccount/wordlist/french.txt",
+    "Lib/site-packages/eth_account/hdaccount/wordlist/italian.txt",
+    "Lib/site-packages/eth_account/hdaccount/wordlist/japanese.txt",
+    "Lib/site-packages/eth_account/hdaccount/wordlist/korean.txt",
+    "Lib/site-packages/eth_account/hdaccount/wordlist/spanish.txt",
+    "Lib/site-packages/eth_account/messages.py",
+    "Lib/site-packages/eth_account/signers/__init__.py",
+    "Lib/site-packages/eth_account/signers/base.py",
+    "Lib/site-packages/eth_account/signers/local.py",
+    "Lib/site-packages/eth_account/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/eth_account/_utils/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/eth_account/_utils/__pycache__/legacy_transactions.cpython-39.pyc",
+    "Lib/site-packages/eth_account/_utils/__pycache__/signing.cpython-39.pyc",
+    "Lib/site-packages/eth_account/_utils/structured_data/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/eth_account/_utils/structured_data/__pycache__/hashing.cpython-39.pyc",
+    "Lib/site-packages/eth_account/_utils/structured_data/__pycache__/validation.cpython-39.pyc",
+    "Lib/site-packages/eth_account/_utils/__pycache__/transaction_utils.cpython-39.pyc",
+    "Lib/site-packages/eth_account/_utils/__pycache__/typed_transactions.cpython-39.pyc",
+    "Lib/site-packages/eth_account/_utils/__pycache__/validation.cpython-39.pyc",
+    "Lib/site-packages/eth_account/__pycache__/account.cpython-39.pyc",
+    "Lib/site-packages/eth_account/__pycache__/datastructures.cpython-39.pyc",
+    "Lib/site-packages/eth_account/hdaccount/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/eth_account/hdaccount/__pycache__/_utils.cpython-39.pyc",
+    "Lib/site-packages/eth_account/hdaccount/__pycache__/deterministic.cpython-39.pyc",
+    "Lib/site-packages/eth_account/hdaccount/__pycache__/mnemonic.cpython-39.pyc",
+    "Lib/site-packages/eth_account/__pycache__/messages.cpython-39.pyc",
+    "Lib/site-packages/eth_account/signers/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/eth_account/signers/__pycache__/base.cpython-39.pyc",
+    "Lib/site-packages/eth_account/signers/__pycache__/local.cpython-39.pyc"
+  ],
+  "fn": "eth-account-0.5.6-pyhd8ed1ab_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\eth-account-0.5.6-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "65b18e1631529aac77a0211e4a41cea7",
+  "name": "eth-account",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\eth-account-0.5.6-pyhd8ed1ab_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/eth_account-0.5.6.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/eth_account-0.5.6.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "dfdd23c17b8345e5da79379fd1e4fadc5ac52a88003158180545a5d681a4e1e7",
+        "sha256_in_prefix": "dfdd23c17b8345e5da79379fd1e4fadc5ac52a88003158180545a5d681a4e1e7",
+        "size_in_bytes": 1090
+      },
+      {
+        "_path": "site-packages/eth_account-0.5.6.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "52940d3b521c2203100cfc070d5bfca1b0bc874348c8fe0b7019ad6f1a670b56",
+        "sha256_in_prefix": "52940d3b521c2203100cfc070d5bfca1b0bc874348c8fe0b7019ad6f1a670b56",
+        "size_in_bytes": 6001
+      },
+      {
+        "_path": "site-packages/eth_account-0.5.6.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "de0e56033b53a22b0873c6175019425a57774120c5218b83e2b610b4cfcd8e01",
+        "sha256_in_prefix": "de0e56033b53a22b0873c6175019425a57774120c5218b83e2b610b4cfcd8e01",
+        "size_in_bytes": 4667
+      },
+      {
+        "_path": "site-packages/eth_account-0.5.6.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/eth_account-0.5.6.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "7b0c04b9e8a8d42d977874ef4f5ee7f1d6542603afc82582b7459534b0a53fda",
+        "sha256_in_prefix": "7b0c04b9e8a8d42d977874ef4f5ee7f1d6542603afc82582b7459534b0a53fda",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/eth_account-0.5.6.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "483d5519399570a9edc87f190ef54512732b6fb13f11a8052a2fff628ba7a5d8",
+        "sha256_in_prefix": "483d5519399570a9edc87f190ef54512732b6fb13f11a8052a2fff628ba7a5d8",
+        "size_in_bytes": 107
+      },
+      {
+        "_path": "site-packages/eth_account-0.5.6.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "3e6cf3afb2a9a08c3feabdca19be002c0a68fa53e4f1b5c162dae974fc9579d7",
+        "sha256_in_prefix": "3e6cf3afb2a9a08c3feabdca19be002c0a68fa53e4f1b5c162dae974fc9579d7",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "site-packages/eth_account/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a29526d901c70b995814dd5d7ac4f68ae92da43da94232c513e7087cba215380",
+        "sha256_in_prefix": "a29526d901c70b995814dd5d7ac4f68ae92da43da94232c513e7087cba215380",
+        "size_in_bytes": 72
+      },
+      {
+        "_path": "site-packages/eth_account/_utils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/eth_account/_utils/legacy_transactions.py",
+        "path_type": "hardlink",
+        "sha256": "5971a0747fe08a3a22d7bfdd8d0bd90d3a65027a6f358c51033152212f4e9a54",
+        "sha256_in_prefix": "5971a0747fe08a3a22d7bfdd8d0bd90d3a65027a6f358c51033152212f4e9a54",
+        "size_in_bytes": 4400
+      },
+      {
+        "_path": "site-packages/eth_account/_utils/signing.py",
+        "path_type": "hardlink",
+        "sha256": "8626ec279ae0c00092c2a758d6e2fff2b8906de68f14b31c1ad3fcbb8cd7bc51",
+        "sha256_in_prefix": "8626ec279ae0c00092c2a758d6e2fff2b8906de68f14b31c1ad3fcbb8cd7bc51",
+        "size_in_bytes": 4632
+      },
+      {
+        "_path": "site-packages/eth_account/_utils/structured_data/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/eth_account/_utils/structured_data/hashing.py",
+        "path_type": "hardlink",
+        "sha256": "a61df835d317896b553631c75b6fb6a5bbe7314deab89064792e2f02eeb42465",
+        "sha256_in_prefix": "a61df835d317896b553631c75b6fb6a5bbe7314deab89064792e2f02eeb42465",
+        "size_in_bytes": 9829
+      },
+      {
+        "_path": "site-packages/eth_account/_utils/structured_data/validation.py",
+        "path_type": "hardlink",
+        "sha256": "22af41701ba36a111968fb3872a83a884e3e9a93134b7bdd2042402a74128cb4",
+        "sha256_in_prefix": "22af41701ba36a111968fb3872a83a884e3e9a93134b7bdd2042402a74128cb4",
+        "size_in_bytes": 5124
+      },
+      {
+        "_path": "site-packages/eth_account/_utils/transaction_utils.py",
+        "path_type": "hardlink",
+        "sha256": "21eaa69e1c9c64dea1ced674fbed479b76f6bd12f5155d382ace1081ea7345fb",
+        "sha256_in_prefix": "21eaa69e1c9c64dea1ced674fbed479b76f6bd12f5155d382ace1081ea7345fb",
+        "size_in_bytes": 2971
+      },
+      {
+        "_path": "site-packages/eth_account/_utils/typed_transactions.py",
+        "path_type": "hardlink",
+        "sha256": "6c8bafb08963ea47eee85a29d7bb4560815a9b03cdb483d58fbe09810c615a82",
+        "sha256_in_prefix": "6c8bafb08963ea47eee85a29d7bb4560815a9b03cdb483d58fbe09810c615a82",
+        "size_in_bytes": 20235
+      },
+      {
+        "_path": "site-packages/eth_account/_utils/validation.py",
+        "path_type": "hardlink",
+        "sha256": "1bb21d725659a7a41a1058047747d7bb7104a6f4a2fec3d71d12d7f973bfe810",
+        "sha256_in_prefix": "1bb21d725659a7a41a1058047747d7bb7104a6f4a2fec3d71d12d7f973bfe810",
+        "size_in_bytes": 3044
+      },
+      {
+        "_path": "site-packages/eth_account/account.py",
+        "path_type": "hardlink",
+        "sha256": "f2b734f9d841fe5ab52ad0f56a5cf203f498b888882fc98c2416c59054574873",
+        "sha256_in_prefix": "f2b734f9d841fe5ab52ad0f56a5cf203f498b888882fc98c2416c59054574873",
+        "size_in_bytes": 34678
+      },
+      {
+        "_path": "site-packages/eth_account/datastructures.py",
+        "path_type": "hardlink",
+        "sha256": "b45255e4b1bd2a4d3426e40471309cce91bc432298c21ff52d797c8d06257053",
+        "sha256_in_prefix": "b45255e4b1bd2a4d3426e40471309cce91bc432298c21ff52d797c8d06257053",
+        "size_in_bytes": 612
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f5f28593022a80e26e626edd4761588d55a403f858f2e10c9aeb85c9ba89bc3b",
+        "sha256_in_prefix": "f5f28593022a80e26e626edd4761588d55a403f858f2e10c9aeb85c9ba89bc3b",
+        "size_in_bytes": 783
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/_utils.py",
+        "path_type": "hardlink",
+        "sha256": "96c93a60d92b12a761f057ef8e39486d86aed24d89a68f6504caa75b697187f0",
+        "sha256_in_prefix": "96c93a60d92b12a761f057ef8e39486d86aed24d89a68f6504caa75b697187f0",
+        "size_in_bytes": 1375
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/deterministic.py",
+        "path_type": "hardlink",
+        "sha256": "7fa630c1464ac3698073a805bf9a6f39f889256ab52db3349666c898d2ae4265",
+        "sha256_in_prefix": "7fa630c1464ac3698073a805bf9a6f39f889256ab52db3349666c898d2ae4265",
+        "size_in_bytes": 9327
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/mnemonic.py",
+        "path_type": "hardlink",
+        "sha256": "e0dcf30bcdb89d88c2007dac3b9b97c9187831b74c4243171bd543714c29ab7b",
+        "sha256_in_prefix": "e0dcf30bcdb89d88c2007dac3b9b97c9187831b74c4243171bd543714c29ab7b",
+        "size_in_bytes": 8021
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/wordlist/chinese_simplified.txt",
+        "path_type": "hardlink",
+        "sha256": "5c5942792bd8340cb8b27cd592f1015edf56a8c5b26276ee18a482428e7c5726",
+        "sha256_in_prefix": "5c5942792bd8340cb8b27cd592f1015edf56a8c5b26276ee18a482428e7c5726",
+        "size_in_bytes": 8192
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/wordlist/chinese_traditional.txt",
+        "path_type": "hardlink",
+        "sha256": "417b26b3d8500a4ae3d59717d7011952db6fc2fb84b807f3f94ac734e89c1b5f",
+        "sha256_in_prefix": "417b26b3d8500a4ae3d59717d7011952db6fc2fb84b807f3f94ac734e89c1b5f",
+        "size_in_bytes": 8192
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/wordlist/czech.txt",
+        "path_type": "hardlink",
+        "sha256": "7e80e161c3e93d9554c2efb78d4e3cebf8fc727e9c52e03b83b94406bdcc95fc",
+        "sha256_in_prefix": "7e80e161c3e93d9554c2efb78d4e3cebf8fc727e9c52e03b83b94406bdcc95fc",
+        "size_in_bytes": 14945
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/wordlist/english.txt",
+        "path_type": "hardlink",
+        "sha256": "2f5eed53a4727b4bf8880d8f3f199efc90e58503646d9ff8eff3a2ed3b24dbda",
+        "sha256_in_prefix": "2f5eed53a4727b4bf8880d8f3f199efc90e58503646d9ff8eff3a2ed3b24dbda",
+        "size_in_bytes": 13116
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/wordlist/french.txt",
+        "path_type": "hardlink",
+        "sha256": "ebc3959ab7801a1df6bac4fa7d970652f1df76b683cd2f4003c941c63d517e59",
+        "sha256_in_prefix": "ebc3959ab7801a1df6bac4fa7d970652f1df76b683cd2f4003c941c63d517e59",
+        "size_in_bytes": 16777
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/wordlist/italian.txt",
+        "path_type": "hardlink",
+        "sha256": "d392c49fdb700a24cd1fceb237c1f65dcc128f6b34a8aacb58b59384b5c648c2",
+        "sha256_in_prefix": "d392c49fdb700a24cd1fceb237c1f65dcc128f6b34a8aacb58b59384b5c648c2",
+        "size_in_bytes": 16033
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/wordlist/japanese.txt",
+        "path_type": "hardlink",
+        "sha256": "2eed0aef492291e061633d7ad8117f1a2b03eb80a29d0e4e3117ac2528d05ffd",
+        "sha256_in_prefix": "2eed0aef492291e061633d7ad8117f1a2b03eb80a29d0e4e3117ac2528d05ffd",
+        "size_in_bytes": 26423
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/wordlist/korean.txt",
+        "path_type": "hardlink",
+        "sha256": "9e95f86c167de88f450f0aaf89e87f6624a57f973c67b516e338e8e8b8897f60",
+        "sha256_in_prefix": "9e95f86c167de88f450f0aaf89e87f6624a57f973c67b516e338e8e8b8897f60",
+        "size_in_bytes": 37832
+      },
+      {
+        "_path": "site-packages/eth_account/hdaccount/wordlist/spanish.txt",
+        "path_type": "hardlink",
+        "sha256": "46846a5a0139d1e3cb77293e521c2865f7bcdb82c44e8d0a06a2cd0ecba48c0b",
+        "sha256_in_prefix": "46846a5a0139d1e3cb77293e521c2865f7bcdb82c44e8d0a06a2cd0ecba48c0b",
+        "size_in_bytes": 13996
+      },
+      {
+        "_path": "site-packages/eth_account/messages.py",
+        "path_type": "hardlink",
+        "sha256": "08a96726794a81c89e369f6e950e8c1c26523209f68f0ac4ea003aa82c9a505a",
+        "sha256_in_prefix": "08a96726794a81c89e369f6e950e8c1c26523209f68f0ac4ea003aa82c9a505a",
+        "size_in_bytes": 8719
+      },
+      {
+        "_path": "site-packages/eth_account/signers/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/eth_account/signers/base.py",
+        "path_type": "hardlink",
+        "sha256": "dac0af8c2662dffef21ea3766b308ca82a5081a35448f370efe78fab06be0ebb",
+        "sha256_in_prefix": "dac0af8c2662dffef21ea3766b308ca82a5081a35448f370efe78fab06be0ebb",
+        "size_in_bytes": 2698
+      },
+      {
+        "_path": "site-packages/eth_account/signers/local.py",
+        "path_type": "hardlink",
+        "sha256": "fe5083c6d5145d32bca55c70ad653aea1637e504bd8350a6bad5dd16bc063c6b",
+        "sha256_in_prefix": "fe5083c6d5145d32bca55c70ad653aea1637e504bd8350a6bad5dd16bc063c6b",
+        "size_in_bytes": 2986
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/_utils/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/_utils/__pycache__/legacy_transactions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/_utils/__pycache__/signing.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/_utils/structured_data/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/_utils/structured_data/__pycache__/hashing.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/_utils/structured_data/__pycache__/validation.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/_utils/__pycache__/transaction_utils.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/_utils/__pycache__/typed_transactions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/_utils/__pycache__/validation.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/__pycache__/account.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/__pycache__/datastructures.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/hdaccount/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/hdaccount/__pycache__/_utils.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/hdaccount/__pycache__/deterministic.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/hdaccount/__pycache__/mnemonic.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/__pycache__/messages.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/signers/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/signers/__pycache__/base.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/eth_account/signers/__pycache__/local.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "eth-account==0.5.6=pyhd8ed1ab_0",
+  "sha256": "2bf8383aad132cfc4551f87b6d83c452475ca1c7f60ce0e81a34e624e0475968",
+  "size": 95396,
+  "subdir": "noarch",
+  "timestamp": 1632386462630,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/eth-account-0.5.6-pyhd8ed1ab_0.tar.bz2",
+  "version": "0.5.6"
+}

@@ -1,0 +1,496 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "httpx >=0.10.1,<1.0.0",
+    "multiaddr >=0.0.7",
+    "python >=3.5",
+    "requests >=2.11",
+    "urllib3 >=1.24,<2.0"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\ipfshttpclient-0.7.0-pyhd8ed1ab_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/ipfshttpclient-0.7.0.dist-info/INSTALLER",
+    "Lib/site-packages/ipfshttpclient-0.7.0.dist-info/LICENSE",
+    "Lib/site-packages/ipfshttpclient-0.7.0.dist-info/METADATA",
+    "Lib/site-packages/ipfshttpclient-0.7.0.dist-info/RECORD",
+    "Lib/site-packages/ipfshttpclient-0.7.0.dist-info/REQUESTED",
+    "Lib/site-packages/ipfshttpclient-0.7.0.dist-info/WHEEL",
+    "Lib/site-packages/ipfshttpclient-0.7.0.dist-info/direct_url.json",
+    "Lib/site-packages/ipfshttpclient/__init__.py",
+    "Lib/site-packages/ipfshttpclient/client/__init__.py",
+    "Lib/site-packages/ipfshttpclient/client/base.py",
+    "Lib/site-packages/ipfshttpclient/client/bitswap.py",
+    "Lib/site-packages/ipfshttpclient/client/block.py",
+    "Lib/site-packages/ipfshttpclient/client/bootstrap.py",
+    "Lib/site-packages/ipfshttpclient/client/config.py",
+    "Lib/site-packages/ipfshttpclient/client/dag.py",
+    "Lib/site-packages/ipfshttpclient/client/dht.py",
+    "Lib/site-packages/ipfshttpclient/client/files.py",
+    "Lib/site-packages/ipfshttpclient/client/key.py",
+    "Lib/site-packages/ipfshttpclient/client/miscellaneous.py",
+    "Lib/site-packages/ipfshttpclient/client/name.py",
+    "Lib/site-packages/ipfshttpclient/client/object.py",
+    "Lib/site-packages/ipfshttpclient/client/pin.py",
+    "Lib/site-packages/ipfshttpclient/client/pubsub.py",
+    "Lib/site-packages/ipfshttpclient/client/repo.py",
+    "Lib/site-packages/ipfshttpclient/client/swarm.py",
+    "Lib/site-packages/ipfshttpclient/client/unstable.py",
+    "Lib/site-packages/ipfshttpclient/encoding.py",
+    "Lib/site-packages/ipfshttpclient/exceptions.py",
+    "Lib/site-packages/ipfshttpclient/filescanner.py",
+    "Lib/site-packages/ipfshttpclient/filescanner_ty.pyi",
+    "Lib/site-packages/ipfshttpclient/http.py",
+    "Lib/site-packages/ipfshttpclient/http_common.py",
+    "Lib/site-packages/ipfshttpclient/http_httpx.py",
+    "Lib/site-packages/ipfshttpclient/http_requests.py",
+    "Lib/site-packages/ipfshttpclient/multipart.py",
+    "Lib/site-packages/ipfshttpclient/requests_wrapper.py",
+    "Lib/site-packages/ipfshttpclient/utils.py",
+    "Lib/site-packages/ipfshttpclient/version.py",
+    "Lib/site-packages/ipfshttpclient/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/base.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/bitswap.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/block.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/bootstrap.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/config.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/dag.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/dht.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/files.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/key.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/miscellaneous.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/name.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/object.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/pin.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/pubsub.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/repo.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/swarm.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/client/__pycache__/unstable.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/__pycache__/encoding.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/__pycache__/exceptions.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/__pycache__/filescanner.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/__pycache__/http.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/__pycache__/http_common.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/__pycache__/http_httpx.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/__pycache__/http_requests.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/__pycache__/multipart.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/__pycache__/requests_wrapper.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/__pycache__/utils.cpython-39.pyc",
+    "Lib/site-packages/ipfshttpclient/__pycache__/version.cpython-39.pyc"
+  ],
+  "fn": "ipfshttpclient-0.7.0-pyhd8ed1ab_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\ipfshttpclient-0.7.0-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "47de62e90a071c7d7c8653a9b4e0c00d",
+  "name": "ipfshttpclient",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\ipfshttpclient-0.7.0-pyhd8ed1ab_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/ipfshttpclient-0.7.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/ipfshttpclient-0.7.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "b291e8bafbf26474336be25b0532c928eb397d0666eea7d5bf7bb6ca9e5affc1",
+        "sha256_in_prefix": "b291e8bafbf26474336be25b0532c928eb397d0666eea7d5bf7bb6ca9e5affc1",
+        "size_in_bytes": 1108
+      },
+      {
+        "_path": "site-packages/ipfshttpclient-0.7.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "ad6e2164396db6fbd30b27a3be55537c2ef48bc8fd1c0c0b670491bb2a778490",
+        "sha256_in_prefix": "ad6e2164396db6fbd30b27a3be55537c2ef48bc8fd1c0c0b670491bb2a778490",
+        "size_in_bytes": 10938
+      },
+      {
+        "_path": "site-packages/ipfshttpclient-0.7.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "98845574b8064595a49574f26ebe86ac7d7a424f7d523584105381e980e0365a",
+        "sha256_in_prefix": "98845574b8064595a49574f26ebe86ac7d7a424f7d523584105381e980e0365a",
+        "size_in_bytes": 5053
+      },
+      {
+        "_path": "site-packages/ipfshttpclient-0.7.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/ipfshttpclient-0.7.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ae0ece954e76a18d9d185f4febebd3efb6f254bb4220de23a02855d478c0c9b5",
+        "sha256_in_prefix": "ae0ece954e76a18d9d185f4febebd3efb6f254bb4220de23a02855d478c0c9b5",
+        "size_in_bytes": 81
+      },
+      {
+        "_path": "site-packages/ipfshttpclient-0.7.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "a14d169a8354309a2733b700e39a40aae39d16b2624900cf5e589ee417020796",
+        "sha256_in_prefix": "a14d169a8354309a2733b700e39a40aae39d16b2624900cf5e589ee417020796",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "18a56963a6a11f6a5a0449cf2e47f8e2919773539992fc13632f969f735ee5b4",
+        "sha256_in_prefix": "18a56963a6a11f6a5a0449cf2e47f8e2919773539992fc13632f969f735ee5b4",
+        "size_in_bytes": 360
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "6f70f657cf5d5f2709085da319bbb674b9b36de26fb14e5828e1fa754e1031f2",
+        "sha256_in_prefix": "6f70f657cf5d5f2709085da319bbb674b9b36de26fb14e5828e1fa754e1031f2",
+        "size_in_bytes": 9838
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/base.py",
+        "path_type": "hardlink",
+        "sha256": "91a6adece8b6937e6c0c6e8360a2ffdb1b0ecb0b3642fe0e0c73fae45f418c43",
+        "sha256_in_prefix": "91a6adece8b6937e6c0c6e8360a2ffdb1b0ecb0b3642fe0e0c73fae45f418c43",
+        "size_in_bytes": 13070
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/bitswap.py",
+        "path_type": "hardlink",
+        "sha256": "396aa2e3a3095399809f714e3bfd5df671327ce0888bf4a2a71fd990bfc44d33",
+        "sha256_in_prefix": "396aa2e3a3095399809f714e3bfd5df671327ce0888bf4a2a71fd990bfc44d33",
+        "size_in_bytes": 1755
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/block.py",
+        "path_type": "hardlink",
+        "sha256": "e887778bb61eb663ba0aabe1f319bee161b5b0258eecabd8d9b4d0700b22a689",
+        "sha256_in_prefix": "e887778bb61eb663ba0aabe1f319bee161b5b0258eecabd8d9b4d0700b22a689",
+        "size_in_bytes": 2045
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/bootstrap.py",
+        "path_type": "hardlink",
+        "sha256": "008fbdee2556f563dc90867eadb46cf404abf4d553fa35703ea2becf45ad6242",
+        "sha256_in_prefix": "008fbdee2556f563dc90867eadb46cf404abf4d553fa35703ea2becf45ad6242",
+        "size_in_bytes": 1783
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/config.py",
+        "path_type": "hardlink",
+        "sha256": "25ad4ecbb36a468cac2cf76a3256c64dcd80c12753521e08dcc298b01832379c",
+        "sha256_in_prefix": "25ad4ecbb36a468cac2cf76a3256c64dcd80c12753521e08dcc298b01832379c",
+        "size_in_bytes": 2159
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/dag.py",
+        "path_type": "hardlink",
+        "sha256": "15fb4b066d94f58a9987a61a526a97fc493e0d74714c05421e0aafb3945e5fa0",
+        "sha256_in_prefix": "15fb4b066d94f58a9987a61a526a97fc493e0d74714c05421e0aafb3945e5fa0",
+        "size_in_bytes": 4665
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/dht.py",
+        "path_type": "hardlink",
+        "sha256": "2192bd0ce37778b073523b83a6c6c7c2164b194fa94d7cd7761a29bfa56af45f",
+        "sha256_in_prefix": "2192bd0ce37778b073523b83a6c6c7c2164b194fa94d7cd7761a29bfa56af45f",
+        "size_in_bytes": 6294
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/files.py",
+        "path_type": "hardlink",
+        "sha256": "af6147bbe7527c6820ab2a1a4755502c23f5be7b79d969e7622ceab918c73048",
+        "sha256_in_prefix": "af6147bbe7527c6820ab2a1a4755502c23f5be7b79d969e7622ceab918c73048",
+        "size_in_bytes": 14839
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/key.py",
+        "path_type": "hardlink",
+        "sha256": "a609b3d321bb2356033f1d7b1f7d35e8e6d428e243615aec1e75cab3ad85138f",
+        "sha256_in_prefix": "a609b3d321bb2356033f1d7b1f7d35e8e6d428e243615aec1e75cab3ad85138f",
+        "size_in_bytes": 3431
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/miscellaneous.py",
+        "path_type": "hardlink",
+        "sha256": "5351c084f2d8c010c9cdfd5791f54943f4f51cfe1c3251d1932bfb259997e326",
+        "sha256_in_prefix": "5351c084f2d8c010c9cdfd5791f54943f4f51cfe1c3251d1932bfb259997e326",
+        "size_in_bytes": 6230
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/name.py",
+        "path_type": "hardlink",
+        "sha256": "3714e8b5e6a3e06cc9c29a6e28bf2b83f2ceff4438b05ee88eea4f75f5b78651",
+        "sha256_in_prefix": "3714e8b5e6a3e06cc9c29a6e28bf2b83f2ceff4438b05ee88eea4f75f5b78651",
+        "size_in_bytes": 4125
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/object.py",
+        "path_type": "hardlink",
+        "sha256": "fbdd85b6a5b790ac283658aeb230f64fb123f0b9789d81d967547106042f45bb",
+        "sha256_in_prefix": "fbdd85b6a5b790ac283658aeb230f64fb123f0b9789d81d967547106042f45bb",
+        "size_in_bytes": 11246
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/pin.py",
+        "path_type": "hardlink",
+        "sha256": "852939fe2bd9b55117ebf4eb8de03bb4e186349a65a29a56309d08c370406185",
+        "sha256_in_prefix": "852939fe2bd9b55117ebf4eb8de03bb4e186349a65a29a56309d08c370406185",
+        "size_in_bytes": 8698
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/pubsub.py",
+        "path_type": "hardlink",
+        "sha256": "25327868f5c88df4ea34be5181294e38bbfac2b2db60598959cd645588467c4b",
+        "sha256_in_prefix": "25327868f5c88df4ea34be5181294e38bbfac2b2db60598959cd645588467c4b",
+        "size_in_bytes": 5045
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/repo.py",
+        "path_type": "hardlink",
+        "sha256": "3d3112b9aed2fe9ba78843435b597f9b97d50b1d71f4590a99092c25ad9b337a",
+        "sha256_in_prefix": "3d3112b9aed2fe9ba78843435b597f9b97d50b1d71f4590a99092c25ad9b337a",
+        "size_in_bytes": 2946
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/swarm.py",
+        "path_type": "hardlink",
+        "sha256": "9ee8087f2bfc630ef4d0674d6c11032b5e835908db3051feecf0d43a5ce431d3",
+        "sha256_in_prefix": "9ee8087f2bfc630ef4d0674d6c11032b5e835908db3051feecf0d43a5ce431d3",
+        "size_in_bytes": 6087
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/client/unstable.py",
+        "path_type": "hardlink",
+        "sha256": "b17e9002f616f865f0a6cc993c8dbfe7912a47c97cde5be5da965dfdfd80e18f",
+        "sha256_in_prefix": "b17e9002f616f865f0a6cc993c8dbfe7912a47c97cde5be5da965dfdfd80e18f",
+        "size_in_bytes": 5684
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/encoding.py",
+        "path_type": "hardlink",
+        "sha256": "400c635b7cedaba1adf3c322cb03253f04dcefd5cda8bed23684b6517ee8ab2e",
+        "sha256_in_prefix": "400c635b7cedaba1adf3c322cb03253f04dcefd5cda8bed23684b6517ee8ab2e",
+        "size_in_bytes": 7926
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "90c428137b6671cac903017f796b7be383b5549c8de58361b6cd6bb55c61f3ab",
+        "sha256_in_prefix": "90c428137b6671cac903017f796b7be383b5549c8de58361b6cd6bb55c61f3ab",
+        "size_in_bytes": 4898
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/filescanner.py",
+        "path_type": "hardlink",
+        "sha256": "6bc8f697a2aff4fff1d6299110d1ec59379f6d2007ccd09744d8f8432fe73180",
+        "sha256_in_prefix": "6bc8f697a2aff4fff1d6299110d1ec59379f6d2007ccd09744d8f8432fe73180",
+        "size_in_bytes": 25019
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/filescanner_ty.pyi",
+        "path_type": "hardlink",
+        "sha256": "1d537b8bc85baa0a06d0d1df74dfa4ea2a62ae1741e8d5dbc4ee4303aa3704f4",
+        "sha256_in_prefix": "1d537b8bc85baa0a06d0d1df74dfa4ea2a62ae1741e8d5dbc4ee4303aa3704f4",
+        "size_in_bytes": 264
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/http.py",
+        "path_type": "hardlink",
+        "sha256": "9705916afccb979fedc6fa1cbf568fe642766c35a7a372990a1825bc626758f1",
+        "sha256_in_prefix": "9705916afccb979fedc6fa1cbf568fe642766c35a7a372990a1825bc626758f1",
+        "size_in_bytes": 947
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/http_common.py",
+        "path_type": "hardlink",
+        "sha256": "01f560774d54589a5f73a2728d261a710a553d8b915a82dd7f3eddb99f89e137",
+        "sha256_in_prefix": "01f560774d54589a5f73a2728d261a710a553d8b915a82dd7f3eddb99f89e137",
+        "size_in_bytes": 21267
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/http_httpx.py",
+        "path_type": "hardlink",
+        "sha256": "66b150b31d15cc3d40fe269c0f982f1547f5f390864f60eaf362262c8fbd7de6",
+        "sha256_in_prefix": "66b150b31d15cc3d40fe269c0f982f1547f5f390864f60eaf362262c8fbd7de6",
+        "size_in_bytes": 6139
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/http_requests.py",
+        "path_type": "hardlink",
+        "sha256": "70a23ce0730f6640a0a6109e9810b4027deb603df37d10ea365da1b1bf21d408",
+        "sha256_in_prefix": "70a23ce0730f6640a0a6109e9810b4027deb603df37d10ea365da1b1bf21d408",
+        "size_in_bytes": 6600
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/multipart.py",
+        "path_type": "hardlink",
+        "sha256": "ea88d5ae6ab5e657aa460e3e356256b2f2545d76da25039aeca2f1505252fac8",
+        "sha256_in_prefix": "ea88d5ae6ab5e657aa460e3e356256b2f2545d76da25039aeca2f1505252fac8",
+        "size_in_bytes": 20040
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/requests_wrapper.py",
+        "path_type": "hardlink",
+        "sha256": "3077d8a136339fd6d261a4145afe35b1fe3289f927ac229b1b788887d52bc4c5",
+        "sha256_in_prefix": "3077d8a136339fd6d261a4145afe35b1fe3289f927ac229b1b788887d52bc4c5",
+        "size_in_bytes": 9483
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/utils.py",
+        "path_type": "hardlink",
+        "sha256": "5009e851be42c4d37e0633ae198e8334d18643e7782feb2f9eda3351d038e8a7",
+        "sha256_in_prefix": "5009e851be42c4d37e0633ae198e8334d18643e7782feb2f9eda3351d038e8a7",
+        "size_in_bytes": 6156
+      },
+      {
+        "_path": "site-packages/ipfshttpclient/version.py",
+        "path_type": "hardlink",
+        "sha256": "7efb8b35de5a6bf793e58d71612ce5ad44dba0ac4b38842c87b3d93f56486f52",
+        "sha256_in_prefix": "7efb8b35de5a6bf793e58d71612ce5ad44dba0ac4b38842c87b3d93f56486f52",
+        "size_in_bytes": 549
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/base.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/bitswap.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/block.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/bootstrap.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/config.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/dag.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/dht.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/files.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/key.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/miscellaneous.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/name.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/object.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/pin.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/pubsub.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/repo.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/swarm.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/client/__pycache__/unstable.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/__pycache__/encoding.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/__pycache__/exceptions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/__pycache__/filescanner.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/__pycache__/http.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/__pycache__/http_common.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/__pycache__/http_httpx.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/__pycache__/http_requests.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/__pycache__/multipart.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/__pycache__/requests_wrapper.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/__pycache__/utils.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/ipfshttpclient/__pycache__/version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "ipfshttpclient==0.7.0=pyhd8ed1ab_0",
+  "sha256": "e0f0963244a922f8a844c1e4f93d1daf79d72663c7385e613a39ad7cd3b8755e",
+  "size": 64283,
+  "subdir": "noarch",
+  "timestamp": 1615811794765,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/ipfshttpclient-0.7.0-pyhd8ed1ab_0.tar.bz2",
+  "version": "0.7.0"
+}

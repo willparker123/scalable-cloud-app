@@ -1,0 +1,285 @@
+{
+  "build": "pyh9f0ad1d_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "eth-utils >=1.0.2,<2",
+    "python"
+  ],
+  "extracted_package_dir": "C:\\Users\\willi\\.conda\\pkgs\\rlp-1.2.0-pyh9f0ad1d_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/rlp-1.2.0.dist-info/INSTALLER",
+    "Lib/site-packages/rlp-1.2.0.dist-info/LICENSE",
+    "Lib/site-packages/rlp-1.2.0.dist-info/METADATA",
+    "Lib/site-packages/rlp-1.2.0.dist-info/RECORD",
+    "Lib/site-packages/rlp-1.2.0.dist-info/REQUESTED",
+    "Lib/site-packages/rlp-1.2.0.dist-info/WHEEL",
+    "Lib/site-packages/rlp-1.2.0.dist-info/direct_url.json",
+    "Lib/site-packages/rlp-1.2.0.dist-info/top_level.txt",
+    "Lib/site-packages/rlp/__init__.py",
+    "Lib/site-packages/rlp/atomic.py",
+    "Lib/site-packages/rlp/codec.py",
+    "Lib/site-packages/rlp/exceptions.py",
+    "Lib/site-packages/rlp/lazy.py",
+    "Lib/site-packages/rlp/sedes/__init__.py",
+    "Lib/site-packages/rlp/sedes/big_endian_int.py",
+    "Lib/site-packages/rlp/sedes/binary.py",
+    "Lib/site-packages/rlp/sedes/boolean.py",
+    "Lib/site-packages/rlp/sedes/lists.py",
+    "Lib/site-packages/rlp/sedes/raw.py",
+    "Lib/site-packages/rlp/sedes/serializable.py",
+    "Lib/site-packages/rlp/sedes/text.py",
+    "Lib/site-packages/rlp/utils.py",
+    "Lib/site-packages/rlp/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/rlp/__pycache__/atomic.cpython-39.pyc",
+    "Lib/site-packages/rlp/__pycache__/codec.cpython-39.pyc",
+    "Lib/site-packages/rlp/__pycache__/exceptions.cpython-39.pyc",
+    "Lib/site-packages/rlp/__pycache__/lazy.cpython-39.pyc",
+    "Lib/site-packages/rlp/sedes/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/rlp/sedes/__pycache__/big_endian_int.cpython-39.pyc",
+    "Lib/site-packages/rlp/sedes/__pycache__/binary.cpython-39.pyc",
+    "Lib/site-packages/rlp/sedes/__pycache__/boolean.cpython-39.pyc",
+    "Lib/site-packages/rlp/sedes/__pycache__/lists.cpython-39.pyc",
+    "Lib/site-packages/rlp/sedes/__pycache__/raw.cpython-39.pyc",
+    "Lib/site-packages/rlp/sedes/__pycache__/serializable.cpython-39.pyc",
+    "Lib/site-packages/rlp/sedes/__pycache__/text.cpython-39.pyc",
+    "Lib/site-packages/rlp/__pycache__/utils.cpython-39.pyc"
+  ],
+  "fn": "rlp-1.2.0-pyh9f0ad1d_0.tar.bz2",
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\willi\\.conda\\pkgs\\rlp-1.2.0-pyh9f0ad1d_0",
+    "type": 1
+  },
+  "md5": "fa84341601cda3ff44b0f9351860475f",
+  "name": "rlp",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\willi\\.conda\\pkgs\\rlp-1.2.0-pyh9f0ad1d_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/rlp-1.2.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/rlp-1.2.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "79f663f43dae27c6f1633676aebdaf44a7459b27f985a75f38d0b06c0f715d5f",
+        "sha256_in_prefix": "79f663f43dae27c6f1633676aebdaf44a7459b27f985a75f38d0b06c0f715d5f",
+        "size_in_bytes": 1088
+      },
+      {
+        "_path": "site-packages/rlp-1.2.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "f9904e3a743c0e5323c6e43d35862e645bda87e96bc986e6a3512e79473e34eb",
+        "sha256_in_prefix": "f9904e3a743c0e5323c6e43d35862e645bda87e96bc986e6a3512e79473e34eb",
+        "size_in_bytes": 3161
+      },
+      {
+        "_path": "site-packages/rlp-1.2.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "6899d34108bf6c7a9f6e11607fef738987c0ec803a0b4f76239ab9b31516c14d",
+        "sha256_in_prefix": "6899d34108bf6c7a9f6e11607fef738987c0ec803a0b4f76239ab9b31516c14d",
+        "size_in_bytes": 2315
+      },
+      {
+        "_path": "site-packages/rlp-1.2.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/rlp-1.2.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "00329ec9a1b2285e43c01344d2c444e69bd6f9b4a414c25f06e873677adc78fe",
+        "sha256_in_prefix": "00329ec9a1b2285e43c01344d2c444e69bd6f9b4a414c25f06e873677adc78fe",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/rlp-1.2.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "b16935363a02bab6341903c33aa41e66f3b6796192816c563973d93d9c97d137",
+        "sha256_in_prefix": "b16935363a02bab6341903c33aa41e66f3b6796192816c563973d93d9c97d137",
+        "size_in_bytes": 99
+      },
+      {
+        "_path": "site-packages/rlp-1.2.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "ee9085e919e42a6f1107de87fcc2dfad7a5519a2a10cea75bd1c345bacd493b6",
+        "sha256_in_prefix": "ee9085e919e42a6f1107de87fcc2dfad7a5519a2a10cea75bd1c345bacd493b6",
+        "size_in_bytes": 4
+      },
+      {
+        "_path": "site-packages/rlp/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "baafc4f8e05f901cc3a07a71bf3b2adcc0a1b23c20381a86ab0b0e5b43f1ba7d",
+        "sha256_in_prefix": "baafc4f8e05f901cc3a07a71bf3b2adcc0a1b23c20381a86ab0b0e5b43f1ba7d",
+        "size_in_bytes": 366
+      },
+      {
+        "_path": "site-packages/rlp/atomic.py",
+        "path_type": "hardlink",
+        "sha256": "2b4935fdb398c18bba812dd3532f9e2a187e44d2acf30db3fdc5e192f6504632",
+        "sha256_in_prefix": "2b4935fdb398c18bba812dd3532f9e2a187e44d2acf30db3fdc5e192f6504632",
+        "size_in_bytes": 168
+      },
+      {
+        "_path": "site-packages/rlp/codec.py",
+        "path_type": "hardlink",
+        "sha256": "df7966f564eefbe72dfbb3d5376716e75df1960fca3a0a64627b90eba56e9b42",
+        "sha256_in_prefix": "df7966f564eefbe72dfbb3d5376716e75df1960fca3a0a64627b90eba56e9b42",
+        "size_in_bytes": 11390
+      },
+      {
+        "_path": "site-packages/rlp/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "ff79a585f2523eea6657132ead64aac71a6694671500db7753590874a2c46a2b",
+        "sha256_in_prefix": "ff79a585f2523eea6657132ead64aac71a6694671500db7753590874a2c46a2b",
+        "size_in_bytes": 5825
+      },
+      {
+        "_path": "site-packages/rlp/lazy.py",
+        "path_type": "hardlink",
+        "sha256": "e8996e65a0cc70967e8cb7ad0a4db8d616576169f7bbcfbaf12017109c0457e7",
+        "sha256_in_prefix": "e8996e65a0cc70967e8cb7ad0a4db8d616576169f7bbcfbaf12017109c0457e7",
+        "size_in_bytes": 5999
+      },
+      {
+        "_path": "site-packages/rlp/sedes/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "535b4e08b598b7d9c6491adf4c5d569a4baddec96851e1434b2bd1416bf29c24",
+        "sha256_in_prefix": "535b4e08b598b7d9c6491adf4c5d569a4baddec96851e1434b2bd1416bf29c24",
+        "size_in_bytes": 353
+      },
+      {
+        "_path": "site-packages/rlp/sedes/big_endian_int.py",
+        "path_type": "hardlink",
+        "sha256": "a05b7ef86807fdccc4f5cfd9aa246892b54ce838f2c547f3524c58c9ece533b3",
+        "sha256_in_prefix": "a05b7ef86807fdccc4f5cfd9aa246892b54ce838f2c547f3524c58c9ece533b3",
+        "size_in_bytes": 1615
+      },
+      {
+        "_path": "site-packages/rlp/sedes/binary.py",
+        "path_type": "hardlink",
+        "sha256": "301a9719aa5866c4948503c39cb6f645f12e31c80c6c08bfe643c41e1c4ace04",
+        "sha256_in_prefix": "301a9719aa5866c4948503c39cb6f645f12e31c80c6c08bfe643c41e1c4ace04",
+        "size_in_bytes": 1937
+      },
+      {
+        "_path": "site-packages/rlp/sedes/boolean.py",
+        "path_type": "hardlink",
+        "sha256": "54ad8a78de3f0daffe65f4d8c54e56168791d714de49eb7bc0394f7f02c4f4f9",
+        "sha256_in_prefix": "54ad8a78de3f0daffe65f4d8c54e56168791d714de49eb7bc0394f7f02c4f4f9",
+        "size_in_bytes": 801
+      },
+      {
+        "_path": "site-packages/rlp/sedes/lists.py",
+        "path_type": "hardlink",
+        "sha256": "683d96de3c55edfeb3b18236a42e1bb458ad14e848265853cc9c4dc940e9b81a",
+        "sha256_in_prefix": "683d96de3c55edfeb3b18236a42e1bb458ad14e848265853cc9c4dc940e9b81a",
+        "size_in_bytes": 4912
+      },
+      {
+        "_path": "site-packages/rlp/sedes/raw.py",
+        "path_type": "hardlink",
+        "sha256": "2868930cd719cbbe4ea2fc4b5d6ebb8f2782b240404940bc9890c4d83104992d",
+        "sha256_in_prefix": "2868930cd719cbbe4ea2fc4b5d6ebb8f2782b240404940bc9890c4d83104992d",
+        "size_in_bytes": 742
+      },
+      {
+        "_path": "site-packages/rlp/sedes/serializable.py",
+        "path_type": "hardlink",
+        "sha256": "f76c9cf87501428cb614ceff8385dcdee0b2f79e7075a75aa3b032d56a19436f",
+        "sha256_in_prefix": "f76c9cf87501428cb614ceff8385dcdee0b2f79e7075a75aa3b032d56a19436f",
+        "size_in_bytes": 15713
+      },
+      {
+        "_path": "site-packages/rlp/sedes/text.py",
+        "path_type": "hardlink",
+        "sha256": "0ee268081e17916563ea272dca97a713cfb7e3297a7e2fad27ad29107c9fe5ea",
+        "sha256_in_prefix": "0ee268081e17916563ea272dca97a713cfb7e3297a7e2fad27ad29107c9fe5ea",
+        "size_in_bytes": 2210
+      },
+      {
+        "_path": "site-packages/rlp/utils.py",
+        "path_type": "hardlink",
+        "sha256": "4c96daa26ce0609ce2965b4f302ef3894627e01e6bf4a9f567d1403fadfc91dc",
+        "sha256_in_prefix": "4c96daa26ce0609ce2965b4f302ef3894627e01e6bf4a9f567d1403fadfc91dc",
+        "size_in_bytes": 85
+      },
+      {
+        "_path": "Lib/site-packages/rlp/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/__pycache__/atomic.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/__pycache__/codec.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/__pycache__/exceptions.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/__pycache__/lazy.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/sedes/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/sedes/__pycache__/big_endian_int.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/sedes/__pycache__/binary.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/sedes/__pycache__/boolean.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/sedes/__pycache__/lists.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/sedes/__pycache__/raw.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/sedes/__pycache__/serializable.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/sedes/__pycache__/text.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/rlp/__pycache__/utils.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "rlp==1.2.0=pyh9f0ad1d_0",
+  "sha256": "14437a4617263a8aad72ffe046b344b9497e9d769a140ff4827b2c52c19cfca5",
+  "size": 19526,
+  "subdir": "noarch",
+  "timestamp": 1598494960858,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/rlp-1.2.0-pyh9f0ad1d_0.tar.bz2",
+  "version": "1.2.0"
+}
