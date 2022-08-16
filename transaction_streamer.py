@@ -1,10 +1,61 @@
 from argparse import ArgumentParser
+from asyncio.log import logger
 from multiprocessing.sharedctypes import Value
 from fabric import task, Connection
 import logging
 import sys
 from web3 import Web3, EthereumTesterProvider
 from web3.auto import w3
+import json
+import requests
+from websockets import connect
+from web3.providers.base import JSONBaseProvider
+import asyncio
+from aiohttp import ClientSession
+import json
+
+async def get_event(loop, logger, url, id=1, method="eth_subscribe", params=["newHeads"], timeout=60):
+    if url.startswith("wss://eth-mainnet.g.alchemy.com/v2/"):
+        async with connect(url) as ws:
+            strlit = f'{json.dumps(params)}'
+            send_msg = f'{{"id": {id}, "jsonrpc": "2.0", "method": "{method}", "params": {strlit}}}'
+            print(send_msg)
+            print(json.loads(send_msg))
+            await ws.send(send_msg)
+            subscription_response = await ws.recv()
+            logger.info(subscription_response)
+            # you keep trying to listen to new events (similar idea to longPolling)
+            try:
+                while True:
+                    try:
+                        message = await asyncio.wait_for(ws.recv(), timeout=timeout)
+                        logger.info(message)
+                    except:
+                        logger.warning(f"Message failed, timed out (limit = {timeout}s) or could not be recieved. Retrying")
+            except:
+                loop.close()
+            logger.info(subscription_response)
+            # you are now subscribed to the event 
+            # you keep trying to listen to new events (similar idea to longPolling)
+    elif url.startswith("wss://mainnet.infura.io/v3/"):
+        #TODO ADD AUTH
+        async with ClientSession() as session:
+            base_provider = JSONBaseProvider()
+            request_data = base_provider.encode_rpc_request(method, params)
+            try:
+                while True:
+                    try:
+                        async with session.post(url, data=request_data,
+                                        headers={'Content-Type': 'application/json'}) as response:
+                            message = await response.read()
+                        response = base_provider.decode_rpc_response(message)
+                        logger.info(message)
+                    except:
+                        logger.warning(f"Message failed, timed out (limit = {timeout}s) or could not be recieved. Retrying")
+            except:
+                loop.close()
+    else:
+        raise ValueError("Error: pipe provider not supported: use 'wss://mainnet.infura.io/v3/' or 'wss://eth-mainnet.g.alchemy.com/v2/'")
 
 YOUR_PUBLIC_IP = "0.0.0.0"
 YOUR_PRIVATE_IP = "0.0.0.0"
@@ -64,7 +115,7 @@ def send_txs_to_cluster(logger, txs):
         transactions = [send_tx_to_cluster(logger, tx) for tx in txs]
         return transactions
 
-def create_web3_pipe(logger, args, filter_address=False):
+def create_web3_pipe(logger, args, filter_address=False, stream_pending=None):
     provider = args.provider
     logger.info(f"Trying to connect to Web3...")
     web3_ = None
@@ -92,19 +143,44 @@ def create_web3_pipe(logger, args, filter_address=False):
     #latest_block = w3.eth.get_block('latest')
     transaction_hashes = []
     temp_transactions = []
-    restart_bool = False
-    while not restart_bool:
-        logger.info(f"Getting latest Block while monitoring address(es) {args.monitor_addresses}...")
+    logger.info(f"Getting latest Block while monitoring address(es) {args.monitor_addresses}...")
+    pending_block = None
+    pending_transactions = None
+    try:
         pending_block = web3_.eth.getBlock(block_identifier='pending', full_transactions=True)
         pending_transactions = pending_block['transactions']
+    except:
+        logger.warning("Web3 function eth.getBlock(block_identifier='pending', full_transactions=True) not supported. Skipping Block data.")
         
+    try:
         latestblock_filter = web3_.eth.filter({'fromBlock': 'latest', 'toBlock': 'pending'})
         if filter_address:
             latestblock_filter = web3_.eth.filter({'fromBlock': 'latest', 'toBlock': 'pending', 'address': format_addresses(web3_, args.monitor_addresses)})
-        #pending_transactions_filtered = latestblock_filter.get_new_entries()
-        #logger.info("Waiting for latest block hashes...")
-        while True:
+    except:
+        logger.warning("Web3 function eth.filter({'fromBlock': 'latest', 'toBlock': 'pending'}) not supported. Skipping filter by address.")
+        
+    #pending_transactions_filtered = latestblock_filter.get_new_entries()
+    #logger.info("Waiting for latest block hashes...")
+    loop = None
+    sp = args.stream_pending
+    if stream_pending is not None:
+        sp = stream_pending
+    if sp:
+        loop = asyncio.get_event_loop()
+    
+    while True:
+        if sp:
+            if args.pipe_url.startswith("wss://eth-mainnet.g.alchemy.com/v2/"):
+                loop.run_until_complete(get_event(loop, logger, args.pipe_url, id=1, method="eth_subscribe", params=["newHeads"], timeout=60))
+            if args.pipe_url.startswith("wss://mainnet.infura.io/v3/"):
+                loop.run_until_complete(get_event(loop, logger, args.pipe_url, id=1, method="eth_subscribe", params=["alchemy_newFullPendingTransactions"], timeout=60))
+            else:
+                raise ValueError("Error: pipe provider not supported: use 'wss://mainnet.infura.io/v3/' or ")
+        else:
             #transaction_hashes = web3_.eth.getFilterChanges(latestblock_filter.filter_id)
+            if pending_block is None and pending_transactions is None:
+                logger.waiting("No pending transactions or block. Skipping.")
+                return
             pending_block = web3_.eth.getBlock(block_identifier='pending', full_transactions=True)
             new_pending = [x for x in pending_block['transactions'] if x not in pending_transactions]
             logger.info(f"New pending transactions: {len(new_pending)}")
@@ -113,16 +189,16 @@ def create_web3_pipe(logger, args, filter_address=False):
             new_transaction_hashes = new_pending
             transaction_hashes.extend(new_transaction_hashes)
             send_txs_to_cluster(logger, new_transaction_hashes)
-        #logger.info("Waiting for latest block hashes...")
-        #while len(pending_transactions) < 1:
-            #logger.info("tick")
-            #transaction_hashes = web3_.eth.getFilterChanges(latestblock_filter.filter_id)
-        #temp_transactions = [web3_.eth.getTransaction(h['transactionHash']) for h in transaction_hashes]
-        #logger.info(f"Captured {len(transaction_hashes)} transaction_hashes from block")
-        #logger.info(f"Captured TXs: {temp_transactions}")
-        #for tx in temp_transactions:
-        #    logger.info(f"Sending TX: {tx} to cluster")
-        #    send_txs_to_cluster(logger, pending_transactions)
+    #logger.info("Waiting for latest block hashes...")
+    #while len(pending_transactions) < 1:
+        #logger.info("tick")
+        #transaction_hashes = web3_.eth.getFilterChanges(latestblock_filter.filter_id)
+    #temp_transactions = [web3_.eth.getTransaction(h['transactionHash']) for h in transaction_hashes]
+    #logger.info(f"Captured {len(transaction_hashes)} transaction_hashes from block")
+    #logger.info(f"Captured TXs: {temp_transactions}")
+    #for tx in temp_transactions:
+    #    logger.info(f"Sending TX: {tx} to cluster")
+    #    send_txs_to_cluster(logger, pending_transactions)
         
     
     
@@ -139,14 +215,14 @@ def create_web3_pipe_remote(c, logger, args):
     #TODO
     
 @task
-def connect(user, host):
+def connect_tohost(user, host):
     con = Connection(f"{user}@{host}")
     return con
 
 @task
 def setup_ssh(logger, args, host, run_script=True):
     pipe = None
-    c = connect(args.user, host)
+    c = connect_tohost(args.user, host)
     # RUNS THIS SCRIPT ON THE MACHINE OVER SSH TO CREATE PIPE
     if run_script:
         logger.info(f"Running 'transaction_streamer.py' on {c.host} with arguments:")
@@ -199,6 +275,9 @@ if __name__ == "__main__":
     parser.add_argument("-s", "--ssh",
                         action="store_true", dest="connect_via_ssh", default=False,
                         help="connect to the node via ssh - requires '-u / --user'")
+    parser.add_argument("-S", "--stream",
+                        action="store_true", dest="stream_pending", default=True,
+                        help="stream the pending transactions from the mempool via WebSocket")
     parser.add_argument("-P", "--provider", dest="provider", default="IPCProvider",
                         help="type of provider to use - must be 'IPCProvider', 'HTTPProvider' or 'WebsocketProvider'")
     parser.add_argument("-A", "--useapi",

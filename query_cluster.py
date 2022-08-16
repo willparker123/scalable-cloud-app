@@ -5,7 +5,7 @@ import yaml
 with open('config.yaml') as f:
     config = yaml.load(f, Loader=yaml.SafeLoader)
 
-hosts = [(k, v) for k, v in config['hosts'].items()]
+hosts = [(h[0], h[1]) for h in config["hosts"].items()]
 
 from fabric import Connection
 

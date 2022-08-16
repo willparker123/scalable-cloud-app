@@ -1,5 +1,6 @@
 import sys
 import time
+from tracemalloc import take_snapshot
 
 import yaml
 import boto3
@@ -14,7 +15,8 @@ import re
 #with open("userdata_base64.txt", "r") as fp:
 #    USERDATA_B64_STR = fp.read()
 
-valid_instance_group_types = {"kubernetes-controlplane", "kubernetes-worker"}
+valid_instance_group_types = {"ec2"}
+valid_instance_group_nodetypes = {"kubernetes_controlplane", "kubernetes_worker"}
 ec2_secgroup_ip_permissions = [
                     {
                         'IpProtocol': 'tcp',
@@ -38,26 +40,37 @@ ec2_secgroup_ip_permissions = [
 
 
 class CreateInstanceEC2(object):
-    def __init__(self, ec2_client):
-        self.ec2_client=ec2_client
+    def __init__(self, ec2_client, logger, config, context):
+        self.ec2_client = ec2_client
+        self.logger = logger
+        self.config = config
+        self.context = context
 
     def get_vpc(self):
-        vpc_id = ""
+        vpc_ids = []
         response = self.ec2_client.describe_vpcs()
         for vpc in response["Vpcs"]:
-            if vpc["Tags"][0]["Value"].__contains__("Default"):
-                vpc_id = vpc["VpcId"]
-                break
+            #self.logger.info(vpc)
+            #if vpc["Tags"][0]["Value"].__contains__("Default"):
+            #    vpc_id = vpc["VpcId"]
+            vpc_id = vpc["VpcId"]
+            vpc_ids.append(vpc_id)
 
-        response = self.ec2_client.describe_subnets(Filters=[{"Name":"vpc-id", "Values": [vpc_id]}])
+        response = self.ec2_client.describe_subnets(Filters=[{"Name": "vpc-id", "Values": vpc_ids}])
         subnet_id = response["Subnets"][0]["SubnetId"]
         az = response["Subnets"][0]["AvailabilityZone"]
-        return vpc_id, subnet_id, az
+        return vpc_ids, subnet_id, az
 
     def create_ec2_secgroup(self, logger, ip_permissions=[]):
+        #EC2SecurityGroup:
+        #   Type: AWS::EC2::SecurityGroup
+        #   Properties:
+        #   GroupDescription: Security Group for EC2 instances.
+        #   #Other properties including SecurityGroupIngress, SecurityGroupEgress, VpcId
+        
         if len(ip_permissions) == 0:
             raise ValueError(f"Error: 'ip_permissions' must be supplied")
-        if all(perm["IpProtocol"] is not None and perm["FromPort"] is not None and perm["ToPort"] is not None and perm["IpRanges"] is not None for perm in ip_permissions):
+        if not all(perm["IpProtocol"] is not None and perm["FromPort"] is not None and perm["ToPort"] is not None and perm["IpRanges"] is not None for perm in ip_permissions):
             raise ValueError("Error: each ip_permission must be in the form { \
                         'IpProtocol': 'tcp' \
                         'FromPort': 22, \
@@ -66,36 +79,76 @@ class CreateInstanceEC2(object):
         sg_name = "awspy_security_group"
         logger.info(f"Creating the Security Group {sg_name} : STARTED ")
         try:
+            keypair_name = "vockey"
+            response = self.ec2_client.describe_key_pairs()
+            #logger.info(response)
+            if not any(r['KeyName'] == keypair_name for r in response['KeyPairs']):
+                response = self.ec2_client.create_key_pair(KeyName=keypair_name)
             vpc_id, subnet_id, az = self.get_vpc()
             response = self.ec2_client.create_security_group(
                 GroupName=sg_name,
                 Description="This SG is created using Python",
                 VpcId=vpc_id
             )
-            sg_id = response["GroupId"]
+            response = self.ec2_client.describe_security_groups(GroupNames=[sg_name])
+            sg_id = response["SecurityGroups"][0]["GroupId"]
             sg_config = self.ec2_client.authorize_security_group_ingress(
                 GroupId=sg_id,
                 IpPermissions=ip_permissions
             )
-            logger.info("Creating the Security Group {sg_name} : COMPLETED - Security Group ID: {sg_id}")
-            return sg_id, sg_name
+            logger.info(f"Creating the Security Group {sg_name} : COMPLETED - Security Group ID: {sg_id}")
+            return sg_id, sg_name, vpc_id, subnet_id, az
         except Exception as e:
             if str(e).__contains__("already exists"):
                 response = self.ec2_client.describe_security_groups(GroupNames=[sg_name])
                 sg_id = response["SecurityGroups"][0]["GroupId"]
-                logger.info("Security Group {sg_name} already exists with Security Group ID: {sg_id}")
-                return sg_id, sg_name
+                logger.warning(f"   Security Group {sg_name} already exists with Security Group ID: {sg_id}")
+            raise ValueError(e)
 
-    def create_ec2_launchtemplate(self, logger, instance_name, template_name="ec2_launch_template", image_id="ami-05e4673d4a28889fe", az_region="us-east-1a", aws_instance_type='t2.micro', securitygroup=None):
+    def create_ec2_launchtemplate(self, logger, ip_permissions, instance_name, template_name="ec2_launch_template", image_id="ami-05e4673d4a28889fe", az_region="us-east-1", aws_instance_type='t2.micro', securitygroup=None):
+        #DemoLaunchTemplate:
+        #    Type: AWS::EC2::LaunchTemplate
+        #    Properties:
+        #    LaunchTemplateName: demo-launch-template
+        #    LaunchTemplateData:
+        #        BlockDeviceMappings:
+        #        - Ebs:
+        #            VolumeSize: 8
+        #            VolumeType: gp2
+        #            DeleteOnTermination: true
+        #            Encrypted: true
+        #            DeviceName: /dev/xvdh
+        #        ImageId: ami-098f16afa9edf40be
+        #        InstanceType: t2.micro
+        #        SecurityGroupIds:
+        #        - !GetAtt EC2SecurityGroup.GroupId
+        
         logger.info("Creating the Launch Templates : STARTED ")
         try:
-            sg_id, sg_name = self.create_ec2_secgroup()
+            sg_id, sg_name, vpc_id, subnet_id, az = self.create_ec2_secgroup(logger, ip_permissions)
+            keypair_name = "vockey"
+            response = self.ec2_client.describe_key_pairs()
+            #logger.info(response)
+            if not any(r['KeyName'] == keypair_name for r in response['KeyPairs']):
+                response = self.ec2_client.create_key_pair(KeyName=keypair_name)
+            """
+            aws ec2 create-key-pair \
+                --key-name {keypair_name} \
+                --key-type rsa \
+                --key-format pem \
+                --query 'KeyMaterial' \
+                --output text > {keypair_name}.pem
+                
+            aws ec2 import-key-pair
+                --key-name {keypair_name}
+                --public-key-material {keypair_name}.pem
+            """
             response = self.ec2_client.create_launch_template(
                 LaunchTemplateName=template_name,
                 LaunchTemplateData={
                     'ImageId': image_id,
                     'InstanceType' : aws_instance_type,
-                    'KeyName' : 'vockey',#ec2-key
+                    'KeyName' : keypair_name,#ec2-key
                     'Placement': {
                         'AvailabilityZone': az_region,
                     },
@@ -105,7 +158,7 @@ class CreateInstanceEC2(object):
             )
             template_id = response['LaunchTemplate']['LaunchTemplateId']
             logger.info(f"Creating the Launch Templates : COMPLETED : TemplateID:{template_id}, TemplateName:{template_name}")
-            return template_id, template_name
+            return template_id, template_name, vpc_id, subnet_id, az
         except Exception as e:
             response = self.ec2_client.describe_launch_templates(
                 LaunchTemplateNames=[
@@ -113,94 +166,124 @@ class CreateInstanceEC2(object):
                 ]
             )
             template_id = response['LaunchTemplates'][0]['LaunchTemplateId']
-            return template_id, template_name
+            keypair_name = "vockey"
+            response = self.ec2_client.describe_key_pairs()
+            #logger.info(response)
+            if not any(r['KeyName'] == keypair_name for r in response['KeyPairs']):
+                response = self.ec2_client.create_key_pair(KeyName=keypair_name)
+            vpc_id, subnet_id, az = self.get_vpc()
+            return template_id, template_name, vpc_id, subnet_id, az
 
-    def create_ec2_group(self, logger, instance_name, instance_type="kubernetes-worker", group_name=None, template_name="ec2_launch_template", image_id="ami-05e4673d4a28889fe", az_region="us-east-1a", aws_instance_type='t2.micro', securitygroup=None):
+    def create_ec2_group(self, config_env, ip_permissions, logger, instance_name, instance_nodetype="kubernetes_worker", instance_type="ec2", group_name=None, template_name="ec2_launch_template", image_id="ami-05e4673d4a28889fe", az_region="us-east-1", aws_instance_type='t2.micro', securitygroup=None, minsize=2, maxsize=4, prefsize=3):
         logger.info("---- Started the creation of Auto Scaling Group using Launch Templates ----")
-        launch_template_id, launch_template_name = self.create_ec2_launchtemplate(logger, instance_name, template_name=template_name, image_id=image_id, az_region=az_region, aws_instance_type=aws_instance_type, securitygroup=securitygroup)
-        vpc_id, subnet_id, az = self.get_vpc()
-        client = boto3.client('autoscaling')
+        launch_template_id, launch_template_name, vpc_id, subnet_id, az = self.create_ec2_launchtemplate(logger, ip_permissions, instance_name, template_name=template_name, image_id=image_id, az_region=az_region, aws_instance_type=aws_instance_type, securitygroup=securitygroup)
+        client = boto3.client('autoscaling', region_name=az_region, **config_env)
         self.autoscale_client = client
-        minsize = 2
-        maxsize = 4
-        prefsize = 3
         if instance_type not in valid_instance_group_types:
             raise ValueError(f"Error: type '{instance_type}' is not a valid instance group type: {valid_instance_group_types}")
+        if instance_nodetype not in valid_instance_group_nodetypes:
+            raise ValueError(f"Error: type '{instance_nodetype}' is not a valid instance group type: {valid_instance_group_nodetypes}")
         with open("config.yaml") as f:
             try:
                 config_ = yaml.load(f, Loader=yaml.SafeLoader)
-                maxsize = config_[f'{instance_type}_max_nodes']
-                minsize = config_[f'{instance_type}_min_nodes']
-                prefsize = config_[f'{instance_type}_pref_nodes']
+                maxsize = config_[f'{instance_nodetype}_max_nodes']
+                minsize = config_[f'{instance_nodetype}_min_nodes']
+                prefsize = config_[f'{instance_nodetype}_pref_nodes']
             except:
                 pass
-                
-        response = client.create_auto_scaling_group(
-            AutoScalingGroupName=group_name if group_name is not None else f'asg_{instance_type}',
-            LaunchTemplate={
-                'LaunchTemplateId': launch_template_id,
-            },
-            MinSize=minsize,
-            MaxSize=maxsize,
-            DesiredCapacity=prefsize,
-            AvailabilityZones=[
-                az,
-            ]
-        )
+        #DemoAutoScalingGroup:
+        #    Type: AWS::AutoScaling::AutoScalingGroup
+        #    Properties:
+        #    AutoScalingGroupName: demo-auto-scaling-group
+        #    MinSize: "2"
+        #    MaxSize: "4"
+        #    DesiredCapacity: "2"
+        #    HealthCheckGracePeriod: 300
+        #    LaunchTemplate:
+        #        LaunchTemplateId: !Ref DemoLaunchTemplate
+        #        Version: !GetAtt DemoLaunchTemplate.LatestVersionNumber
+        #    VPCZoneIdentifier:
+        #        - subnet-0123
+        #        - subnet-0456 
+        groups = client.describe_auto_scaling_groups(AutoScalingGroupNames=[group_name,],).get("AutoScalingGroups")
+        if any(g['AutoScalingGroupName'] == group_name for g in groups):
+            logger.warning(f"Autoscaling Group with name {group_name} already exists")
+            response = None
+        else:
+            response = client.create_auto_scaling_group(
+                AutoScalingGroupName=group_name if group_name is not None else f'asg_{instance_nodetype}',
+                MinSize=minsize,
+                MaxSize=maxsize,
+                DesiredCapacity=prefsize,
+                HealthCheckGracePeriod=300,
+                LaunchTemplate={
+                    'LaunchTemplateId': launch_template_id
+                },
+                VPCZoneIdentifier=
+                    subnet_id, #vpc_id
+                AvailabilityZones=[
+                    az_region,#az
+                ]
+            )
         self.ec2_client.create_tags(
             Resources=[image_id],
-            Tags=[{'Key': 'Name', 'Value': template_name}, {'Key': 'Instance Type', 'Value': instance_type}]
+            Tags=[{'Key': 'Name', 'Value': template_name}, {'Key': 'Instance Type', 'Value': instance_nodetype}]
         )
-        if str(response["ResponseMetadata"]["HTTPStatusCode"]) == "200":
-            groups = response.describe_auto_scaling_groups(AutoScalingGroupNames=[group_name,],).get("AutoScalingGroups")
+        logger.info("Created autoscaling group successfully.")
+        if response is None or str(response["ResponseMetadata"]["HTTPStatusCode"]) == "200":
             logger.info(f"---- Creation of Auto Scaling Group using Launch Templates : COMPLETED ----")
             instances = (groups[0].get('Instances'))
-            logger.info(instances) #maybe
             pubips = []
             privips = []
             ids = []
-            for i in instances:
-                i.wait_until_running('self',Filters=[{'Name':'state','Values':['available']}])
-                pubip = self.ec2_client.Instance(i.get('InstanceId')).public_ip_address
-                privip = self.ec2_client.Instance(i.get('InstanceId')).private_ip_address
+            hs = []
+            for ind, i in enumerate(instances):
+                pubip, privip = get_ip_from_instance_id(self.context, i.get('InstanceId'), az_region, config_env)
+                logger.info(f"IPs of instance {ind}: PUB: {pubip}, PRIV: {privip}")
                 ids.append(i.get('InstanceId'))
                 pubips.append(pubip)
                 privips.append(privip)
-                with open("config.yaml") as f:
-                    config_['hosts'][pubip] = privip
-            hosts = [v for k, v in config_['hosts'].items()]
-            newhosts = privips
+                config_['hosts'][pubip] = privip
+            hosts = config_['hosts'].items()
+            logger.info(f"Created {len(instances)} Instances; {hosts}") #maybe
             with open("config.yaml", 'w') as f:
                 try:
                     yaml.dump(config_, f, default_flow_style=False)
                 except yaml.YAMLError as exception:
                     logger.warning(exception)
                     raise ValueError("Error: could not open 'config.yaml'")
-            logger.info(f"---- Added Auto Scaling Group to config.yaml for K8S : COMPLETED ; hosts={hosts}, IDs={ids}----")
+            logger.info(f"---- Added Auto Scaling Group to config.yaml for K8S : COMPLETED ----")
+            return hosts, ids, pubips, privips
         else:
             logger.info("---- Creation of Auto Scaling Group using Launch Templates : FAILED ----")
-        return hosts, ids, pubips, privips
+            return None, None, None, None
 
 # ImageId='ami-02e136e904f3da870', #(Amazon AMI)
 # ImageId='ami-05e4673d4a28889fe',  # (Cloud9 Ubuntu - 2021-10-28T1333)
 @task
-def create_instance_autoscaling_group(c, config, logger, instance_name="barry", instance_type="kubernetes-worker", group_name=None, template_name="ec2_launch_template", image_id="ami-05e4673d4a28889fe", az_region="us-east-1a", securitygroup=None):
+def create_instance_autoscaling_group(c, config, config_env, logger, instance_name="barry", instance_nodetype="kubernetes_worker", instance_type="ec2", group_name=None, template_name="ec2_launch_template", image_id="ami-05e4673d4a28889fe", az_region="us-east-1", securitygroup=None):
     """
     Creates an AWS ASG of the specified instance_type
     """
     try:
-        ec2_client = boto3.client(instance_type, region_name=az_region, **config)
-        ec2_instance = CreateInstanceEC2(ec2_client, logger)
-        updated_hosts, ids, pubips, privips = ec2_instance.create_ec2_group(logger=logger, instance_name=instance_name, instance_type=instance_type, group_name=group_name, template_name=template_name, image_id=image_id, az_region=az_region, securitygroup=securitygroup) #ec2_instance.
+        ec2_client = boto3.client(instance_type, region_name=az_region, **config_env)
+        ec2_instance = CreateInstanceEC2(ec2_client, logger, config, c)
+        updated_hosts, ids, pubips, privips = ec2_instance.create_ec2_group(config_env=config_env, ip_permissions=ec2_secgroup_ip_permissions, logger=logger, instance_nodetype=instance_nodetype, instance_type=instance_type, instance_name=instance_name, group_name=group_name, template_name=template_name, image_id=image_id, az_region=az_region, securitygroup=securitygroup) #ec2_instance.
+        return updated_hosts, ids, pubips, privips
     except ClientError as e:
         logger.warning(e)
+        return None, None, None, None
 
 @task
-def create_instance(c, config, logger, instance_type="kubernetes-worker", instance_name="new_ec2_instance", image_id="ami-05e4673d4a28889fe", az_region="us-east-1a", aws_instance_type='t2.large', securitygroup=None):
+def create_instance(c, config, config_env, logger, instance_type="kubernetes_worker", instance_name="new_ec2_instance", image_id="ami-05e4673d4a28889fe", az_region="us-east-1a", aws_instance_type='t2.large', securitygroup=None):
     """
     Creates a singular EC2 instance
     """
-    ec2 = boto3.resource('ec2', region_name=az_region, **config)
+    ec2 = boto3.resource('ec2', region_name=az_region, **config_env)
+    keypair_name = "vockey"
+    response = ec2.create_key_pair(KeyName=keypair_name)
+    response = ec2.describe_key_pairs()
+    logger.info(response)
     instances = ec2.create_instances(
         ImageId=image_id,
         MinCount=1,
@@ -210,7 +293,7 @@ def create_instance(c, config, logger, instance_type="kubernetes-worker", instan
             'AvailabilityZone': az_region,
         },
         SecurityGroupIds=[securitygroup] if securitygroup else [],
-        KeyName='vockey'
+        KeyName=keypair_name
     )
     iid = instances[0].id
     # give the instance a tag name
@@ -222,18 +305,26 @@ def create_instance(c, config, logger, instance_type="kubernetes-worker", instan
     return instances[0]
 
 @task
-def instancedetails(c, config, logger, instance_name, az_region="us-east-1a"):
+def get_ip_from_instance_id(c, instance_id, az_region, config_env):
+    ec2 = boto3.client('ec2', region_name=az_region, **config_env)
+    pubip = ec2.describe_instances(InstanceIds=[instance_id])['Reservations'][0]['Instances'][0]['PrivateDnsName']
+    privip = ec2.describe_instances(InstanceIds=[instance_id])['Reservations'][0]['Instances'][0]['PublicDnsName']
+    return pubip, privip
+                
+
+@task
+def instancedetails(c, config, config_env, logger, instance_name, az_region="us-east-1"):
     """
     Returns the specific EC2 Instance(s) that are running
     """
-    ec2 = boto3.resource('ec2', region_name=az_region, **config)
+    ec2 = boto3.resource('ec2', region_name=az_region, **config_env)
     instances = ec2.instances.filter(
         Filters=[{'Name': 'tag:Name', 'Values': [instance_name]}])
     instances = list(instances)
 
     if len(instances) == 0:
         logger.warning(f"   Error: No instances with 'Name' {instance_name} - creating...")
-        return create_instance(c, instance_name=instance_name)
+        return create_instance(c, config=config, config_env=config_env, instance_name=instance_name)
     else:
         running_instances = []
         for instance in instances:
@@ -247,95 +338,90 @@ def instancedetails(c, config, logger, instance_name, az_region="us-east-1a"):
             else:
                 logger.warning(f"   Instance with id={instance.id} is not running")
 
-        ec2 = boto3.resource('ec2')
+        ec2 = boto3.resource('ec2', region_name=az_region, **config_env)
         return instances
 
 @task
-def terminate_instances(c, group_name):
+def terminate_instances(c, group_name, az_region, config_env):
     """
     Terminates all instances in ASG with group_name
     """
-    autoscaling = boto3.resource('autoscaling')
-    groups = autoscaling.describe_auto_scaling_groups(AutoScalingGroupNames=[group_name,],).get("AutoScalingGroups")
+    ec2 = boto3.client('ec2', region_name=az_region, **config_env)
+    groups = ec2.describe_auto_scaling_groups(AutoScalingGroupNames=[group_name,],).get("AutoScalingGroups")
     instances = (groups[0].get('Instances'))
-    instances.terminate()
+    response = ec2.stop_instances(InstanceIds=instances, DryRun=False)
 
 @task
-def waitfor_instances(c, group_name):
+def waitfor_instances(c, group_name, az_region, config_env):
     """
-    Waits for all instances in the ASG with group_name
+    Waits for all instances in the ASG with group_name  
+    #TODO NOT WORKING
     """
-    autoscaling = boto3.resource('autoscaling')
+    autoscaling = boto3.client('autoscaling', region_name=az_region, **config_env)
     groups = autoscaling.describe_auto_scaling_groups(AutoScalingGroupNames=[group_name,],).get("AutoScalingGroups")
     instances = (groups[0].get('Instances'))
-    for instance in instances:
-        instance.wait_until_running('self',Filters=[{'Name':'state','Values':['available']}])
-    return True
+    return instances
 
 @task
-def getips_instances(c, config, group_name):
+def getips_instances(c, config, group_name, az_region, config_env):
     """
     Returns (public_ips[], private_ips[]) for all instances in the ASG with group_name
     """
-    autoscaling = boto3.resource('autoscaling')
+    autoscaling = boto3.client('autoscaling', region_name=az_region, **config_env)
     groups = autoscaling.describe_auto_scaling_groups(AutoScalingGroupNames=[group_name,],).get("AutoScalingGroups")
-    pubips = [k for k, v in config['hosts'].items()]
-    privips = [v for k, v in config['hosts'].items()]
+    pubips = [k for (k, v) in config['hosts']]
+    privips = [v for (k, v) in config['hosts']]
     return pubips, privips
 
 @task
-def get_nodes(c, user, hosts):
-    for host in hosts:
-        con = Connection(f"{user}@{host}")
-        con.sudo("kubectl get nodes")
+def get_nodes(c, con):
+    con.sudo("kubectl get nodes")
 
 @task
-def install_docker(c, logger):
+def install_docker(c, con, logger):
     logger.info(f"Installing Docker on {c.host}")
-    c.sudo("yum update && yum install -y docker")
-    c.run("docker --version")
-    c.sudo("systemctl enable docker.service")
-    c.sudo("systemctl enable docker")
-    c.sudo("usermod -aG docker ec2-user")
-    c.sudo("yum install -y nc")
+    con.sudo("yum update && yum install -y docker")
+    con.run("docker --version")
+    con.sudo("systemctl enable docker.service")
+    con.sudo("systemctl enable docker")
+    con.sudo("usermod -aG docker ec2-user")
+    con.sudo("yum install -y nc")
 
 @task
-def install_kubernetes(c, logger):
+def install_kubernetes(c, con, logger):
     logger.info(f"Installing Kubernetes on {c.host}")
-    c.sudo("apt-get update")
-    c.sudo("apt-get install -y apt-transport-https ca-certificates curl")
-    c.sudo("curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg")
-    c.run('echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list')
-    c.sudo("apt-get update")
-    c.sudo("apt-get install -y kubelet kubeadm kubectl")
-    c.sudo("apt-mark hold kubelet kubeadm kubectl")
+    con.sudo("apt-get update")
+    con.sudo("apt-get install -y apt-transport-https ca-certificates curl")
+    con.sudo("curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg")
+    con.run('echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list')
+    con.sudo("apt-get update")
+    con.sudo("apt-get install -y kubelet kubeadm kubectl")
+    con.sudo("apt-mark hold kubelet kubeadm kubectl")
 
 @task
-def configure_k8s_master(c):
-    c.sudo("kubeadm init")
-    c.sudo("mkdir -p $HOME/.kube")
-    c.sudo("cp -i /etc/kubernetes/admin.conf $HOME/.kube/config")
-    c.sudo("chown $(id -u):$(id -g) $HOME/.kube/config")
-    c.sudo("kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml")
+def configure_k8s_master(c, con):
+    con.sudo("kubeadm init")
+    con.sudo("mkdir -p $HOME/.kube")
+    con.sudo("cp -i /etc/kubernetes/admin.conf $HOME/.kube/config")
+    con.sudo("chown $(id -u):$(id -g) $HOME/.kube/config")
+    con.sudo("kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml")
 
 @task
-def prepare_instances(c, user, host):
-    con = Connection(f"{user}@{host}")
-    install_docker(con)
+def prepare_instances(c):
+    install_docker(c)
     #disable_selinux_swap(conn)
-    install_kubernetes(con)
+    install_kubernetes(c)
 
 @task
-def prepare_masters(c, user, host):
+def prepare_masters(c):
     configure_k8s_master(c)
     get_join_token(c)
 
 @task
-def prepare_slaves(c, user, host):
+def prepare_slaves(c):
     with open("join_command.txt") as f:
         command = f.readline()
-        con = Connection(f"{user}@{host}")
-        con.sudo(f"{command}")
+        c.sudo(f"{command}")
 
 @task
 def configure_k8s_master(c):

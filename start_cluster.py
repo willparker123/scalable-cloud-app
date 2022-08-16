@@ -1,18 +1,15 @@
 import sys
 import time
 import logging
-
-import fabric
-import jinja2
 import yaml
-import boto3
 import logging
 from fabric import Connection, task
 import os
 from kubernetes import client, config
 from dotenv import load_dotenv, dotenv_values
 from cluster_handler import Cluster
-    
+from argparse import ArgumentParser
+
 """
 hosts:
   52.90.32.232: 172.31.89.137
@@ -36,6 +33,10 @@ if __name__ == "__main__":
 
     load_dotenv()
     config_env = dotenv_values(".env")
+    
+    parser = ArgumentParser()
+    #parser.add_argument("-p", "--pipeurl", dest="pipe_url", required=True,
+    #                    help="IPC, HTTP or WebSocket pipe url used to create the web3 pipe; must be supplied")
     
     main(logger, config_env)
 
@@ -143,7 +144,7 @@ hosts:
 
 with open('config.yaml') as f:
     config = yaml.load(f, Loader=yaml.SafeLoader)
-hosts = [(k, v) for k, v in config['hosts'].items()]
+hosts = [(h[0], h[1]) for h in config["hosts"].items()]
 
 load_dotenv()
 
