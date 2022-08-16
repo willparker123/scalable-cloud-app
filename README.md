@@ -147,6 +147,7 @@ The main cluster startup and deployment to spin up EC2 instances, autoscaling gr
 | boto3        | 1.24.2      | Interaction with AWS services                  | ```conda install -c anaconda boto3```                |
 | dotenv       | 0.20.0      | Get and set values in a ```.env``` file        | ```conda install -c conda-forge python-dotenv```     |
 | kafka-python |             |                                                |                                                      |
+| pyspark      |             |                                                |                                                      |
 
 
 
